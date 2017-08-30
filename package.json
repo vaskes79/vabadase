@@ -1,0 +1,8 @@
+{
+  "name": "vabaduse",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vaskes79/vabadase.git",
+  "author": "Vasily Guzov <kinev1979@gmail.com>",
+  "license": "MIT"
+}
