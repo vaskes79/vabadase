@@ -30,7 +30,7 @@ FilterGallery.prototype.filterImg = function (event) {
 };
 
 
-var filter = new FilterGallery({
-    selector: '#filterGallery',
-    imgCont: '.imgCont'
-});
+// var filter = new FilterGallery({
+//     selector: '#filterGallery',
+//     imgCont: '.imgCont'
+// });
