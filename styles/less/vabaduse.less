@@ -1,0 +1,66 @@
+// style vabaduse
+.bgApp {
+  background: url("../../img/background/bgWorkPage.jpg") no-repeat;
+  background-size: cover;
+}
+
+.bgHome {
+  background: url("../../img/background/background-image-source.jpg") no-repeat;
+  background-size: cover;
+}
+
+// gallery
+.gallery {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  a {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px;
+    width: 240px;
+    height: 200px;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .gallery a {
+    width: 90%;
+    height: 200px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+//// map
+//.map #map {
+//  width: 100%;
+//  height: 100%;
+//  position: relative;
+//
+//}
+
+
+
+.filterHide {
+  opacity: .3;
+  background-color: @basic-color;
+  cursor: default;
+  img {
+    -webkit-filter: grayscale(100%);
+  }
+}

@@ -1,0 +1,11 @@
+*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+*.sass-cache/
+# PyCharm
+# http://www.jetbrains.com/pycharm/webhelp/project.html
+.idea
+.iml
+dataFiles
