@@ -1,0 +1,9 @@
+{
+  "name": "vabadase",
+  "version": "0.1.0",
+  "description": "landing pages row house",
+  "main": "index.js",
+  "repository": "git@github.com:vaskes79/vabadase.git",
+  "author": "Vasily Guzov <vasily.guzov@gmail.com>",
+  "license": "MIT"
+}
