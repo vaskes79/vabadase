@@ -7,7 +7,8 @@
   "author": "Vasily Guzov <vasily.guzov@gmail.com>",
   "license": "MIT",
   "scripts": {
-      "deploy": "gh-pages -d public"
+      "deploy": "gh-pages -d public",
+      "cp": "cp -r src/* public/"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1"
