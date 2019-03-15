@@ -874,8 +874,8 @@ i {
   margin: 100px 0 20px 0;
 }
 .priceblock .block-container .pricetable .priceitem {
-  max-width: 300px;
-  width: 25%;
+  max-width: 400px;
+  width: 50%;
   min-width: 250px;
   min-height: 200px;
   z-index: 10;
