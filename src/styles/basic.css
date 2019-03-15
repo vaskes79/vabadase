@@ -429,6 +429,7 @@ i {
   margin: 0 40px 0 20px;
 }
 .homeblock #description-home .wrapper .developer {
+    margin-top: 25px;
   font-size: 18px;
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 2px;
@@ -436,7 +437,7 @@ i {
 }
 .homeblock #description-home .wrapper .maintext {
   font-family: 'Roboto', sans-serif;
-  margin: 50px 0;
+  margin: 10px 0;
   font-weight: 200;
   font-style: italic;
   letter-spacing: 1px;
