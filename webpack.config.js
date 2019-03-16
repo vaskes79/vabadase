@@ -71,6 +71,41 @@ module.exports = {
                     useRelativePath: true,
                 }
             },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[contenthash:8].[name].[ext]',
+                            outputPath: 'static/img',
+                            useRelativePath: true,
+                        },
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            // webp: {
+                            //     quality: 75,
+                            // },
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65,
+                            },
+                            optipng: {
+                                enabled: true,
+                            },
+                            pngquant: {
+                                quality: '65-90',
+                                speed: 4,
+                            },
+                            gifsicle: {
+                                interlaced: false,
+                            },
+                        },
+                    },
+                ],
+            },
         ]
     },
 
