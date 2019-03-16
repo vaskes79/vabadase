@@ -7,6 +7,8 @@
   "author": "Vasily Guzov <vasily.guzov@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "stage:server": "cd public && npx browser-sync start --server --no-notify --no-ui --files *",
+    "prestage:server": "yarn build",
     "build": "NODE_ENV=production webpack --mode=production",
     "postbuild": "yarn copy:files",
     "copy:files": "cp ./src/robots.txt ./src/.htaccess ./public",

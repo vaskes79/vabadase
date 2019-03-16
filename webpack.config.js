@@ -6,7 +6,6 @@ const autoprefixer = require('autoprefixer');
 const JsOptimize = require('terser-webpack-plugin');
 const CssOptimize = require('optimize-css-assets-webpack-plugin');
 
-
 const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
@@ -14,7 +13,8 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, 'public'),
-        filename: 'js/[hash:6].build.js'
+        filename: 'js/[hash:6].build.js',
+        publicPath: isDev ? '/' : '/vabadase/',
     },
 
     devtool: isDev && 'source-map',
