@@ -17,6 +17,15 @@ module.exports = {
         filename: 'js/[hash:6].build.js'
     },
 
+    devtool: isDev && 'source-map',
+
+    devServer: {
+        port: 3000,
+        //host: '0.0.0.0',
+        open: true,
+        contentBase: path.join(__dirname, 'src'),
+    },
+
     optimization: isDev ? {} : { minimizer: [new JsOptimize({}), new CssOptimize({})], },
 
     module: {
