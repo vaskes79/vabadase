@@ -70,7 +70,7 @@ module.exports = {
                     outputPath: 'static/fonts',
                     useRelativePath: true,
                 }
-            }
+            },
         ]
     },
 
