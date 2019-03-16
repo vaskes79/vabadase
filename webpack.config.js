@@ -1,6 +1,8 @@
 const path = require('path');
 const CleanWP = require('clean-webpack-plugin');
+const HtmlWP = require('html-webpack-plugin');
 
+const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
     entry: './src/index.js',
@@ -11,7 +13,19 @@ module.exports = {
     },
 
     plugins: [
-        new CleanWP()
+        new CleanWP(),
+        new HtmlWP({
+            title: 'My Landing boilerplate',
+            template: './src/index.html',
+            minify: !isDev && {
+                html5: true,
+                collapseWhitespace: true,
+                caseSensitive: true,
+                removeComments: true,
+                removeEmptyElements: true,
+            },
+        }),
+
     ]
 
 }
