@@ -9,14 +9,20 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, 'public'),
-        filename: '[hash:6].build.js'
+        filename: 'js/[hash:6].build.js'
+    },
+
+    module: {
+        rules: [{
+            test: /\.pug$/,
+            loader: 'pug-loader'
+        }]
     },
 
     plugins: [
         new CleanWP(),
         new HtmlWP({
-            title: 'My Landing boilerplate',
-            template: './src/index.html',
+            template: './src/index.pug',
             minify: !isDev && {
                 html5: true,
                 collapseWhitespace: true,
