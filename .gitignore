@@ -2,6 +2,10 @@ node_modules
 public
 .vscode
 
+# work no optimise assets and docs about project
+# should be save to the cloud storage YD or GD
+assets
+
 # Swap
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]

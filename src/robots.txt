@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /php
+Host: www.vaskes79.github.io/vabadase/

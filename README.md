@@ -1,4 +1,22 @@
-Проект vabaduse
-================================================================================
+Vabaduse
+===============
 
-![vabaduse.ru](https://leto24h.storage.yandex.net/rdisk/5b7b07cb89f95902f30fa762ec3ba969380541fa9696133af505c225e019e8c0/inf/k-GReoPwOAgZLoQH3UdyD-LwjA0ATcNeStU2JljNgNUnocLtv4MpMvxmx_IUxoEt3CKHusq5UUEoFLvMBJnqXg==?uid=141680397&filename=vabaduse.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&rtoken=4dace89125401c713bc571292457c2e0&force_default=yes)
+## description folders and files
+
+```
+├── data.json                        - all data
+├── index.js                         - entry point webpack
+├── index.pug                        - entery point pug templete
+├── js                               - contain all js scripts
+├── parts                            - pug templates
+├── robots.txt                       - seo
+├── .htaccess                        - server   
+├── sass                             - styles
+│   ├── base                         - base styles for all pages
+│   │   ├── _base.scss               - styles body and resset
+│   │   └── _typography.scss         - font, heading, paragraph etc.
+│   └── main.scss                    - entry point for styles
+└── static                           - stytic files
+    ├── font                         - fonts
+    └── img                          - images
+```

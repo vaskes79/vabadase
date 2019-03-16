@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /php
-Host: www.vabaduse.ru
