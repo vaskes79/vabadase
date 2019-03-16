@@ -61,8 +61,16 @@ module.exports = {
                         },
                     },
                 ]
+            },
+            {
+                test: /\.(woff2?)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[contenthash:8].[name].[ext]',
+                    outputPath: 'static/fonts',
+                    useRelativePath: true,
+                }
             }
-
         ]
     },
 

@@ -1,5 +1,2 @@
-body {
-    display: grid;
-    perspective: 150rem;
-    color: red;
-}
+@import './base/typography';
+@import './base/base';
