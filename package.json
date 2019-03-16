@@ -7,10 +7,16 @@
   "author": "Vasily Guzov <vasily.guzov@gmail.com>",
   "license": "MIT",
   "scripts": {
-      "deploy": "gh-pages -d public",
-      "cp": "cp -r src/* public/"
+    "build": "NODE_ENV=production webpack --mode=production",
+    "dev": "webpack-dev-server",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d public"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "clean-webpack-plugin": "^2.0.1",
+    "gh-pages": "^2.0.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
   }
 }
