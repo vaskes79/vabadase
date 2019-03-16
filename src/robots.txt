@@ -1,3 +1,3 @@
 User-agent: *
 Disallow: /php
-Host: www.vabaduse.ru
+Host: www.vaskes79.github.io/vabadase/
