@@ -260,7 +260,12 @@
       }
     ]
   },
+  "time": {
+    "heading": "срок окончания строительства",
+    "subHeading": "весна лето 2019г."
+  },
   "contacts": {
+    "heading": "контакты",
     "phone": "+7(921) 902-51-13",
     "email": "vip.info.rik@mail.ru",
     "address": "Vabaduse 19 Narva Jose",
