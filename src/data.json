@@ -241,6 +241,25 @@
       }
     ]
   },
+  "twitter": {
+    "twitterItems": [
+      {
+        "content": "закончен штукатурные работы внешнего фасада здания.",
+        "author": "@vabaduse",
+        "pubDate": "6 октября, 2018"
+      },
+      {
+        "content": "Смонтированны, инженерные коммуникаци на всех этажа дома.",
+        "author": "@vabaduse",
+        "pubDate": "6 июля, 2018"
+      },
+      {
+        "content": "проведены электротехнические работы.",
+        "author": "@vabaduse",
+        "pubDate": "6 сентября, 2018"
+      }
+    ]
+  },
   "contacts": {
     "phone": "+7(921) 902-51-13",
     "email": "vip.info.rik@mail.ru",
