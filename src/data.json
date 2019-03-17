@@ -270,5 +270,8 @@
     "email": "vip.info.rik@mail.ru",
     "address": "Vabaduse 19 Narva Jose",
     "year": "2019"
+  },
+  "footer": {
+    "copyright": "vabaduse"
   }
 }
