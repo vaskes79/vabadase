@@ -103,7 +103,63 @@
         "paragraphs": [
           "Сосновые лес, свежий воздух и Нарвский залив делают, составляют жемчужину балтийского взморья."
         ]
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "галерея",
+    "subHeading": "фото и эскизы проекта VBADUSE",
+    "galleryItems": [
+      {
+        "srcImg": ["sketch-vabaduse-@1x-1.jpg", "sketch-vabaduse-@2x-1.jpg"],
+        "alt": "эскиз светлой спальни",
+        "description": "открытые светлые спальни"
       },
+      {
+        "srcImg": ["sketch-vabaduse-@1x-2.jpg", "sketch-vabaduse-@2x-2.jpg"],
+        "alt": "кабинет и балкон",
+        "description": "рабочий кабинет с выходом на балкон"
+      },
+      {
+        "srcImg": ["sketch-vabaduse-@1x-3.jpg", "sketch-vabaduse-@2x-3.jpg"],
+        "alt": "ванная комната",
+        "description": "ванная комната с окном"
+      },
+      {
+        "srcImg": ["sketch-vabaduse-@1x-4.jpg", "sketch-vabaduse-@2x-4.jpg"],
+        "alt": "кабинет интерьер",
+        "description": "уютный кабинет с диваном"
+      },
+      {
+        "srcImg": ["sketch-vabaduse-@1x-5.jpg", "sketch-vabaduse-@2x-5.jpg"],
+        "alt": "внешний вид дома",
+        "description": "внешний вид дома с парковкой"
+      },
+      {
+        "srcImg": ["sketch-vabaduse-@1x-6.jpg", "sketch-vabaduse-@2x-6.jpg"],
+        "alt": "фасад дома",
+        "description": "фасад дома снаружи с парковкой"
+      },
+      {
+        "srcImg": ["sketch-vabaduse-@1x-7.jpg", "sketch-vabaduse-@2x-7.jpg"],
+        "alt": "внешний вид дома вид снизу на парковку",
+        "description": "внешний вид дома вид снизу на парковку"
+      },
+      {
+        "srcImg": ["sketch-vabaduse-@1x-8.jpg", "sketch-vabaduse-@2x-8.jpg"],
+        "alt": "гостиная",
+        "description": "гостиная"
+      },
+      {
+        "srcImg": ["sketch-vabaduse-@1x-9.jpg", "sketch-vabaduse-@2x-9.jpg"],
+        "alt": "кухня с рабочей зоной",
+        "description": "кухня с рабочей зоной"
+      },
+      {
+        "srcImg": ["sketch-vabaduse-@1x-10.jpg", "sketch-vabaduse-@2x-10.jpg"],
+        "alt": "кухня другой ракурс",
+        "description": "кухня другой ракурс"
+      }
     ]
   },
   "contacts": {
