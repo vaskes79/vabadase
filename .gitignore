@@ -1,6 +1,7 @@
 node_modules
 public
 .vscode
+img
 
 # work no optimise assets and docs about project
 # should be save to the cloud storage YD or GD
