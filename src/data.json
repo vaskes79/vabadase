@@ -57,7 +57,7 @@
     "subHeading": "Row House на 4 семьи в 7 минутах от моря",
     "slideItems": [
       {
-        "srcImg": ["ust-narva-49-@1x.jpg", "ust-narva-49-@2x.jpg"],
+        "srcImg": "slide-1.jpg",
         "heading": "2 часа от петербурга",
         "paragraphs": [
           "Все лишь за 2 часа езды на машине можно добраться, до вашего дома в Европе. Где вас ждут Тихие ухоженные тропинки, сосновый лес и много чистого воздуха. ",
@@ -65,14 +65,14 @@
         ]
       },
       {
-        "srcImg": ["sea-3-min-@1x.jpg", "sea-3-min-@2x.jpg"],
+        "srcImg": "slide-2.jpg",
         "heading": "3 минуты до моря",
         "paragraphs": [
           "Дом VABADUSE расположен на побережъе нарвского залива, в трех минутах хотьбы от берега. Вы сможете очутится на море под теплым солнцем, буквально сразу как захотите!"
         ]
       },
       {
-        "srcImg": ["narva-jouse-@1x.jpg", "narva-jouse-@2x.jpg"],
+        "srcImg": "slide-3.jpg",
         "heading": "рядом все необходимое",
         "paragraphs": [
           "Через дорогу от дома расположен супермаркет. В минуте хотьбы СПА санаторий, известный на всю эстонию своими лечебыными процедурами, «Нарва-Йыэсуу». В 2014 году построен современный СПА центр «Норус». Планируется так же строительство аквапарка."
@@ -111,52 +111,52 @@
     "subHeading": "фото и эскизы проекта VBADUSE",
     "galleryItems": [
       {
-        "srcImg": ["sketch-vabaduse-1-@1x.jpg", "sketch-vabaduse-1-@2x.jpg"],
+        "srcImg": "sketch-vabaduse-1.jpg",
         "alt": "эскиз светлой спальни",
         "description": "открытые светлые спальни"
       },
       {
-        "srcImg": ["sketch-vabaduse-2-@1x.jpg", "sketch-vabaduse-2-@2x.jpg"],
+        "srcImg": "sketch-vabaduse-2.jpg",
         "alt": "кабинет и балкон",
         "description": "рабочий кабинет с выходом на балкон"
       },
       {
-        "srcImg": ["sketch-vabaduse-3-@1x.jpg", "sketch-vabaduse-3-@2x.jpg"],
+        "srcImg": "sketch-vabaduse-3.jpg",
         "alt": "ванная комната",
         "description": "ванная комната с окном"
       },
       {
-        "srcImg": ["sketch-vabaduse-4-@1x.jpg", "sketch-vabaduse-4-@2x.jpg"],
+        "srcImg": "sketch-vabaduse-4.jpg",
         "alt": "кабинет интерьер",
         "description": "уютный кабинет с диваном"
       },
       {
-        "srcImg": ["sketch-vabaduse-5-@1x.jpg", "sketch-vabaduse-5-@2x.jpg"],
+        "srcImg": "sketch-vabaduse-5.jpg",
         "alt": "внешний вид дома",
         "description": "внешний вид дома с парковкой"
       },
       {
-        "srcImg": ["sketch-vabaduse-6-@1x.jpg", "sketch-vabaduse-6-@2x.jpg"],
+        "srcImg": "sketch-vabaduse-6.jpg",
         "alt": "фасад дома",
         "description": "фасад дома снаружи с парковкой"
       },
       {
-        "srcImg": ["sketch-vabaduse-7-@1x.jpg", "sketch-vabaduse-7-@2x.jpg"],
+        "srcImg": "sketch-vabaduse-7.jpg",
         "alt": "внешний вид дома вид снизу на парковку",
         "description": "внешний вид дома вид снизу на парковку"
       },
       {
-        "srcImg": ["sketch-vabaduse-8-@1x.jpg", "sketch-vabaduse-8-@2x.jpg"],
+        "srcImg": "sketch-vabaduse-8.jpg",
         "alt": "гостиная",
         "description": "гостиная"
       },
       {
-        "srcImg": ["sketch-vabaduse-9-@1x.jpg", "sketch-vabaduse-9-@2x.jpg"],
+        "srcImg": "sketch-vabaduse-9.jpg",
         "alt": "кухня с рабочей зоной",
         "description": "кухня с рабочей зоной"
       },
       {
-        "srcImg": ["sketch-vabaduse-10-@1x.jpg", "sketch-vabaduse-10-@2x.jpg"],
+        "srcImg": "sketch-vabaduse-10.jpg",
         "alt": "кухня другой ракурс",
         "description": "кухня другой ракурс"
       }
@@ -227,17 +227,17 @@
       {
         "heading": "первый этаж",
         "description": "план первого этажа",
-        "srcImg": ["floor-1-@1x.jpg", "floor-1-@2x.jpg"]
+        "srcImg": "floor-1.jpg"
       },
       {
         "heading": "второй этаж",
         "description": "план второго этажа",
-        "srcImg": ["floor-2-@1x.jpg", "floor-2-@2x.jpg"]
+        "srcImg": "floor-2.jpg"
       },
       {
         "heading": "цокольный этаж",
         "description": "план цокольного этажа",
-        "srcImg": ["floor-0-@1x.jpg", "floor-0-@2x.jpg"]
+        "srcImg": "floor-0.jpg"
       }
     ]
   },

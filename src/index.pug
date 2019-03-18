@@ -1,5 +1,5 @@
 - const {head: {title}} = require('./data.json');
-- const bg = require('./static/img/background-image-source.jpg');
+- const bg = require('./static/img/bg-header.jpg');
 
 doctype html
 html(lang='ru')
@@ -13,4 +13,4 @@ html(lang='ru')
       script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
   body
     h1= title
-    img(src= bg, alt="background")
+    img( srcSet= bg.srcSet src= bg.src class='res__img' sizes='(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px' allt='background')
