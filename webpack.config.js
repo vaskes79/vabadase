@@ -74,7 +74,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
+        test: /\.(png|jpe?g)$/i,
         use: [
           {
             loader: 'responsive-loader',
@@ -83,6 +83,7 @@ module.exports = {
               placeholder: true,
               placeholderSize: 50,
               name: '[hash:6]-[name]-[width].[ext]',
+              outputPath: 'static/img',
             },
           },
           {
@@ -134,7 +135,7 @@ module.exports = {
         collapseWhitespace: true,
         caseSensitive: true,
         removeComments: true,
-        removeEmptyElements: true,
+        removeEmptyElements: false,
       },
     }),
   ],

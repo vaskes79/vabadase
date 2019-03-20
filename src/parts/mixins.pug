@@ -1,0 +1,11 @@
+mixin paragraph(data)
+    each item in data
+        p.paragraph= item
+
+mixin icon(icon)
+    svg.va-icon 
+        use(xlink:href= `#va-icon-${icon}`)
+
+mixin btn-icon({url, icon})
+    a.btn-icon(href= `#${url}`)
+        +icon(icon)

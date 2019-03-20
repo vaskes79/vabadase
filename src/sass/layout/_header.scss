@@ -1,0 +1,27 @@
+.header {
+    width: 100%;
+    // for phone view exclude top bar
+    height: calc(100vh - var(--top-menu));
+    margin-top: -7.25rem;
+    // end top menu
+    padding-left: var(--page-padding);
+    padding-right: var(--page-padding);
+    
+    background-image: url('../static/img/bg-header.jpg?size=600');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+
+    @include respond(tab-land) {
+        background-image: url('../static/img/bg-header.jpg?size=1200');
+        margin-top: 0;
+        .intro {
+            margin-left: 12rem;
+        }
+    }
+
+    @include respond(desctop) {
+        background-image: url('../static/img/bg-header.jpg?size=2000');
+    }
+}
