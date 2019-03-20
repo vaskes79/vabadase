@@ -20,4 +20,8 @@
             margin-left: 12rem;
         }
     }
+
+    @include respond(desctop) {
+        background-image: url('../static/img/bg-header.jpg?size=2000');
+    }
 }
