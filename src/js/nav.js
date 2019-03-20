@@ -12,13 +12,23 @@ class Nav {
   init() {
     if (window.innerWidth < 900) {
       this.elem.classList.add(this.activeClass);
+      this.addHandlers();
     }
-    this.btn.addEventListener('click', this.clickHandler);
 
     this.resizeHandler();
+  }
 
+  addHandlers() {
+    this.btn.addEventListener('click', this.clickHandler);
     this.links.forEach(link =>
       link.addEventListener('click', this.clickHandler),
+    );
+  }
+
+  removeHandlers() {
+    this.btn.removeEventListener('click', this.clickHandler);
+    this.links.forEach(link =>
+      link.removeEventListener('click', this.clickHandler),
     );
   }
 
@@ -27,8 +37,10 @@ class Nav {
       let width = e.currentTarget.innerWidth;
       if (width >= 900) {
         this.elem.classList.remove(this.activeClass);
-      } else if (width <= 900) {
+        this.removeHandlers();
+      } else if (width < 900) {
         this.elem.classList.add(this.activeClass);
+        this.addHandlers();
       }
     });
   }
