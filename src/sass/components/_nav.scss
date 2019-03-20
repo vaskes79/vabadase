@@ -20,6 +20,10 @@
     height: auto;
     margin-top: 2rem;
     transition: all 0.5s;
+
+    @include respond(tab-land) {
+
+    }
   }
 
   &__item {
