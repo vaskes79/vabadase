@@ -9,15 +9,20 @@
 :root {
   // fonts
   --heading-font: 'Roboto', system, sans-serif;
+  --logo-font: 'Fredericka the Great', cursive;
+  // font-family: 'Monoton', cursive;
+  // font-family: 'Fredericka the Great', cursive;
+  // font-family: 'Cabin Sketch', cursive;
+  // font-family: 'Bungee Outline', cursive;
 
   // colors
-  --white: rgba(255, 255, 255, 1);
-  --black: rgba(2, 50, 50, 1);
-  --green: rgba(4, 169, 155, 1);
-  --light-gray: rgba(188, 189, 189, 1);
-  --gray: rgba(109, 120, 107, 1);
-  --blue: rgb(81, 200, 240, 1);
-  --orange: rgb(251, 159, 107, 1);
+  --white: #ffffff;
+  --green: #04a99b;
+  --black: #023232;
+  --light-gray: #bcbdbd;
+  --gray: #6d786b;
+  --blue: #51c8f0;
+  --orange: #fb9f6b;
 
   // sizes
   --mb-ss: 2rem;
@@ -45,7 +50,8 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 2rem;
+  min-height: 2000px;
+  position: relative;
 }
 
 ::selection {
