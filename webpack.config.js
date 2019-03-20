@@ -74,7 +74,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
+        test: /\.(png|jpe?g)$/i,
         use: [
           {
             loader: 'responsive-loader',
