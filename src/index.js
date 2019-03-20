@@ -1,3 +1,6 @@
+import Nav from './js/Nav.js';
 import './sass/main.scss'
 
-console.log('entery point index js')
+const nav = new Nav('.nav', 'nav--close', '.nav__logo', '.nav__link');
+
+nav.init();

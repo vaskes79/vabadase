@@ -1,0 +1,12 @@
+- const {nav: { items }, contacts: {phone}} = require('../data.json');
+
+nav.nav
+    .nav__logo 
+        span.logo vabaduse
+    ul.nav__list
+        each item in items
+            - let {url, label} = item
+            li.nav__item
+                a.nav__link(href= `#${url}`)= label
+
+    .nav__phone.phone= phone 
