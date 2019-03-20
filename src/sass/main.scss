@@ -1,5 +1,12 @@
+@import './abstacts/vars';
 @import './abstacts/mixins';
 @import './base/typography';
 @import './base/base';
+@import './layout/_home-page';
+@import './layout/_header';
+
 @import './components/nav';
 @import './components/logo';
+@import './components/va-icon';
+@import './components/btn-icon';
+@import './components/intro';
