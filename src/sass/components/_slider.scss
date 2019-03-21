@@ -1,9 +1,17 @@
 .slider {
   position: relative;
+  perspective: 150rem;
 
   &__slides-container {
     position: relative;
-    perspective: 150rem;
+    backface-visibility: hidden;
+    transition: all 1s ease;
+    max-width: 75rem;
+    margin: 0 auto;
+
+    &--active {
+        transform: rotateY(-180deg);
+    }
   }
 
   &__slide {
@@ -19,11 +27,16 @@
     background-position: center;
     backface-visibility: hidden;
     transition: all 1s ease;
-    transform: rotateY(180deg);
     box-shadow: var(--elem-shadow);
+    opacity: 0;
     .paragraph,
     .heading-3 {
       padding: 0 var(--page-padding);
+    }
+
+    &:nth-child(even) {
+        backface-visibility: visible;
+        transform: rotateY(180deg);
     }
 
     .paragraph {
@@ -31,12 +44,9 @@
     }
 
     &--active {
+        opacity: 1;
         transform: rotateY(0deg);
     }
-
-    // &:not(:first-child) {
-    //   display: none;
-    // }
   }
 
   &__slide-img {
