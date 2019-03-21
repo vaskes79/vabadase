@@ -1,9 +1,11 @@
 @import './abstacts/vars';
 @import './abstacts/mixins';
+@import './abstacts/func';
 @import './base/typography';
 @import './base/base';
-@import './layout/_home-page';
-@import './layout/_header';
+@import './layout/home-page';
+@import './layout/header';
+@import './layout/slide-show';
 
 @import './components/nav';
 @import './components/logo';
