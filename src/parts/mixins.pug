@@ -24,9 +24,9 @@ mixin slider(slides)
         .slider__left-btn
             +icon('chevron-circle-left')
         .slider__slides-container
-            each slide in slides
+            each slide, i in slides
                 - let {srcImg, heading, paragraphs} = slide;
-                figure.slider__slide
+                figure.slider__slide(class= `${i === 0 ? 'slider__slide--active': ''}`)
                     +responsiveImg(require(`./static/img/${srcImg}`), 'slider__slide-img', heading)
                     figcaption.slider__slide-description
                         h3.heading-3= heading

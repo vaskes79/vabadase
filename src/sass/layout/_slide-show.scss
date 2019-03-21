@@ -1,6 +1,12 @@
 .slide-show {
+    position: relative;
     background-image: url('../static/img/bg-slider.jpg?size=600');
     background-size: cover;
     background-position: center;
     padding: var(--page-padding);
+    height: 95rem;
+
+    .slider {
+        margin-top: var(--page-padding);
+    }
 }

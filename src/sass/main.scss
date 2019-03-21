@@ -1,8 +1,10 @@
 @import './abstacts/vars';
 @import './abstacts/mixins';
 @import './abstacts/func';
+
 @import './base/typography';
 @import './base/base';
+
 @import './layout/home-page';
 @import './layout/header';
 @import './layout/slide-show';
@@ -12,3 +14,4 @@
 @import './components/va-icon';
 @import './components/btn-icon';
 @import './components/intro';
+@import './components/slider';

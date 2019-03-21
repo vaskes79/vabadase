@@ -24,6 +24,8 @@
   --blue: #51c8f0;
   --orange: #fb9f6b;
 
+  --elem-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.4);
+
   // sizes
   --mb-fonts: 1.25em;
   --top-menu: 7.5rem;
@@ -55,7 +57,6 @@ html {
 
 body {
   box-sizing: border-box;
-  min-height: 2000px;
   position: relative;
 }
 
