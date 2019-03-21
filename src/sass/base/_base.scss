@@ -24,10 +24,14 @@
   --blue: #51c8f0;
   --orange: #fb9f6b;
 
+  --elem-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.4);
+
   // sizes
-  --mb-ss: 2rem;
+  --mb-fonts: 1.25em;
   --top-menu: 7.5rem;
   --page-padding: 2rem;
+  --page-padding-medium: 8rem;
+  --page-padding-large: 12rem;
   --component-padding: .5rem;
   --icon-small: 2rem;
   --icon-middle: 4rem;
@@ -55,7 +59,6 @@ html {
 
 body {
   box-sizing: border-box;
-  min-height: 2000px;
   position: relative;
 }
 

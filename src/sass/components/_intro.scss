@@ -6,17 +6,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 1.5rem 1rem rgba(black, .4);
+    box-shadow: var(--elem-shadow);
     max-width: 60rem;
+    text-align: left;
     
     .heading {
         font-size: 3rem;
-        font-weight: 300;
         text-transform: uppercase;
         font-style: italic;
         color: inherit;
-        line-height: 1.2em;
-        margin-bottom: var(--mb-ss);
     }
 
     .subHeading {
@@ -26,5 +24,9 @@
     .paragraph {
         font-size: 1.8rem;
         color: inherit;
+    }
+
+    .btn-icon {
+        text-align: right;
     }
 }

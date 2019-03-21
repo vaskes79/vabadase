@@ -1,3 +1,11 @@
+mixin responsiveImg(url, className, alt)
+    img( 
+        srcSet= url.srcSet 
+        src= url.src 
+        class= className
+        sizes='(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px' 
+        alt= alt)
+
 mixin paragraph(data)
     each item in data
         p.paragraph= item
@@ -9,3 +17,19 @@ mixin icon(icon)
 mixin btn-icon({url, icon})
     a.btn-icon(href= `#${url}`)
         +icon(icon)
+
+
+mixin slider(slides)
+    .slider
+        .slider__left-btn
+            +icon('chevron-circle-left')
+        .slider__slides-container
+            each slide, i in slides
+                - let {srcImg, heading, paragraphs} = slide;
+                figure.slider__slide(class= `${i === 0 ? 'slider__slide--active': ''}`)
+                    +responsiveImg(require(`./static/img/${srcImg}`), 'slider__slide-img', heading)
+                    figcaption.slider__slide-description
+                        h3.heading-3= heading
+                        +paragraph(paragraphs)
+        .slider__right-btn
+            +icon('chevron-circle-right')
