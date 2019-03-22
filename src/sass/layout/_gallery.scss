@@ -1,0 +1,20 @@
+.gallery {
+  position: relative;
+  padding: var(--page-padding);
+
+  .gallery-items {
+    margin-top: var(--page-padding);
+    @include respond(tab-land) {
+      margin-top: var(--page-padding-large);
+    }
+  }
+
+  @include respond(tab-port) {
+    padding: var(--page-padding-medium);
+    min-height: 100vh;
+  }
+
+  @include respond(tab-land) {
+    padding: var(--page-padding-large);
+  }
+}
