@@ -1,0 +1,5 @@
+- const {skills} = require('./data.json');
+
+section#skills.skills
+    h2.heading-2= skills.heading
+    +skill-items(skills.skillItems)
