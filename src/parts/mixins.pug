@@ -53,6 +53,6 @@ mixin gallery-items(galleryData)
                 - let {srcImg, allt, description} = item;
                 figure.gallery-items__item
                     +responsiveImg(require(`./static/img/${srcImg}`), 'gallery-items__img', allt)
-                    figcaption.slider__slide-description
+                    figcaption.gallery-items__description
                         h3.heading-3= allt
-                        .paragraph= description
+                        p.paragraph= description

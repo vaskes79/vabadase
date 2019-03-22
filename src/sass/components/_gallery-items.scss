@@ -1,0 +1,26 @@
+.gallery-items {
+  &__container {
+  }
+
+  &__item {
+  }
+
+  &__img {
+      display: block;
+  }
+
+  &__description {
+    text-align: left;
+    line-height: 1.2;
+
+    .heading-3 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    .paragraph {
+      font-size: 1.6rem;
+      font-style: italic;
+    }
+  }
+}
