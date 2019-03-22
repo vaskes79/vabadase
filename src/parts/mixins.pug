@@ -1,10 +1,10 @@
-mixin responsiveImg(url, className, alt)
+mixin responsiveImg(url, className, allt)
     img( 
         srcSet= url.srcSet 
         src= url.src 
         class= className
         sizes='(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px' 
-        alt= alt)
+        allt= allt)
 
 mixin paragraph(data)
     each item in data
@@ -44,3 +44,15 @@ mixin skill-items(skillItemsData)
                 .skill-items__description
                     h3.heading-3= heading
                     +paragraph(paragraphs)
+
+
+mixin gallery-items(galleryData)
+    .gallery-items
+        .gallery-items__container
+            each item in galleryData
+                - let {srcImg, allt, description} = item;
+                figure.gallery-items__item
+                    +responsiveImg(require(`./static/img/${srcImg}`), 'gallery-items__img', allt)
+                    figcaption.slider__slide-description
+                        h3.heading-3= allt
+                        .paragraph= description

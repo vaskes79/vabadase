@@ -1,0 +1,6 @@
+- const {gallery} = require('./data.json');
+
+section#gallery.gallery
+    h2.heading-2= gallery.heading
+    span.sub-heading= gallery.subHeading
+    +gallery-items(gallery.galleryItems)
