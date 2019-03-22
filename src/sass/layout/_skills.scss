@@ -1,0 +1,16 @@
+.skills {
+  position: relative;
+  padding: var(--page-padding);
+  border-top: 1px solid var(--light-gray);
+  background: rgba($light-gray, 0.2);
+  border-bottom: 1px solid var(--light-gray);
+
+  @include respond(tab-port) {
+    padding: var(--page-padding-medium);
+  }
+
+  @include respond(tab-land) {
+    padding: var(--page-padding-large);
+    min-height: 100vh;
+  }
+}
