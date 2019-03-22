@@ -52,7 +52,8 @@ mixin gallery-items(galleryData)
             each item in galleryData
                 - let {srcImg, allt, description} = item;
                 figure.gallery-items__item
-                    +responsiveImg(require(`./static/img/${srcImg}`), 'gallery-items__img', allt)
+                    a.gallery-items__link(href= require(`./static/img/${srcImg}?size=2000`).src)
+                        +responsiveImg(require(`./static/img/${srcImg}`), 'gallery-items__img', allt)
                     figcaption.gallery-items__description
                         h3.heading-3= allt
                         p.paragraph= description
