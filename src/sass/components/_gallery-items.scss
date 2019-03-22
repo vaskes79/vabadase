@@ -1,9 +1,10 @@
 .gallery-items {
+  position: relative;
+
   &__container {
     @include respond(tab-land) {
       display: flex;
       justify-content: space-between;
-      align-content: start;
       flex-wrap: wrap;
     }
   }
@@ -51,7 +52,8 @@
     filter: saturate(250%);
   }
 
-  &__description {
+  &__description,
+  &__view-description {
     text-align: left;
     line-height: 1.2;
 
@@ -69,5 +71,70 @@
       position: absolute;
       visibility: hidden;
     }
+  }
+
+  //////////////////////////////////////////////////
+  // IMG VIEW
+  &__view-box {
+    position: fixed;
+    z-index: 2000;
+    padding: 3rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img-view {
+    width: 85vw;
+    height: 75vh;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 8);
+  }
+
+  &__img-show {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__view-description {
+    background-image: linear-gradient(
+      to bottom,
+      rgba($white, 0.8),
+      rgba($light-gray, 0.8)
+    );
+    width: 85vw;
+    padding: 0.5rem 3rem;
+    .paragraph {
+      margin: 0;
+    }
+
+    @include respond(tab-land) {
+      visibility: visible;
+    }
+  }
+
+  &__btn-L,
+  &__btn-close,
+  &__btn-R {
+    cursor: pointer;
+    &:hover {
+      .va-icon {
+        fill: var(--green);
+      }
+    }
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
 }

@@ -22,7 +22,7 @@ mixin btn-icon({url, icon})
 mixin slider(slides)
     .slider
         .slider__left-btn
-            +icon('chevron-circle-left')
+            +icon('chevron-left')
         .slider__slides-container
             each slide, i in slides
                 - let {srcImg, heading, paragraphs} = slide;
@@ -32,7 +32,7 @@ mixin slider(slides)
                         h3.heading-3= heading
                         +paragraph(paragraphs)
         .slider__right-btn
-            +icon('chevron-circle-right')
+            +icon('chevron-right')
 
 mixin skill-items(skillItemsData)
     ul.skill-items
@@ -48,6 +48,18 @@ mixin skill-items(skillItemsData)
 
 mixin gallery-items(galleryData)
     .gallery-items
+        .gallery-items__view-box
+            .gallery-items__btn-close
+                +icon('close')
+            .gallery-items__btn-L
+                +icon('chevron-left')
+            .gallery-items__img-view
+                img.gallery-items__img-show(src= require(`./static/img/sketch-vabaduse-1.jpg?size=1200`).src)
+                .gallery-items__view-description
+                    h3.hading-3 ваша новая спальня
+                    p.paragraph смотреть описание
+            .gallery-items__btn-R
+                +icon('chevron-right')
         .gallery-items__container
             each item in galleryData
                 - let {srcImg, allt, description} = item;
