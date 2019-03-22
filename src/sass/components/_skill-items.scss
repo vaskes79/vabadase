@@ -1,3 +1,60 @@
 .skill-items {
-    color: red;
+  list-style: none;
+
+  @include respond(tab-land) {
+    display: flex;
+  }
+
+  &__item {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-top: var(--page-padding);
+    @include respond(tab-land) {
+      max-width: 35rem;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--light-gray);
+      @include respond(tab-land) {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 15rem;
+    height: 15rem;
+    border: 4px solid var(--light-gray);
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    transition: all 0.3s ease;
+
+    .va-icon {
+      display: block;
+      margin: auto;
+      width: 6rem;
+      height: 6rem;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__description {
+    .heading-3 {
+      color: var(--green);
+    }
+
+    .paragraph {
+      color: var(--gray);
+    }
+  }
+
+  &__item:hover &__icon {
+    border: 4px solid var(--green);
+    .va-icon {
+      transform: rotate(360deg);
+      fill: var(--green);
+    }
+  }
 }

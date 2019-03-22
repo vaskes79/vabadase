@@ -9,8 +9,4 @@
     padding: var(--page-padding-medium);
   }
 
-  @include respond(tab-land) {
-    padding: var(--page-padding-large);
-    min-height: 100vh;
-  }
 }
