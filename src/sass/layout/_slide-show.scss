@@ -15,14 +15,15 @@
 
   @include respond(tab-port) {
     padding: var(--page-padding-medium);
-}
+  }
+
   @include respond(tab-land) {
     padding: var(--page-padding-large);
     background-image: url('../static/img/bg-slider.jpg?size=1200');
     min-height: 100vh;
   }
+
   @include respond(desctop) {
     background-image: url('../static/img/bg-slider.jpg?size=2000');
-    min-height: 100vh;
   }
 }
