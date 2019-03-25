@@ -2,12 +2,14 @@
 @import './abstacts/mixins';
 @import './abstacts/func';
 
-@import './base/typography';
 @import './base/base';
+@import './base/typography';
+@import './base/utilities';
 
 @import './layout/home-page';
 @import './layout/header';
 @import './layout/slide-show';
+@import './layout/skills';
 
 @import './components/nav';
 @import './components/logo';
@@ -15,3 +17,4 @@
 @import './components/btn-icon';
 @import './components/intro';
 @import './components/slider';
+@import './components/skill-items';

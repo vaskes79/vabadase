@@ -5,7 +5,9 @@ img
 
 # work no optimise assets and docs about project
 # should be save to the cloud storage YD or GD
+
 assets
+assets.*
 
 # Swap
 [._]*.s[a-v][a-z]
