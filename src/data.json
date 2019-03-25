@@ -112,52 +112,52 @@
     "galleryItems": [
       {
         "srcImg": "sketch-vabaduse-1.jpg",
-        "allt": "эскиз светлой спальни",
+        "alt": "эскиз светлой спальни",
         "description": "открытые светлые спальни"
       },
       {
         "srcImg": "sketch-vabaduse-2.jpg",
-        "allt": "кабинет и балкон",
+        "alt": "кабинет и балкон",
         "description": "рабочий кабинет с выходом на балкон"
       },
       {
         "srcImg": "sketch-vabaduse-3.jpg",
-        "allt": "ванная комната",
+        "alt": "ванная комната",
         "description": "ванная комната с окном"
       },
       {
         "srcImg": "sketch-vabaduse-4.jpg",
-        "allt": "кабинет интерьер",
+        "alt": "кабинет интерьер",
         "description": "уютный кабинет с диваном"
       },
       {
         "srcImg": "sketch-vabaduse-5.jpg",
-        "allt": "внешний вид дома",
+        "alt": "внешний вид дома",
         "description": "внешний вид дома с парковкой"
       },
       {
         "srcImg": "sketch-vabaduse-6.jpg",
-        "allt": "фасад дома",
+        "alt": "фасад дома",
         "description": "фасад дома снаружи с парковкой"
       },
       {
         "srcImg": "sketch-vabaduse-7.jpg",
-        "allt": "внешний вид дома вид снизу на парковку",
+        "alt": "внешний вид дома вид снизу на парковку",
         "description": "внешний вид дома вид снизу на парковку"
       },
       {
         "srcImg": "sketch-vabaduse-8.jpg",
-        "allt": "гостиная",
+        "alt": "гостиная",
         "description": "гостиная"
       },
       {
         "srcImg": "sketch-vabaduse-9.jpg",
-        "allt": "кухня с рабочей зоной",
+        "alt": "кухня с рабочей зоной",
         "description": "кухня с рабочей зоной"
       },
       {
         "srcImg": "sketch-vabaduse-10.jpg",
-        "allt": "кухня другой ракурс",
+        "alt": "кухня другой ракурс",
         "description": "кухня другой ракурс"
       }
     ]
