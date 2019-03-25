@@ -75,6 +75,7 @@
 
   //////////////////////////////////////////////////
   // IMG VIEW
+  $transition: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   &__view-box {
     position: fixed;
     top: 0;
@@ -87,13 +88,31 @@
     height: 100vh;
     padding: 3rem;
     background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s $transition;
   }
 
   &__img-view {
+    display: block;
     width: 85vw;
     height: 75vh;
     overflow: hidden;
     box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 8);
+    opacity: 0;
+    transform: scale(0.2);
+    transition: all 0.2s $transition;
+    transition-delay: 0.2s;
+  }
+
+  &--open &__view-box {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &--open &__img-view {
+    transform: scale(1);
+    opacity: 1;
   }
 
   &__img-show {
