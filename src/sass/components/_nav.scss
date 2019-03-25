@@ -1,9 +1,9 @@
 .nav {
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
+  width: 100%;
   text-align: center;
   background: var(--green);
 
@@ -22,13 +22,13 @@
   }
 
   &__list {
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-around;
     height: auto;
     margin-top: 2rem;
+    list-style: none;
     transition: all 0.5s;
     @include respond(tab-land) {
       flex-wrap: nowrap;
@@ -36,16 +36,16 @@
       margin-top: -0.5rem;
     }
     @include respond(desctop) {
-      margin-left: 3rem;
       margin-right: auto;
+      margin-left: 3rem;
     }
   }
 
   &__item {
-    margin-bottom: 1rem;
     width: 45%;
-    opacity: 1;
+    margin-bottom: 1rem;
     transform: translateY(0);
+    opacity: 1;
 
     @for $i from 1 through 6 {
       &:nth-child(#{$i}) {
@@ -71,21 +71,21 @@
   &__link {
     &:link,
     &:visited {
-      font-weight: 700;
-      background: var(--white);
       display: inline-block;
-      text-decoration: none;
-      padding: 1.6rem 0;
       width: 100%;
       height: 100%;
-      transition: 0.2s all;
+      padding: 1.6rem 0;
       color: var(--black);
+      font-weight: 700;
+      text-decoration: none;
+      background: var(--white);
+      transition: 0.2s all;
 
       @include respond(tab-land) {
+        height: auto;
+        padding: 0 1.6rem;
         font-size: 1.6rem;
         background: none;
-        padding: 0 1.6rem;
-        height: auto;
       }
       @include respond(desctop) {
         font-size: 2rem;
@@ -94,27 +94,27 @@
 
     &:hover,
     &:focus {
-      outline: none;
-      background: var(--green);
       color: var(--white);
+      background: var(--green);
+      outline: none;
       box-shadow: 0 0.5rem 1rem rgba(black, 0.5);
       transform: translateY(-1px);
     }
 
     &:active {
-      transform: translateY(1px);
       box-shadow: 0 0.2rem 1rem rgba(black, 0.5);
+      transform: translateY(1px);
     }
   }
 
   &__logo,
   &__phone {
-    background-color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     font-size: 1.5rem;
+    background-color: var(--white);
 
     @include respond(desctop) {
       font-size: 2rem;
@@ -132,11 +132,11 @@
   }
 
   &__phone {
-    margin-top: 0;
     display: none;
+    margin-top: 0;
     @include respond(tab-land) {
-      background: none;
       display: block;
+      background: none;
     }
   }
 
@@ -149,13 +149,13 @@
 
   &--close &__list {
     height: 0;
-    overflow: hidden;
     margin-top: 1px;
+    overflow: hidden;
   }
 
   &--close &__item {
-    opacity: 0;
     transform: translateY(-10px);
+    opacity: 0;
   }
 
   &--close &__logo {

@@ -2,30 +2,29 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=cyrillic');
 
 @font-face {
+  font-weight: 300;
   font-family: system;
   font-style: normal;
-  font-weight: 300;
   src: local('.SFNSText-Light'), local('.HelveticaNeueDeskInterface-Light'),
     local('.LucidaGrandeUI'), local('Ubuntu Light'), local('Segoe UI Light'),
     local('Roboto-Light'), local('DroidSans'), local('Tahoma');
 }
 
 body {
-  font-family: system;
-  font-size: 2rem;
-  line-height: 1.45;
-  background-color: var(--white);
   color: var(--black);
+  font-size: 2rem;
+  font-family: system;
+  line-height: 1.45;
   text-align: center;
+  background-color: var(--white);
 }
 
 #{headings(1,6)} {
-  font-family: var(--heading-font);
-  margin: 2.75rem 0rem 1rem;
+  margin: 2.75rem 0 1rem;
   font-weight: 300;
+  font-family: var(--heading-font);
   line-height: 1.15;
 }
-
 
 .heading-1 {
   margin-top: 0;

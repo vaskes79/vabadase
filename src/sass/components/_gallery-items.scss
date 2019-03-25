@@ -4,8 +4,8 @@
   &__container {
     @include respond(tab-land) {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 
@@ -54,8 +54,13 @@
 
   &__description,
   &__view-description {
-    text-align: left;
     line-height: 1.2;
+    text-align: left;
+
+    @include respond(tab-land) {
+      position: absolute;
+      visibility: hidden;
+    }
 
     .heading-3 {
       margin: 0;
@@ -66,27 +71,22 @@
       font-size: 1.6rem;
       font-style: italic;
     }
-
-    @include respond(tab-land) {
-      position: absolute;
-      visibility: hidden;
-    }
   }
 
   //////////////////////////////////////////////////
   // IMG VIEW
   &__view-box {
     position: fixed;
-    z-index: 2000;
-    padding: 3rem;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.8);
   }
 
   &__img-view {
@@ -105,19 +105,20 @@
   }
 
   &__view-description {
+    width: 85vw;
+    padding: 0.5rem 3rem;
     background-image: linear-gradient(
       to bottom,
       rgba($white, 0.8),
       rgba($light-gray, 0.8)
     );
-    width: 85vw;
-    padding: 0.5rem 3rem;
-    .paragraph {
-      margin: 0;
-    }
 
     @include respond(tab-land) {
       visibility: visible;
+    }
+
+    .paragraph {
+      margin: 0;
     }
   }
 
@@ -125,6 +126,7 @@
   &__btn-close,
   &__btn-R {
     cursor: pointer;
+
     &:hover {
       .va-icon {
         fill: var(--green);

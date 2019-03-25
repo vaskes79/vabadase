@@ -1,15 +1,14 @@
 .btn-icon {
-    &:link,
-    &:visited {
-        text-decoration: none;
-    }
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
 
-    &:active,
-    &:focus,
-    &:hover {
-        & .va-icon {
-            fill: var(--green);
-        }
+  &:active,
+  &:focus,
+  &:hover {
+    & .va-icon {
+      fill: var(--green);
     }
-
+  }
 }

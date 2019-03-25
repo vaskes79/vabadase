@@ -2,19 +2,19 @@
   position: relative;
   padding: var(--page-padding);
 
+  @include respond(tab-port) {
+    min-height: 100vh;
+    padding: var(--page-padding-medium);
+  }
+
+  @include respond(tab-land) {
+    padding: var(--page-padding-large);
+  }
+
   .gallery-items {
     margin-top: var(--page-padding);
     @include respond(tab-land) {
       margin-top: var(--page-padding-large);
     }
-  }
-
-  @include respond(tab-port) {
-    padding: var(--page-padding-medium);
-    min-height: 100vh;
-  }
-
-  @include respond(tab-land) {
-    padding: var(--page-padding-large);
   }
 }

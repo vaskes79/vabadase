@@ -3,9 +3,8 @@ class Gallery {
     elem = '.gallery-items',
     galleryItems = '.gallery-items__item',
     activeModifire = 'gallery-items--active',
-    classNameLink = '.gallery-items__link',
+    classNameLink = '.gallery-items__link'
   ) {
-
     this.elem = document.querySelector(elem);
     this.galleryItems = document.querySelectorAll(galleryItems);
     this.linkName = classNameLink;
@@ -24,7 +23,7 @@ class Gallery {
     e.preventDefault();
 
     this.galleryItems.forEach(item =>
-      item.classList.remove(this.activeModifire),
+      item.classList.remove(this.activeModifire)
     );
 
     e.target.parentNode.parentNode.classList.add(this.activeModifire);

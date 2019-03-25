@@ -1,9 +1,9 @@
 *,
 *::after,
 *::before {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
 }
 
 :root {
@@ -16,7 +16,7 @@
   // font-family: 'Bungee Outline', cursive;
 
   // colors
-  --white: #ffffff;
+  --white: #fff;
   --green: #04a99b;
   --black: #023232;
   --light-gray: #bcbdbd;
@@ -32,7 +32,7 @@
   --page-padding: 2rem;
   --page-padding-medium: 8rem;
   --page-padding-large: 12rem;
-  --component-padding: .5rem;
+  --component-padding: 0.5rem;
   --icon-small: 2rem;
   --icon-middle: 4rem;
 }
@@ -58,11 +58,11 @@ html {
 }
 
 body {
-  box-sizing: border-box;
   position: relative;
+  box-sizing: border-box;
 }
 
 ::selection {
-  background-color: var(--green);
   color: var(--white);
+  background-color: var(--green);
 }

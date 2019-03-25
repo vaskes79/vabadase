@@ -1,15 +1,15 @@
 .slider {
   position: relative;
-  perspective: 150rem;
-  margin: 0 auto;
   max-width: 95rem;
+  margin: 0 auto;
+  perspective: 150rem;
 
   &__slides-container {
     position: relative;
-    backface-visibility: hidden;
-    transition: all 1s ease;
     max-width: 75rem;
     margin: 0 auto;
+    backface-visibility: hidden;
+    transition: all 1s ease;
 
     &--active {
       transform: rotateY(-180deg);
@@ -25,20 +25,33 @@
       var(--light-gray),
       var(--gray)
     );
-    background-size: cover;
     background-position: center;
-    backface-visibility: hidden;
-    transition: all 1s ease;
+    background-size: cover;
     box-shadow: var(--elem-shadow);
+    backface-visibility: hidden;
     opacity: 0;
+    transition: all 1s ease;
+
+    @include respond(tab-land) {
+      display: flex;
+      height: 40rem;
+      overflow: hidden;
+
+      background-image: linear-gradient(
+        to bottom right,
+        var(--light-gray),
+        var(--gray)
+      );
+    }
+
     .paragraph,
     .heading-3 {
       padding: 0 var(--page-padding);
     }
 
     &:nth-child(even) {
-      backface-visibility: visible;
       transform: rotateY(180deg);
+      backface-visibility: visible;
     }
 
     .paragraph {
@@ -46,20 +59,8 @@
     }
 
     &--active {
-      opacity: 1;
       transform: rotateY(0deg);
-    }
-
-    @include respond(tab-land) {
-      display: flex;
-      overflow: hidden;
-      height: 40rem;
-
-      background-image: linear-gradient(
-        to bottom right,
-        var(--light-gray),
-        var(--gray)
-      );
+      opacity: 1;
     }
   }
 
@@ -92,6 +93,7 @@
     left: var(--page-padding);
     z-index: 100;
     cursor: pointer;
+
     .va-icon {
       fill: var(--green);
     }

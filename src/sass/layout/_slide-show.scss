@@ -1,29 +1,29 @@
 .slide-show {
   position: relative;
-  background-image: url('../static/img/bg-slider.jpg?size=600');
-  background-size: cover;
-  background-position: center;
-  padding: var(--page-padding);
   height: 95rem;
-
-  .slider {
-    margin-top: var(--page-padding);
-    @include respond(tab-land) {
-      margin-top: var(--page-padding-large);
-    }
-  }
+  padding: var(--page-padding);
+  background-image: url('../static/img/bg-slider.jpg?size=600');
+  background-position: center;
+  background-size: cover;
 
   @include respond(tab-port) {
     padding: var(--page-padding-medium);
   }
 
   @include respond(tab-land) {
+    min-height: 100vh;
     padding: var(--page-padding-large);
     background-image: url('../static/img/bg-slider.jpg?size=1200');
-    min-height: 100vh;
   }
 
   @include respond(desctop) {
     background-image: url('../static/img/bg-slider.jpg?size=2000');
+  }
+
+  .slider {
+    margin-top: var(--page-padding);
+    @include respond(tab-land) {
+      margin-top: var(--page-padding-large);
+    }
   }
 }
