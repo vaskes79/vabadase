@@ -1,62 +1,92 @@
 class Gallery {
   constructor(
     rootElem = '.gallery-items',
-    items = '.gallery-items__item',
-    itemsContainer = '.gallery-items__container',
     openModifire = 'gallery-items--open',
-    links = '.gallery-items__link',
+    itemsContainer = '.gallery-items__container',
+    items = '.gallery-items__item',
+    itemLinks = '.gallery-items__link',
+    closeBtn = '.gallery-items__btn-close',
     nextBtn = '.gallery-items__btn-R',
     previousBtn = '.gallery-items__btn-L',
-    closeBtn = '.gallery-items__btn-close',
-    imgShow = '.gallery-items__img-show'
+    currentImg = '.gallery-items__img-show'
   ) {
     this.rootElem = document.querySelector(rootElem);
+    this.openModifire = openModifire;
+
+    this.itemsContainer = document.querySelector(itemsContainer);
     this.items = document.querySelectorAll(items);
+    this.itemLinks = document.querySelectorAll(itemLinks);
+
     this.closeBtn = document.querySelector(closeBtn);
     this.nextBtn = document.querySelector(nextBtn);
     this.previousBtn = document.querySelector(previousBtn);
-    this.itemsContainer = document.querySelector(itemsContainer);
-    this.imgShow = document.querySelector(imgShow);
-    this.linkName = links;
-    this.openModifire = openModifire;
 
-    this.init = this.init.bind(this);
+    this.currentImg = document.querySelector(currentImg);
+
     this.openHandler = this.openHandler.bind(this);
-    this.setHandlers = this.setHandlers.bind(this);
     this.closeHandler = this.closeHandler.bind(this);
-    this.nextHandler = this.nextHandler.bind(this);
-    this.previousHandler = this.previousHandler.bind(this);
   }
 
   init() {
     this.setHandlers();
+    this.createStorageImages();
   }
 
-  nextHandler() {
-    console.log('next');
+  createStorageImages() {
+    this.storageImages = [].map.call(this.itemLinks, item => item.href);
   }
 
-  previousHandler() {
-    console.log('previous');
+  nextHandler(imgSrc) {
+    console.log('nextBtn');
+    if (imgSrc) {
+      this.nextBtn.style.cssText = 'opacity: 1; cursor: pointer;';
+      // this.nextImg.src = imgSrc;
+    }
+  }
+
+  previousHandler(imgSrc) {
+    console.log('previousBtn');
+    if (imgSrc) {
+      this.previousBtn.style.cssText = 'opacity: 1; cursor: pointer;';
+      // this.previousImg.src = imgSrc;
+    }
   }
 
   openHandler(e) {
     e.preventDefault();
+    let currentImg, previousImg, nextImg, currentImgIndex, storImg;
+    storImg = this.storageImages;
 
     switch (e.target.tagName) {
       case 'A':
-        this.imgShow.src = e.target.href;
+        currentImg = e.target;
         break;
       case 'IMG':
-        this.imgShow.src = e.target.parentNode.href;
+        currentImg = e.target.parentNode;
         break;
     }
 
+    currentImgIndex = storImg.findIndex(item => item === currentImg.href);
+
+    previousImg = currentImgIndex === 0 ? null : storImg[currentImgIndex - 1];
+    nextImg =
+      currentImgIndex === storImg.length - 1
+        ? null
+        : storImg[currentImgIndex + 1];
+
+    this.currentImg.src = currentImg.href;
+
+    this.previousHandler(previousImg);
+    this.nextHandler(nextImg);
     this.rootElem.classList.add(this.openModifire);
+    document.body.style.cssText = 'overflow: hidden';
   }
 
   closeHandler() {
     this.rootElem.classList.remove(this.openModifire);
+    this.previousBtn.style.cssText = 'opacity: 0; cursor: none';
+    this.nextBtn.style.cssText = 'opacity: 0; cursor: none';
+    document.body.style.cssText = 'overflow: visible';
   }
 
   setHandlers() {
