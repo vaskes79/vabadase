@@ -118,7 +118,6 @@
 
   &__img-show {
     display: block;
-    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
@@ -134,6 +133,12 @@
     &--next {
       left: 110%;
     }
+  }
+
+  &__wrap-items {
+    height: 100%;
+    display: flex;
+    transform: translateX(0);
   }
 
   &__view-description {

@@ -17,6 +17,7 @@ class Gallery {
     this.openHandler = this.openHandler.bind(this);
     this.createImgItem = this.createImgItem.bind(this);
     this.closeHandler = this.closeHandler.bind(this);
+    this.setCurrentPosition = this.setCurrentPosition.bind(this);
   }
   createItems() {
     let {items, createImgItem, viewBox, dataItems, wrapItemsClassName} = this;
@@ -107,9 +108,8 @@ class Gallery {
     }
     // 2. set this.currentIndex
     this.currentIndex = parseInt(currentItem['dataset']['index']);
-
     // 3. set position wrapItems
-    // setCurrentPosition();
+    setCurrentPosition();
     // 4. show gallery
     gallery.classList.add(open);
   }
@@ -138,7 +138,24 @@ class Gallery {
     console.log('keyboardHandlers is working');
   }
 
-  setCurrentPosition() {}
+  setCurrentPosition() {
+    let {currentIndex, startPos, endPos} = this;
+    // 1. calculate
+    let offset = currentIndex * -100;
+    // 4. condition
+    switch (currentIndex) {
+      case startPos:
+        offset = 0;
+        break;
+      case endPos:
+        offset = endPos * -100;
+        break;
+    }
+    console.log(offset);
+    // 5. update value
+    this.wrapItems.style.cssText = `transform: translateX(${offset}%);`;
+    // showControlls();
+  }
 
   init() {
     this.createItems();
