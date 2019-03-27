@@ -4,6 +4,8 @@ class Gallery {
     this.items = document.querySelectorAll(`${gal}__link`);
     this.viewBox = document.querySelector(`${gal}__img-view`);
     this.btnClose = document.querySelector(`${gal}__btn-close`);
+    this.btnPrevious = document.querySelector(`${gal}__btn-L`);
+    this.btnNext = document.querySelector(`${gal}__btn-R`);
     this.container = document.querySelector(`${gal}__container`);
 
     this.wrapItemsClassName = `${gal.slice(1)}__wrap-items`;
@@ -18,6 +20,7 @@ class Gallery {
     this.createImgItem = this.createImgItem.bind(this);
     this.closeHandler = this.closeHandler.bind(this);
     this.setCurrentPosition = this.setCurrentPosition.bind(this);
+    this.showControlls = this.showControlls.bind(this);
   }
   createItems() {
     let {items, createImgItem, viewBox, dataItems, wrapItemsClassName} = this;
@@ -139,7 +142,7 @@ class Gallery {
   }
 
   setCurrentPosition() {
-    let {currentIndex, startPos, endPos} = this;
+    let {showControlls, currentIndex, startPos, endPos} = this;
     // 1. calculate
     let offset = currentIndex * -100;
     // 4. condition
@@ -154,7 +157,23 @@ class Gallery {
     console.log(offset);
     // 5. update value
     this.wrapItems.style.cssText = `transform: translateX(${offset}%);`;
-    // showControlls();
+    showControlls();
+  }
+
+  showControlls() {
+    let {currentIndex, endPos, btnPrevious, btnNext} = this;
+
+    btnPrevious.style.cssText = 'cursor: pointer; opacity: 1; visible: visible';
+    btnNext.style.cssText = 'cursor: pointer; opacity: 1; visible: visible';
+
+    if (currentIndex <= 0) {
+      btnPrevious.style.cssText = 'opacity: 0; visible: hidden';
+      currentIndex = 0;
+    }
+    if (currentIndex >= endPos) {
+      btnNext.style.cssText = 'opacity: 0; visible: hidden';
+      currentIndex = endPos;
+    }
   }
 
   init() {
