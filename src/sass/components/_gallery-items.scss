@@ -111,16 +111,29 @@
   }
 
   &--open &__img-view {
+    position: relative;
     transform: scale(1);
     opacity: 1;
   }
 
   &__img-show {
     display: block;
+    position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     object-fit: cover;
     object-position: center;
+    transition: all 0.2s $transition;
+
+    &--previous {
+      left: -110%;
+    }
+
+    &--next {
+      left: 110%;
+    }
   }
 
   &__view-description {

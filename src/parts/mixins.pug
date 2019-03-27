@@ -47,25 +47,25 @@ mixin skill-items(skillItemsData)
 
 
 mixin gallery-items(galleryData)
-    .gallery-items
-        .gallery-items__view-box
-            .gallery-items__btn-close
-                +icon('close')
-            .gallery-items__btn-L
-                +icon('chevron-left')
-            .gallery-items__img-view
-                img.gallery-items__img-show(src= require(`./static/img/sketch-vabaduse-1.jpg?size=1200`).src)
-                .gallery-items__view-description
-                    h3.hading-3 ваша новая спальня
-                    p.paragraph смотреть описание
-            .gallery-items__btn-R
-                +icon('chevron-right')
-        .gallery-items__container
-            each item in galleryData
-                - let {srcImg, allt, description} = item;
-                figure.gallery-items__item
-                    a.gallery-items__link(href= require(`./static/img/${srcImg}?size=2000`).src)
-                        +responsiveImg(require(`./static/img/${srcImg}`), 'gallery-items__img', allt)
-                    figcaption.gallery-items__description
-                        h3.heading-3= allt
-                        p.paragraph= description
+  .gallery-items
+    .gallery-items__view-box
+      .gallery-items__btn-close
+        +icon('close')
+      .gallery-items__btn-L
+        +icon('chevron-left')
+      .gallery-items__img-view
+        .gallery-items__view-description
+          h3.hading-3 ваша новая спальня
+          p.paragraph смотреть описание
+      .gallery-items__btn-R
+        +icon('chevron-right')
+    .gallery-items__container
+      each item, index in galleryData
+        - let {srcImg, allt, description} = item;
+        figure.gallery-items__item
+          a.gallery-items__link(href=
+          require(`./static/img/${srcImg}?size=2000`).src data-allt= allt data-index= index data-description= description)
+            +responsiveImg(require(`./static/img/${srcImg}`), 'gallery-items__img', allt)
+          figcaption.gallery-items__description
+            h3.heading-3= allt
+            p.paragraph= description
