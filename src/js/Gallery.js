@@ -23,6 +23,7 @@ class Gallery {
     this.showControlls = this.showControlls.bind(this);
     this.previousHandler = this.previousHandler.bind(this);
     this.nextHandler = this.nextHandler.bind(this);
+    this.keyboardHandlers = this.keyboardHandlers.bind(this);
   }
   createItems() {
     let {items, createImgItem, viewBox, dataItems, wrapItemsClassName} = this;
@@ -91,6 +92,7 @@ class Gallery {
     btnPrevious.addEventListener('click', previousHandler);
     btnNext.addEventListener('click', nextHandler);
     // 4. set handlers for keyboard events
+    window.addEventListener('keydown', keyboardHandlers);
   }
 
   openHandler(e) {
@@ -147,7 +149,37 @@ class Gallery {
   }
 
   keyboardHandlers(e) {
-    console.log('keyboardHandlers is working');
+    let {keyCode, which} = e;
+    let {
+      setCurrentPosition,
+      gallery,
+      modifires: {open},
+    } = this;
+    let galleryIsOpen = gallery.classList.contains(open);
+    // esc, q
+    let closeKeys = [27, 81];
+    // h, →
+    let prevKeys = [72, 37];
+    // h, ←
+    let nextKeys = [76, 39];
+
+    let isClose = closeKeys.includes(keyCode) || closeKeys.includes(which);
+    let isPrev = prevKeys.includes(keyCode) || prevKeys.includes(which);
+    let isNext = nextKeys.includes(keyCode) || nextKeys.includes(which);
+
+    if (isClose && galleryIsOpen) {
+      gallery.classList.remove(open);
+    }
+
+    if (isPrev && galleryIsOpen) {
+      this.currentIndex--;
+      setCurrentPosition();
+    }
+
+    if (isNext && galleryIsOpen) {
+      this.currentIndex++;
+      setCurrentPosition();
+    }
   }
 
   setCurrentPosition() {
