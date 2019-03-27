@@ -1,0 +1,184 @@
+.gallery-items {
+  position: relative;
+
+  &__container {
+    @include respond(tab-land) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    position: relative;
+    @include respond(tab-land) {
+      flex-basis: 22%;
+      margin-top: calc(12% / 3);
+
+      &:last-child {
+        margin-right: auto;
+        margin-left: calc(12% / 3);
+      }
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      transform: translateY(0);
+      transition: all 0.2s ease;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
+      transform: translateY(-1px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__img {
+    display: block;
+    transition: all 0.2s ease;
+  }
+
+  &__link:hover &__img,
+  &__link:focus &__img {
+    filter: saturate(250%);
+  }
+
+  &__description,
+  &__view-description {
+    line-height: 1.2;
+    text-align: left;
+
+    @include respond(tab-land) {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    .heading-3 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    .paragraph {
+      font-size: 1.6rem;
+      font-style: italic;
+    }
+  }
+
+  //////////////////////////////////////////////////
+  // IMG VIEW
+  $transition: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  &__view-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s $transition;
+  }
+
+  &__img-view {
+    position: relative;
+    display: block;
+    width: 85vw;
+    height: 75vh;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 8);
+    opacity: 0;
+    transform: scale(0.2);
+    transition: all 0.2s $transition;
+    transition-delay: 0.2s;
+  }
+
+  &--open &__view-box {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &--open &__img-view {
+    position: relative;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &__img-show {
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.2s $transition;
+
+    &--previous {
+      left: -110%;
+    }
+
+    &--next {
+      left: 110%;
+    }
+  }
+
+  &__wrap-items {
+    height: 100%;
+    display: flex;
+    transition: all 0.2s $transition;
+    transform: translateX(0);
+  }
+
+  &__view-description {
+    width: 85vw;
+    padding: 0.5rem 3rem;
+    background-image: linear-gradient(
+      to bottom,
+      rgba($white, 0.8),
+      rgba($light-gray, 0.8)
+    );
+
+    @include respond(tab-land) {
+      visibility: visible;
+    }
+
+    .paragraph {
+      margin: 0;
+    }
+  }
+
+  &__btn-L,
+  &__btn-close,
+  &__btn-R {
+    cursor: none;
+    opacity: 0;
+
+    &:hover {
+      .va-icon {
+        fill: var(--green);
+      }
+    }
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    opacity: 1;
+    cursor: pointer;
+  }
+}

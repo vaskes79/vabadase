@@ -3,6 +3,8 @@ public
 .vscode
 img
 
+.DS_Store
+
 # work no optimise assets and docs about project
 # should be save to the cloud storage YD or GD
 

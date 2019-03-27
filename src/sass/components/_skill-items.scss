@@ -23,19 +23,19 @@
 
   &__icon {
     display: block;
+    display: flex;
     width: 15rem;
     height: 15rem;
+    margin: 0 auto;
     border: 4px solid var(--light-gray);
     border-radius: 50%;
-    margin: 0 auto;
-    display: flex;
     transition: all 0.3s ease;
 
     .va-icon {
       display: block;
-      margin: auto;
       width: 6rem;
       height: 6rem;
+      margin: auto;
       transition: all 0.3s ease;
     }
   }
@@ -52,6 +52,7 @@
 
   &__item:hover &__icon {
     border: 4px solid var(--green);
+
     .va-icon {
       transform: rotate(360deg);
       fill: var(--green);
