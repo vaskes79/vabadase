@@ -138,6 +138,7 @@
   &__wrap-items {
     height: 100%;
     display: flex;
+    transition: all 0.2s $transition;
     transform: translateX(0);
   }
 

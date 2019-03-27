@@ -21,6 +21,8 @@ class Gallery {
     this.closeHandler = this.closeHandler.bind(this);
     this.setCurrentPosition = this.setCurrentPosition.bind(this);
     this.showControlls = this.showControlls.bind(this);
+    this.previousHandler = this.previousHandler.bind(this);
+    this.nextHandler = this.nextHandler.bind(this);
   }
   createItems() {
     let {items, createImgItem, viewBox, dataItems, wrapItemsClassName} = this;
@@ -76,6 +78,8 @@ class Gallery {
       previousHandler,
       keyboardHandlers,
       btnClose,
+      btnPrevious,
+      btnNext,
       container,
     } = this;
 
@@ -84,6 +88,8 @@ class Gallery {
     // 2. set handlers for close events
     btnClose.addEventListener('click', closeHandler);
     // 3. set handlers for controls events
+    btnPrevious.addEventListener('click', previousHandler);
+    btnNext.addEventListener('click', nextHandler);
     // 4. set handlers for keyboard events
   }
 
@@ -118,7 +124,6 @@ class Gallery {
   }
 
   closeHandler(e) {
-    console.log('close is working');
     let {
       modifires: {open},
       gallery,
@@ -131,10 +136,14 @@ class Gallery {
 
   nextHandler(e) {
     console.log('nextHandler is working');
+    this.currentIndex++;
+    this.setCurrentPosition();
   }
 
   previousHandler(e) {
     console.log('previousHandler is working');
+    this.currentIndex--;
+    this.setCurrentPosition();
   }
 
   keyboardHandlers(e) {
@@ -146,15 +155,8 @@ class Gallery {
     // 1. calculate
     let offset = currentIndex * -100;
     // 4. condition
-    switch (currentIndex) {
-      case startPos:
-        offset = 0;
-        break;
-      case endPos:
-        offset = endPos * -100;
-        break;
-    }
-    console.log(offset);
+    if (currentIndex <= startPos) offset = 0;
+    if (currentIndex >= endPos) offset = endPos * -100;
     // 5. update value
     this.wrapItems.style.cssText = `transform: translateX(${offset}%);`;
     showControlls();
@@ -168,11 +170,11 @@ class Gallery {
 
     if (currentIndex <= 0) {
       btnPrevious.style.cssText = 'opacity: 0; visible: hidden';
-      currentIndex = 0;
+      this.currentIndex = 0;
     }
     if (currentIndex >= endPos) {
       btnNext.style.cssText = 'opacity: 0; visible: hidden';
-      currentIndex = endPos;
+      this.currentIndex = endPos;
     }
   }
 
