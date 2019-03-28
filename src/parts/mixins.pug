@@ -1,3 +1,10 @@
+mixin navList(data)
+  ul.nav__list
+    each item in data
+      -let {url, label} = item
+      li.nav__item
+        a.nav__link(href= `#${url}`)= label
+
 mixin responsiveImg(url, className, allt)
     img( 
         srcSet= url.srcSet 
@@ -46,26 +53,30 @@ mixin skill-items(skillItemsData)
                     +paragraph(paragraphs)
 
 
-mixin gallery-items(galleryData)
-  .gallery-items
-    .gallery-items__view-box
-      .gallery-items__btn-close
-        +icon('close')
-      .gallery-items__btn-L
-        +icon('chevron-left')
-      .gallery-items__img-view
-        .gallery-items__view-description
-          h3.hading-3 ваша новая спальня
-          p.paragraph смотреть описание
-      .gallery-items__btn-R
-        +icon('chevron-right')
-    .gallery-items__container
-      each item, index in galleryData
-        - let {srcImg, allt, description} = item;
-        figure.gallery-items__item
-          a.gallery-items__link(href=
-          require(`./static/img/${srcImg}?size=2000`).src data-allt= allt data-index= index data-description= description)
-            +responsiveImg(require(`./static/img/${srcImg}`), 'gallery-items__img', allt)
-          figcaption.gallery-items__description
-            h3.heading-3= allt
-            p.paragraph= description
+mixin gallery-items(data)
+  .gallery-items__container
+    each item, index in data 
+      - let {srcImg, alt, description} = item;
+      figure.gallery-items__item
+        a.gallery-items__link(href=
+        require(`./static/img/${srcImg}?size=2000`).src data-alt= alt data-index= index data-description= description)
+          +responsiveImg(require(`./static/img/${srcImg}`), 'gallery-items__img', alt)
+        figcaption.gallery-items__description
+          h3.heading-3= alt
+          p.paragraph= description
+
+mixin card({heading, features, priceValue, priceFor})
+
+  .card
+    .card__header
+      h3.heading-3= heading
+    ul.card__item-container
+      each item in features
+        - let {icon, text} = item
+        li.card__item
+          span.card__item-icon
+            +icon(icon)
+          span.card__description= text
+    .card__footer
+      .card__value= priceValue
+        .card__describe-value= priceFor

@@ -1,0 +1,8 @@
+section#price.price
+  header.price__header
+    h2.heading-2= price.heading
+    span.subHeading= price.subHeading
+  .price__content
+    each item in price.priceItems
+      +card(item)
+  footer.price__footer

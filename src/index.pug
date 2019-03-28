@@ -1,5 +1,13 @@
-- const {head: {title}} = require('./data.json');
-- const bg = require('./static/img/bg-header.jpg');
+-const {
+-    head: {title}, 
+-    nav, 
+-    header, 
+-    slideShow,
+-    skills,
+-    gallery,
+-    price, 
+-    contacts, 
+-  } = require('./data.json');
 
 doctype html
 html(lang='ru')
@@ -20,3 +28,4 @@ html(lang='ru')
       include parts/slide-show
       include parts/skills
       include parts/gallery
+      include parts/price

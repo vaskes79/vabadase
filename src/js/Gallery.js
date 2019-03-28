@@ -31,11 +31,11 @@ class Gallery {
     dataItems = [].map.call(items, item => {
       const {
         href: src,
-        dataset: {allt, index, description},
+        dataset: {alt, index, description},
       } = item;
       return {
         src,
-        allt,
+        alt,
         index,
         description,
       };
@@ -53,13 +53,13 @@ class Gallery {
     this.startPos = 0;
   }
 
-  createImgItem({src, allt, index, description}) {
+  createImgItem({src, alt, index, description}) {
     const {imgShowClassName} = this;
     const imgItem = document.createElement('img');
 
     imgItem.src = src;
     imgItem.setAttribute('class', imgShowClassName);
-    imgItem.setAttribute('allt', allt);
+    imgItem.setAttribute('alt', alt);
     imgItem.dataset['index'] = index;
     imgItem.dataset['description'] = description;
 
