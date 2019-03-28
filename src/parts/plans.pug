@@ -1,0 +1,14 @@
+section#plans.plans
+  header.plans__header
+    +h(plans.heading)
+    +subHeading(plans.subHeading)
+
+  .plans__content
+    each item in plans.planItems
+      -let {srcImg, description, heading} = item;
+      -let img = require(`./static/img/${srcImg}`)
+      figure.plans__item
+        figcaption.plans__description
+          +h(heading, 3)
+          +paragraph(description)
+        +responsiveImg(img, 'plans__img', description)
