@@ -1,9 +1,6 @@
-- const {header: {heading, subHeading, paragraphs, btn}} = require('./data.json');
-
 header#home.header
-    .intro
-        h1.heading= heading
-        span.subHeading= subHeading
-        +paragraph(paragraphs)
-        +btn-icon(btn)
-        
+  .intro
+    h1.heading= header.heading
+    span.subHeading= header.subHeading
+    +paragraph(header.paragraphs)
+    +btn-icon(header.btn)

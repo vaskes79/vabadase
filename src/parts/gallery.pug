@@ -1,6 +1,16 @@
-- const {gallery} = require('./data.json');
-
 section#gallery.gallery
     h2.heading-2= gallery.heading
     span.sub-heading= gallery.subHeading
-    +gallery-items(gallery.galleryItems)
+    .gallery-items
+      .gallery-items__view-box
+        .gallery-items__btn-close
+          +icon('close')
+        .gallery-items__btn-L
+          +icon('chevron-left')
+        .gallery-items__img-view
+          .gallery-items__view-description
+            h3.hading-3 ваша новая спальня
+            p.paragraph смотреть описание
+        .gallery-items__btn-R
+          +icon('chevron-right')
+      +gallery-items(gallery.galleryItems)

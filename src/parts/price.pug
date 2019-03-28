@@ -1,0 +1,12 @@
+section#price.price
+  header.price__header
+    +h(price.heading)
+    +subHeading(price.subHeading)
+  .price__content
+    each item in price.priceItems
+      +card(item)
+  footer.price__footer
+    +h(price.footer.heading, 2)
+    +subHeading(price.footer.paragraphs)
+    +phoneBtn
+    +emailBtn

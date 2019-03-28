@@ -1,0 +1,72 @@
+.card {
+  background: rgba($white, 0.2);
+  color: var(--white);
+  width: 90%;
+  margin: 4rem auto;
+  box-shadow: var(--elem-shadow);
+  padding: 2rem;
+  .va-icon {
+    fill: var(--white);
+    height: 20px;
+    transform: translateY(4px);
+  }
+
+  &:nth-child(even) {
+    background: rgba($black, 0.2);
+  }
+
+  @include respond(tab-port) {
+    max-width: 350px;
+  }
+
+  &__header {
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba($white, 0.5);
+  }
+
+  &__item-container {
+    list-style: none;
+    padding: 3rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  &__item-icon {
+    margin-right: 1rem;
+  }
+
+  &__description {
+    font-size: 2rem;
+  }
+
+  &__footer {
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    & > * {
+      margin-right: 1rem;
+    }
+    .va-icon {
+      height: 4rem;
+      transform: translateY(2px);
+      margin-right: -3px;
+    }
+  }
+
+  &__describe-value {
+    font-size: 2rem;
+    &::before {
+      content: '/';
+      margin: 0 0.5rem;
+    }
+  }
+}

@@ -1,71 +1,115 @@
+mixin navList(data)
+  ul.nav__list
+    each item in data
+      -let {url, label} = item
+      li.nav__item
+        a.nav__link(href= `#${url}`)= label
+
 mixin responsiveImg(url, className, allt)
-    img( 
-        srcSet= url.srcSet 
-        src= url.src 
-        class= className
-        sizes='(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px' 
-        allt= allt)
+  img( 
+    srcSet= url.srcSet 
+    src= url.src 
+    class= className
+    sizes='(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px' 
+    allt= allt)
 
 mixin paragraph(data)
+  if typeof data === 'string'
+    p.paragraph= data
+  else
     each item in data
         p.paragraph= item
 
 mixin icon(icon)
-    svg.va-icon 
-        use(xlink:href= `#va-icon-${icon}`)
+  svg.va-icon 
+    use(xlink:href= `#va-icon-${icon}`)
 
 mixin btn-icon({url, icon})
-    a.btn-icon(href= `#${url}`)
-        +icon(icon)
-
+  a.btn-icon(href= `#${url}`)
+    +icon(icon)
 
 mixin slider(slides)
-    .slider
-        .slider__left-btn
-            +icon('chevron-left')
-        .slider__slides-container
-            each slide, i in slides
-                - let {srcImg, heading, paragraphs} = slide;
-                figure.slider__slide(class= `${i === 0 ? 'slider__slide--active': ''}`)
-                    +responsiveImg(require(`./static/img/${srcImg}`), 'slider__slide-img', heading)
-                    figcaption.slider__slide-description
-                        h3.heading-3= heading
-                        +paragraph(paragraphs)
-        .slider__right-btn
-            +icon('chevron-right')
+  .slider
+    .slider__left-btn
+      +icon('chevron-left')
+    .slider__slides-container
+      each slide, i in slides
+        -let {srcImg, heading, paragraphs} = slide;
+        figure.slider__slide(class= `${i === 0 ? 'slider__slide--active': ''}`)
+          +responsiveImg(require(`./static/img/${srcImg}`), 'slider__slide-img', heading)
+          figcaption.slider__slide-description
+            +h(heading, 3)
+            +paragraph(paragraphs)
+    .slider__right-btn
+      +icon('chevron-right')
 
 mixin skill-items(skillItemsData)
-    ul.skill-items
-        each item in skillItemsData
-            - let {icon, heading, paragraphs} = item;
-            li.skill-items__item
-                .skill-items__icon
-                    +icon(icon)
-                .skill-items__description
-                    h3.heading-3= heading
-                    +paragraph(paragraphs)
+  ul.skill-items
+    each item in skillItemsData
+      - let {icon, heading, paragraphs} = item;
+      li.skill-items__item
+        .skill-items__icon
+          +icon(icon)
+        .skill-items__description
+          +h(heading, 3)
+          +paragraph(paragraphs)
 
+mixin gallery-items(data)
+  .gallery-items__container
+    each item, index in data 
+      - let {srcImg, alt, description} = item;
+      figure.gallery-items__item
+        a.gallery-items__link(href=
+        require(`./static/img/${srcImg}?size=2000`).src data-alt= alt data-index= index data-description= description)
+          +responsiveImg(require(`./static/img/${srcImg}`), 'gallery-items__img', alt)
+        figcaption.gallery-items__description
+          +h(alt, 3)
+          +paragraph(description)
 
-mixin gallery-items(galleryData)
-  .gallery-items
-    .gallery-items__view-box
-      .gallery-items__btn-close
-        +icon('close')
-      .gallery-items__btn-L
-        +icon('chevron-left')
-      .gallery-items__img-view
-        .gallery-items__view-description
-          h3.hading-3 ваша новая спальня
-          p.paragraph смотреть описание
-      .gallery-items__btn-R
-        +icon('chevron-right')
-    .gallery-items__container
-      each item, index in galleryData
-        - let {srcImg, allt, description} = item;
-        figure.gallery-items__item
-          a.gallery-items__link(href=
-          require(`./static/img/${srcImg}?size=2000`).src data-allt= allt data-index= index data-description= description)
-            +responsiveImg(require(`./static/img/${srcImg}`), 'gallery-items__img', allt)
-          figcaption.gallery-items__description
-            h3.heading-3= allt
-            p.paragraph= description
+mixin card({heading, features, priceValue, priceFor})
+
+  .card
+    .card__header
+      +h(heading, 3)
+    ul.card__item-container
+      each item in features
+        - let {icon, text} = item
+        li.card__item
+          span.card__item-icon
+            +icon(icon)
+          span.card__description= text
+    .card__footer
+      .card__value
+        +icon("eur")
+        | #{priceValue}  
+        
+        .card__describe-value= priceFor
+
+mixin h(data, size)
+  if size === 1
+    h1.heading-1= data
+  else if size === 2
+    h2.heading-2= data
+  else if size === 3
+    h3.heading-3= data
+  else if size === 4
+    h4.heading-4= data
+  else if size === 5
+    h5.heading-5= data
+  else if size === 6
+    h6.heading-6= data
+  else
+    h2.heading-2= data
+  
+mixin phoneBtn
+  span.phone
+    +icon('phone11')
+    | #{contacts.phone}
+
+mixin emailBtn
+  span.email
+    +icon('envelope')
+    | #{contacts.email}
+
+mixin subHeading(data)
+  span.subHeading= data
