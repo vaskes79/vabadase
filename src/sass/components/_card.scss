@@ -28,6 +28,9 @@
   &__item-container {
     list-style: none;
     padding: 3rem;
+    @include respond(tab-land) {
+      padding: 2rem;
+    }
   }
 
   &__item {
