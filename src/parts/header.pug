@@ -1,7 +1,6 @@
 header#home.header
-  -let {heading, subHeading, paragraphs, btn} = header
   .intro
-    h1.heading= heading
-    span.subHeading= subHeading
-    +paragraph(paragraphs)
-    +btn-icon(btn)
+    h1.heading= header.heading
+    span.subHeading= header.subHeading
+    +paragraph(header.paragraphs)
+    +btn-icon(header.btn)

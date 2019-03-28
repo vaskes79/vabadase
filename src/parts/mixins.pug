@@ -6,52 +6,53 @@ mixin navList(data)
         a.nav__link(href= `#${url}`)= label
 
 mixin responsiveImg(url, className, allt)
-    img( 
-        srcSet= url.srcSet 
-        src= url.src 
-        class= className
-        sizes='(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px' 
-        allt= allt)
+  img( 
+    srcSet= url.srcSet 
+    src= url.src 
+    class= className
+    sizes='(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px' 
+    allt= allt)
 
 mixin paragraph(data)
+  if typeof data === 'string'
+    p.paragraph= data
+  else
     each item in data
         p.paragraph= item
 
 mixin icon(icon)
-    svg.va-icon 
-        use(xlink:href= `#va-icon-${icon}`)
+  svg.va-icon 
+    use(xlink:href= `#va-icon-${icon}`)
 
 mixin btn-icon({url, icon})
-    a.btn-icon(href= `#${url}`)
-        +icon(icon)
-
+  a.btn-icon(href= `#${url}`)
+    +icon(icon)
 
 mixin slider(slides)
-    .slider
-        .slider__left-btn
-            +icon('chevron-left')
-        .slider__slides-container
-            each slide, i in slides
-                - let {srcImg, heading, paragraphs} = slide;
-                figure.slider__slide(class= `${i === 0 ? 'slider__slide--active': ''}`)
-                    +responsiveImg(require(`./static/img/${srcImg}`), 'slider__slide-img', heading)
-                    figcaption.slider__slide-description
-                        h3.heading-3= heading
-                        +paragraph(paragraphs)
-        .slider__right-btn
-            +icon('chevron-right')
+  .slider
+    .slider__left-btn
+      +icon('chevron-left')
+    .slider__slides-container
+      each slide, i in slides
+        -let {srcImg, heading, paragraphs} = slide;
+        figure.slider__slide(class= `${i === 0 ? 'slider__slide--active': ''}`)
+          +responsiveImg(require(`./static/img/${srcImg}`), 'slider__slide-img', heading)
+          figcaption.slider__slide-description
+            +h(heading, 3)
+            +paragraph(paragraphs)
+    .slider__right-btn
+      +icon('chevron-right')
 
 mixin skill-items(skillItemsData)
-    ul.skill-items
-        each item in skillItemsData
-            - let {icon, heading, paragraphs} = item;
-            li.skill-items__item
-                .skill-items__icon
-                    +icon(icon)
-                .skill-items__description
-                    h3.heading-3= heading
-                    +paragraph(paragraphs)
-
+  ul.skill-items
+    each item in skillItemsData
+      - let {icon, heading, paragraphs} = item;
+      li.skill-items__item
+        .skill-items__icon
+          +icon(icon)
+        .skill-items__description
+          +h(heading, 3)
+          +paragraph(paragraphs)
 
 mixin gallery-items(data)
   .gallery-items__container
@@ -62,8 +63,8 @@ mixin gallery-items(data)
         require(`./static/img/${srcImg}?size=2000`).src data-alt= alt data-index= index data-description= description)
           +responsiveImg(require(`./static/img/${srcImg}`), 'gallery-items__img', alt)
         figcaption.gallery-items__description
-          h3.heading-3= alt
-          p.paragraph= description
+          +h(alt, 3)
+          +paragraph(description)
 
 mixin card({heading, features, priceValue, priceFor})
 
@@ -80,3 +81,32 @@ mixin card({heading, features, priceValue, priceFor})
     .card__footer
       .card__value= priceValue
         .card__describe-value= priceFor
+
+mixin h(data, size)
+  if size === 1
+    h1.heading-1= data
+  else if size === 2
+    h2.heading-2= data
+  else if size === 3
+    h3.heading-3= data
+  else if size === 4
+    h4.heading-4= data
+  else if size === 5
+    h5.heading-5= data
+  else if size === 6
+    h6.heading-6= data
+  else
+    h2.heading-2= data
+  
+mixin phoneBtn
+  span.phone
+    +icon('phone11')
+    | #{contacts.phone}
+
+mixin emailBtn
+  span.phone
+    +icon('envelope')
+    | #{contacts.email}
+
+mixin subHeading(data)
+  span.subHeading= data
