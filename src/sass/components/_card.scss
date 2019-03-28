@@ -1,7 +1,7 @@
 .card {
   background: rgba($white, 0.2);
   color: var(--white);
-  width: 90vw;
+  width: 90%;
   margin: 4rem auto;
   box-shadow: var(--elem-shadow);
   padding: 2rem;
@@ -13,6 +13,10 @@
 
   &:nth-child(even) {
     background: rgba($black, 0.2);
+  }
+
+  @include respond(tab-port) {
+    max-width: 350px;
   }
 
   &__header {
