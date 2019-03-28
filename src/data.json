@@ -94,7 +94,7 @@
         "icon": "eur",
         "heading": "евросоюз",
         "paragraphs": [
-          "Дом расположен на территории Евросоюза в Эстонии в курортном городке Усть-Нарва (Narva-Jousue)"
+          "Дом расположен на территории Евросоюза в Эстонии в курортном городке Усть-Нарва (NarJousue)"
         ]
       },
       {
@@ -170,47 +170,47 @@
         "heading": "этап строительства",
         "features": [
           {
-            "icon": "va-check",
+            "icon": "check-circle",
             "text": "Чистовая отделка"
           },
           {
-            "icon": "va-check",
+            "icon": "check-circle",
             "text": "Отделка помещений"
           },
           {
-            "icon": "va-check",
+            "icon": "check-circle",
             "text": "Дизайн проект"
           },
           {
-            "icon": "va-check",
+            "icon": "check-circle",
             "text": "Рассрочка"
           }
         ],
         "priceValue": "1500",
-        "priceFor": "/за метр"
+        "priceFor": "за метр"
       },
       {
         "heading": "объект построен",
         "features": [
           {
-            "icon": "va-check",
+            "icon": "check-circle",
             "text": "Чистовая отделка"
           },
           {
-            "icon": "va-check",
+            "icon": "check-circle",
             "text": "Отделка помещений"
           },
           {
-            "icon": "va-check",
+            "icon": "check-circle",
             "text": "Дизайн проект"
           },
           {
-            "icon": "va-check",
+            "icon": "check-circle",
             "text": "Рассрочка"
           }
         ],
         "priceValue": "1750",
-        "priceFor": "/за метр"
+        "priceFor": "за метр"
       }
     ],
     "footer": {

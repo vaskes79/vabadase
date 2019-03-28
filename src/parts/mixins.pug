@@ -70,7 +70,7 @@ mixin card({heading, features, priceValue, priceFor})
 
   .card
     .card__header
-      h3.heading-3= heading
+      +h(heading, 3)
     ul.card__item-container
       each item in features
         - let {icon, text} = item
@@ -79,7 +79,10 @@ mixin card({heading, features, priceValue, priceFor})
             +icon(icon)
           span.card__description= text
     .card__footer
-      .card__value= priceValue
+      .card__value
+        +icon("eur")
+        | #{priceValue}  
+        
         .card__describe-value= priceFor
 
 mixin h(data, size)
@@ -104,7 +107,7 @@ mixin phoneBtn
     | #{contacts.phone}
 
 mixin emailBtn
-  span.phone
+  span.email
     +icon('envelope')
     | #{contacts.email}
 

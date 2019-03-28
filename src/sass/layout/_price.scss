@@ -1,0 +1,31 @@
+.price {
+  background: var(--green);
+  position: relative;
+  padding: var(--page-padding);
+
+  @include respond(tab-port) {
+    padding: var(--page-padding-medium);
+  }
+
+  @include respond(tab-land) {
+    min-height: 100vh;
+    padding: var(--page-padding-large);
+  }
+
+  .phone,
+  .email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  &__footer {
+    color: var(--white);
+    .va-icon {
+      fill: var(--white);
+      height: 3rem;
+      margin-right: 1rem;
+    }
+  }
+}
