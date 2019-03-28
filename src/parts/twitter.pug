@@ -1,0 +1,10 @@
+section#twitter.twitter
+  .twitter__logo
+    +icon('twitter1')
+  each item in twitter.twitterItems
+    -let {content, author, pubDate} = item;
+    .twitter__item
+      .twitter__text= content
+      .twitter__meta
+        .twitter__author= author
+        .twitter__pub-date= pubDate
