@@ -15,10 +15,11 @@ section#contacts.contacts
       +icon('envelope')
 
   form.form
+    +h('отправить сообщение', 3)
     input.form__input(type='text' name='name' placeholder='имя')
     input.form__input(type='email' name='email' placeholder='эл. почта')
     input.form__input(type='text' name='theme_message' placeholder='тема сообщения')
     textarea.form__textarea(name='message')
     button.form__btn отправить
 
-  .contacts__map
+  #gmap.contacts__map
