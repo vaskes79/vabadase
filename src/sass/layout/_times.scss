@@ -1,0 +1,21 @@
+.times {
+  position: relative;
+  padding: var(--page-padding);
+  margin: auto;
+
+  @include respond(tab-port) {
+    max-width: 60rem;
+    padding: var(--page-padding-medium);
+  }
+
+  @include respond(tab-land) {
+    padding: var(--page-padding-large);
+  }
+
+  .gallery-items {
+    margin-top: var(--page-padding);
+    @include respond(tab-land) {
+      margin-top: var(--page-padding-large);
+    }
+  }
+}
