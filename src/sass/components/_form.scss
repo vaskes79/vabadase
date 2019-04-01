@@ -1,5 +1,26 @@
 .form {
-  padding: 1rem var(--page-padding-medium);
+  padding: 3rem 3rem;
+  background: var(--white);
+  align-self: center;
+  margin: auto;
+  transition: all 0.4s;
+  .heading-3 {
+    margin-top: 0;
+  }
+
+  @include respond(tab-land) {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  &--active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  @include respond(desctop) {
+    width: 35%;
+  }
+
   &__input,
   &__textarea,
   &__btn {
