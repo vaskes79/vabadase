@@ -1,10 +1,11 @@
 section#twitter.twitter
   .twitter__logo
     +icon('twitter1')
-  each item in twitter.twitterItems
-    -let {content, author, pubDate} = item;
-    .twitter__item
-      .twitter__text= content
-      .twitter__meta
-        .twitter__author= author
-        .twitter__pub-date= pubDate
+  .twitter__content
+    each item, i in twitter.twitterItems
+      -let {content, author, pubDate} = item;
+      .twitter__item(class= `${i === 0 ? 'twitter__item--active' : ''}`)
+        .twitter__text= content
+        .twitter__meta
+          .twitter__author= author
+          .twitter__pub-date= pubDate
