@@ -1,0 +1,30 @@
+.plans {
+  position: relative;
+  padding: var(--page-padding);
+
+  @include respond(tab-port) {
+    padding: var(--page-padding-medium);
+  }
+
+  @include respond(tab-land) {
+    min-height: 100vh;
+    padding: var(--page-padding-large);
+  }
+
+  &__header,
+  &__footer {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+
+  &__content {
+    @include respond(tab-land) {
+      padding-top: var(--page-padding-large);
+      margin: 0 auto;
+    }
+
+    @include respond(desctop) {
+      max-width: 80%;
+    }
+  }
+}

@@ -1,30 +1,73 @@
-.plans {
+.twitter {
+  background: var(--blue);
   position: relative;
   padding: var(--page-padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  height: 30rem;
 
-  @include respond(tab-port) {
-    padding: var(--page-padding-medium);
-  }
-
-  @include respond(tab-land) {
-    min-height: 100vh;
-    padding: var(--page-padding-large);
-  }
-
-  &__header,
-  &__footer {
-    max-width: 60rem;
-    margin: 0 auto;
+  &__logo {
+    margin-right: 2%;
+    .va-icon {
+      fill: var(--white);
+      height: 100px;
+      width: 100px;
+    }
   }
 
   &__content {
-    @include respond(tab-land) {
-      padding-top: var(--page-padding-large);
-      margin: 0 auto;
-    }
+    position: relative;
+    width: calc(80% - 120px);
+    max-width: 60rem;
+    text-align: left;
+  }
 
-    @include respond(desctop) {
-      max-width: 80%;
+  &__item {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-55%);
+    transition: all 0.4s;
+    opacity: 0;
+
+    &--active {
+      opacity: 1;
     }
   }
+
+  &__text {
+  }
+
+  &__meta {
+    display: flex;
+    font-size: 1.5rem;
+  }
+
+  // @include respond(tab-port) {
+  //   padding: var(--page-padding-medium);
+  // }
+
+  // @include respond(tab-land) {
+  //   min-height: 100vh;
+  //   padding: var(--page-padding-large);
+  // }
+
+  // &__header,
+  // &__footer {
+  //   max-width: 60rem;
+  //   margin: 0 auto;
+  // }
+
+  // &__content {
+  //   @include respond(tab-land) {
+  //     padding-top: var(--page-padding-large);
+  //     margin: 0 auto;
+  //   }
+
+  //   @include respond(desctop) {
+  //     max-width: 80%;
+  //   }
+  // }
 }
