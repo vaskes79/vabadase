@@ -24,26 +24,43 @@ class Form {
     this.form.classList.toggle(this.activeModifire);
   };
 
+  validate = () => {
+    let emailRegExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+    let nameValue = this.form.querySelector('input[name="name"]').value !== '';
+    let emailValue = this.form.querySelector('input[name="email"]').value;
+    let themeMessageValue =
+      this.form.querySelector('input[name="theme_message"]').value !== '';
+    let messageValue =
+      this.form.querySelector('textarea[name="message"]').value !== '';
+
+    emailValue = emailRegExp.test(emailValue);
+
+    return nameValue && emailValue && themeMessageValue && messageValue;
+  };
+
   handleSendMessage = async e => {
     e.preventDefault();
     let formData = new FormData(this.form);
+    console.log('validate result', this.validate());
 
-    const data = {
-      email: formData.get('email'),
-      name: formData.get('name'),
-      theme_message: formData.get('theme_message'),
-      message: formData.get('message'),
-    };
+    if (this.validate()) {
+      const data = {
+        email: formData.get('email'),
+        name: formData.get('name'),
+        theme_message: formData.get('theme_message'),
+        message: formData.get('message'),
+      };
 
-    try {
-      const rawResponse = await axios.post(null, data);
-      console.log(rawResponse);
-      if (rawResponse.statusText === 'OK') {
-        this.handleActive();
-        this.form.reset();
+      try {
+        const rawResponse = await axios.post(null, data);
+        console.log(rawResponse);
+        if (rawResponse.statusText === 'OK') {
+          this.handleActive();
+          this.form.reset();
+        }
+      } catch (err) {
+        console.log('axios request error', err);
       }
-    } catch (err) {
-      console.log('axios request error', err);
     }
   };
 
