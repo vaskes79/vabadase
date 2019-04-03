@@ -13,9 +13,11 @@ section#contacts.contacts
         span.contacts__item-value= contacts.phone
     button.contacts__btn
       +icon('envelope')
+    .contacts__msg 
 
   form.form
     +h('отправить сообщение', 3)
+    .form__msg 
     input.form__input(type='text' name='name' placeholder='имя')
     input.form__input(type='email' name='email' placeholder='эл. почта')
     input.form__input(type='text' name='theme_message' placeholder='тема сообщения')

@@ -75,7 +75,28 @@
     }
   }
 
-  form {
+  .form {
     z-index: 1;
+    &__msg {
+      display: block;
+      height: 4rem;
+      opacity: 0;
+      margin-bottom: 1.5rem;
+      transition: all 0.4s;
+      &--active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__msg {
+    display: block;
+    height: 4rem;
+    opacity: 0;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s;
+    &--active {
+      opacity: 1;
+    }
   }
 }

@@ -38,10 +38,30 @@ class Form {
     return nameValue && emailValue && themeMessageValue && messageValue;
   };
 
+  showMsg = () => {
+    let msg;
+    if (window.innerWidth >= 900) {
+      msg = document.querySelector('.contacts__msg');
+      msg.classList.add('contacts__msg--active');
+    } else {
+      msg = document.querySelector('.form__msg');
+      msg.classList.add('form__msg--active');
+    }
+    msg.innerHTML = 'ваше сообщение успешно отправлено';
+
+    setTimeout(() => {
+      msg.innerHTML = '';
+      if (window.innerWidth >= 900) {
+        msg.classList.remove('contacts__msg--active');
+      } else {
+        msg.classList.remove('form__msg--active');
+      }
+    }, 5000);
+  };
+
   handleSendMessage = async e => {
     e.preventDefault();
     let formData = new FormData(this.form);
-    console.log('validate result', this.validate());
 
     if (this.validate()) {
       const data = {
@@ -57,6 +77,7 @@ class Form {
         if (rawResponse.statusText === 'OK') {
           this.handleActive();
           this.form.reset();
+          this.showMsg();
         }
       } catch (err) {
         console.log('axios request error', err);
