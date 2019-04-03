@@ -72,7 +72,6 @@ class Form {
 
       try {
         const rawResponse = await axios.post(null, data);
-        console.log(rawResponse);
         if (rawResponse.statusText === 'OK') {
           this.handleActive();
           this.form.reset();

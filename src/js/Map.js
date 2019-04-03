@@ -6,12 +6,14 @@ class Map {
     this.center = [59.462475, 28.0408413];
     this.key = 'AIzaSyBFJkLTCugVE8sB4qEJ3-AXfFoGsFRvJ14';
     this.ver = '3.36';
+    this.lang = 'ru';
   }
 
   init = () => {
-    const {center, mapContainer, key, ver} = this;
+    const {center, mapContainer, key, ver, lang} = this;
     GoogleMapsLoader.KEY = key;
     GoogleMapsLoader.VERSION = ver;
+    GoogleMapsLoader.LANGUAGE = lang;
     GoogleMapsLoader.load(google => {
       const options = {
         zoom: 17,
