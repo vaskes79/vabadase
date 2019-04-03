@@ -50,7 +50,6 @@ class Form {
     msg.innerHTML = 'ваше сообщение успешно отправлено';
 
     setTimeout(() => {
-      msg.innerHTML = '';
       if (window.innerWidth >= 900) {
         msg.classList.remove('contacts__msg--active');
       } else {

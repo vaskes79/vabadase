@@ -62,6 +62,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "google-maps": "^3.3.0"
   }
 }
