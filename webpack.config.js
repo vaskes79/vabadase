@@ -9,7 +9,7 @@ const CssOptimize = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  entry: './src/index.js',
+  entry: ['babel-polyfill', './src/index.js'],
 
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -32,6 +32,11 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
       {
         test: /\.pug$/,
         loader: 'pug-loader',
