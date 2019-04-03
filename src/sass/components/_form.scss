@@ -1,0 +1,64 @@
+.form {
+  padding: 3rem 3rem;
+  background: var(--white);
+  align-self: center;
+  margin: auto;
+  transition: all 0.4s;
+  .heading-3 {
+    margin-top: 0;
+  }
+
+  @include respond(tab-land) {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  &--active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  @include respond(desctop) {
+    width: 35%;
+  }
+
+  &__input,
+  &__textarea,
+  &__btn {
+    width: 100%;
+    color: var(--gray);
+    display: block;
+    padding: var(--page-padding);
+    border: 1px solid var(--light-gray);
+    font-size: 2rem;
+    transition: all 0.3s;
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      border: 1px solid var(--green);
+    }
+  }
+  ::placeholder {
+    color: rgba($green, 0.5);
+  }
+  &__textarea {
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 50rem;
+  }
+
+  &__btn {
+    background: var(--green);
+    color: var(--white);
+    cursor: pointer;
+    text-transform: uppercase;
+    &:hover,
+    &:focus {
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1.5rem rgba($black, 0.4);
+    }
+  }
+}

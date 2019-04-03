@@ -1,0 +1,27 @@
+section#contacts.contacts
+  header.contacts__header  
+    +h(contacts.heading)
+    ul.contacts__list
+      li.contacts__item
+        +h('наш адрес эл. почты', 5)
+        span.contacts__item-value= contacts.email
+      li.contacts__item
+        +h('адрес объекта', 5)
+        span.contacts__item-value= contacts.address
+      li.contacts__item
+        +h('телефон', 5)
+        span.contacts__item-value= contacts.phone
+    button.contacts__btn
+      +icon('envelope')
+    .contacts__msg 
+
+  form.form
+    +h('отправить сообщение', 3)
+    .form__msg 
+    input.form__input(type='text' name='name' placeholder='имя')
+    input.form__input(type='email' name='email' placeholder='эл. почта')
+    input.form__input(type='text' name='theme_message' placeholder='тема сообщения')
+    textarea.form__textarea(name='message' rows= 4 placeholder='сообщение')
+    button.form__btn отправить
+
+  #gmap.contacts__map
