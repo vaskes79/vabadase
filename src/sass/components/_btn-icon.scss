@@ -2,11 +2,16 @@
   &:link,
   &:visited {
     text-decoration: none;
+    & .va-icon {
+      fill: var(--light-gray);
+    }
   }
 
   &:active,
   &:focus,
   &:hover {
+    outline: none;
+    animation: pulsate 1s infinite;
     & .va-icon {
       fill: var(--green);
     }
