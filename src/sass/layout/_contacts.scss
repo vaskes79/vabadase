@@ -1,5 +1,6 @@
 .contacts {
   position: relative;
+  overflow: hidden;
   @include respond(tab-land) {
     display: flex;
     justify-content: flex-end;

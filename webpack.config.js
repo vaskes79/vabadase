@@ -13,8 +13,8 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'js/[hash:6].build.js',
-    publicPath: isDev ? '/' : '/vabadase/',
+    filename: 'js/[contenthash:6].[name].js',
+    publicPath: isDev ? '/' : '/',
   },
 
   devtool: isDev && 'source-map',
@@ -28,7 +28,12 @@ module.exports = {
 
   optimization: isDev
     ? {}
-    : {minimizer: [new JsOptimize({}), new CssOptimize({})]},
+    : {
+        splitChunks: {
+          chunks: 'all',
+        },
+        minimizer: [new JsOptimize({}), new CssOptimize({})],
+      },
 
   module: {
     rules: [
@@ -55,7 +60,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               autoprefixer: {
-                browser: ['last 5 versions'],
+                browser: ['last 3 versions'],
               },
               sourceMap: isDev,
               plugins: () => [autoprefixer],
@@ -84,10 +89,10 @@ module.exports = {
           {
             loader: 'responsive-loader',
             options: {
-              sizes: [300, 600, 1200, 2000],
+              sizes: isDev ? 2000 : [300, 600, 1200, 2000],
               placeholder: true,
               placeholderSize: 50,
-              name: '[hash:6]-[name]-[width].[ext]',
+              name: '[contenthash:6]-[name]-[width].[ext]',
               outputPath: 'static/img',
             },
           },
@@ -99,7 +104,6 @@ module.exports = {
               useRelativePath: true,
             },
           },
-
           {
             loader: 'image-webpack-loader',
             options: {
@@ -130,8 +134,8 @@ module.exports = {
   plugins: [
     new CleanWP(),
     new MiniCssExtractPlugin({
-      filename: isDev ? '[name].css' : 'css/[hash:8].[name].css',
-      chunkFilename: isDev ? '[id].css' : 'css/[id].[hash:8].css',
+      filename: isDev ? '[name].css' : 'css/[contenthash:8].[name].css',
+      chunkFilename: isDev ? '[id].css' : 'css/[id].[contenthash:8].css',
     }),
     new HtmlWP({
       template: './src/index.pug',
