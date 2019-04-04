@@ -4,9 +4,9 @@ class Map {
   constructor(rootSelector = '#gmap') {
     this.mapContainer = document.querySelector(rootSelector);
     this.center = [59.462475, 28.0408413];
-    this.key = 'AIzaSyBFJkLTCugVE8sB4qEJ3-AXfFoGsFRvJ14';
-    this.ver = '3.36';
-    this.lang = 'ru';
+    this.key = process.env.G_KEY;
+    this.ver = process.env.G_VER;
+    this.lang = process.env.G_LANG;
   }
 
   init = () => {

@@ -1,13 +1,6 @@
-import axios from 'axios';
-
 // CORS
-const PROXY_URL = 'https://cors-anywhere.herokuapp.com/';
-const URL = 'https://us-central1-static-bp.cloudfunctions.net/addMessage ';
-
-// SETUP AXIOS
-axios.defaults.baseURL = PROXY_URL + URL;
-axios.defaults.headers.common['Accept'] = 'application/json';
-axios.defaults.headers.post['Content-Type'] = 'application/json';
+const PROXY_URL = process.env.PROXY_URL;
+const URL = process.env.URL;
 
 class Form {
   constructor(
@@ -71,8 +64,18 @@ class Form {
       };
 
       try {
-        const rawResponse = await axios.post(null, data);
-        if (rawResponse.statusText === 'OK') {
+        let rawResponse = await fetch(PROXY_URL + URL, {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        const JSON_DATA = await rawResponse.json();
+
+        if (JSON_DATA.id) {
           this.handleActive();
           this.form.reset();
           this.showMsg();

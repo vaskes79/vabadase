@@ -2,7 +2,7 @@ node_modules
 public
 .vscode
 img
-
+.env
 .DS_Store
 
 # work no optimise assets and docs about project
