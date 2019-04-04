@@ -17,10 +17,13 @@ const slider = new Slider(
 
 const gallery = new Gallery();
 const form = new Form();
-const map = new Map();
 
 nav.init();
 slider.init();
 gallery.init();
 form.init();
-map.init();
+
+if (window.innerWidth >= 900) {
+  const map = new Map();
+  map.init();
+}

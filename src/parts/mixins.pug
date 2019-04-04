@@ -61,7 +61,7 @@ mixin gallery-items(data)
       figure.gallery-items__item
         a.gallery-items__link(href=
         require(`./static/img/${srcImg}?size=2000`).src data-alt= alt data-index= index data-description= description)
-          +responsiveImg(require(`./static/img/${srcImg}`), 'gallery-items__img', alt)
+          +responsiveImg(require(`./static/img/${srcImg}?size=600`), 'gallery-items__img', alt)
         figcaption.gallery-items__description
           +h(alt, 3)
           +paragraph(description)
