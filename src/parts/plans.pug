@@ -11,4 +11,5 @@ section#plans.plans
         figcaption.plans__description
           +h(heading, 3)
           +paragraph(description)
-        +responsiveImg(img, 'plans__img', description)
+        a.plans__link(href= `#{heding}`)
+          +responsiveImg(img, 'plans__img', description)
