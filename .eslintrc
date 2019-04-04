@@ -2,6 +2,7 @@
   "parserOptions": {
     "ecmaVersion": 2017,
     "sourceType": "module"
+    "arrowFunctions": true,
   },
   "env": {
     "es6": true
