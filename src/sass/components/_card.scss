@@ -5,10 +5,18 @@
   margin: 4rem auto;
   box-shadow: var(--elem-shadow);
   padding: 2rem;
+  text-decoration: none;
   .va-icon {
     fill: var(--white);
     height: 20px;
     transform: translateY(4px);
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+    animation: pulsate 1s infinite;
   }
 
   &:nth-child(even) {

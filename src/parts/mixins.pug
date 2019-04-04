@@ -30,7 +30,7 @@ mixin btn-icon({url, icon})
 
 mixin slider(slides)
   .slider
-    .slider__left-btn
+    a.slider__left-btn(href="#previos")
       +icon('chevron-left')
     .slider__slides-container
       each slide, i in slides
@@ -40,7 +40,7 @@ mixin slider(slides)
           figcaption.slider__slide-description
             +h(heading, 3)
             +paragraph(paragraphs)
-    .slider__right-btn
+    a.slider__right-btn(href="#next")
       +icon('chevron-right')
 
 mixin skill-items(skillItemsData)
@@ -48,11 +48,12 @@ mixin skill-items(skillItemsData)
     each item in skillItemsData
       - let {icon, heading, paragraphs} = item;
       li.skill-items__item
-        .skill-items__icon
-          +icon(icon)
-        .skill-items__description
-          +h(heading, 3)
-          +paragraph(paragraphs)
+        a.skill-items__link(href= `#${heading}`)
+          .skill-items__icon
+            +icon(icon)
+          .skill-items__description
+            +h(heading, 3)
+            +paragraph(paragraphs)
 
 mixin gallery-items(data)
   .gallery-items__container
@@ -68,7 +69,7 @@ mixin gallery-items(data)
 
 mixin card({heading, features, priceValue, priceFor})
 
-  .card
+  a.card(href= `#${heading}`)
     .card__header
       +h(heading, 3)
     ul.card__item-container
