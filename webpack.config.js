@@ -1,4 +1,5 @@
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
 const CleanWP = require('clean-webpack-plugin');
 const HtmlWP = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -132,6 +133,7 @@ module.exports = {
   },
 
   plugins: [
+    new Dotenv(),
     new CleanWP(),
     new MiniCssExtractPlugin({
       filename: isDev ? '[name].css' : 'css/[contenthash:8].[name].css',
