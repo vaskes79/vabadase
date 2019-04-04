@@ -16,15 +16,6 @@ class Gallery {
 
     this.dataItems = [];
     this.widthGallery = 900;
-
-    this.openHandler = this.openHandler.bind(this);
-    this.createImgItem = this.createImgItem.bind(this);
-    this.closeHandler = this.closeHandler.bind(this);
-    this.setCurrentPosition = this.setCurrentPosition.bind(this);
-    this.showControlls = this.showControlls.bind(this);
-    this.previousHandler = this.previousHandler.bind(this);
-    this.nextHandler = this.nextHandler.bind(this);
-    this.keyboardHandlers = this.keyboardHandlers.bind(this);
   }
   createItems() {
     let {items, createImgItem, viewBox, dataItems, wrapItemsClassName} = this;
@@ -53,7 +44,7 @@ class Gallery {
     this.startPos = 0;
   }
 
-  createImgItem({src, alt, index, description}) {
+  createImgItem = ({src, alt, index, description}) => {
     const {imgShowClassName} = this;
     const imgItem = document.createElement('img');
 
@@ -64,49 +55,39 @@ class Gallery {
     imgItem.dataset['description'] = description;
 
     return imgItem;
-  }
+  };
+
+  addEventHandlers = () => {
+    this.container.addEventListener('click', this.openHandler);
+    this.btnClose.addEventListener('click', this.closeHandler);
+    this.btnPrevious.addEventListener('click', this.previousHandler);
+    this.btnNext.addEventListener('click', this.nextHandler);
+    window.addEventListener('keydown', this.keyboardHandlers);
+  };
+
+  removeEventHandlers = () => {
+    this.container.removeEventListener('click', this.openHandler);
+    this.btnClose.removeEventListener('click', this.closeHandler);
+    this.btnPrevious.removeEventListener('click', this.previousHandler);
+    this.btnNext.removeEventListener('click', this.nextHandler);
+    window.removeEventListener('keydown', this.keyboardHandlers);
+  };
 
   setHandlers() {
-    let {
-      openHandler,
-      closeHandler,
-      nextHandler,
-      previousHandler,
-      keyboardHandlers,
-      btnClose,
-      btnPrevious,
-      btnNext,
-      container,
-      showGallery,
-      widthGallery,
-    } = this;
-
     if (window.innerWidth >= this.widthGallery) {
-      container.addEventListener('click', openHandler);
-      btnClose.addEventListener('click', closeHandler);
-      btnPrevious.addEventListener('click', previousHandler);
-      btnNext.addEventListener('click', nextHandler);
-      window.addEventListener('keydown', keyboardHandlers);
+      this.addEventHandlers();
     }
 
     window.addEventListener('resize', ({target: {innerWidth}}) => {
-      if (innerWidth >= widthGallery) {
-        container.addEventListener('click', openHandler);
-        btnClose.addEventListener('click', closeHandler);
-        btnPrevious.addEventListener('click', previousHandler);
-        btnNext.addEventListener('click', nextHandler);
-        window.addEventListener('keydown', keyboardHandlers);
+      if (innerWidth >= this.widthGallery) {
+        this.addEventHandlers();
       } else {
-        container.removeEventListener('click', openHandler);
-        btnClose.removeEventListener('click', closeHandler);
-        btnPrevious.removeEventListener('click', previousHandler);
-        btnNext.removeEventListener('click', nextHandler);
-        window.removeEventListener('keydown', keyboardHandlers);
+        this.removeEventHandlers();
       }
     });
   }
 
-  openHandler(e) {
+  openHandler = e => {
     e.preventDefault();
     let {
       openHandler,
@@ -128,9 +109,9 @@ class Gallery {
     this.currentIndex = parseInt(currentItem['dataset']['index']);
     setCurrentPosition();
     gallery.classList.add(open);
-  }
+  };
 
-  closeHandler(e) {
+  closeHandler = e => {
     let {
       modifires: {open},
       gallery,
@@ -138,19 +119,19 @@ class Gallery {
 
     gallery.classList.remove(open);
     document.body.style.cssText = 'overflow: auto';
-  }
+  };
 
-  nextHandler(e) {
+  nextHandler = e => {
     this.currentIndex++;
     this.setCurrentPosition();
-  }
+  };
 
-  previousHandler(e) {
+  previousHandler = e => {
     this.currentIndex--;
     this.setCurrentPosition();
-  }
+  };
 
-  keyboardHandlers(e) {
+  keyboardHandlers = e => {
     let {keyCode, which} = e;
     let {
       setCurrentPosition,
@@ -179,9 +160,9 @@ class Gallery {
       this.currentIndex++;
       setCurrentPosition();
     }
-  }
+  };
 
-  setCurrentPosition() {
+  setCurrentPosition = () => {
     let {showControlls, currentIndex, startPos, endPos} = this;
     let offset = currentIndex * -100;
 
@@ -189,9 +170,9 @@ class Gallery {
     if (currentIndex >= endPos) offset = endPos * -100;
     this.wrapItems.style.cssText = `transform: translateX(${offset}%);`;
     showControlls();
-  }
+  };
 
-  showControlls() {
+  showControlls = () => {
     let {currentIndex, endPos, btnPrevious, btnNext} = this;
     btnPrevious.style.cssText = 'cursor: pointer; opacity: 1; visible: visible';
     btnNext.style.cssText = 'cursor: pointer; opacity: 1; visible: visible';
@@ -203,7 +184,7 @@ class Gallery {
       btnNext.style.cssText = 'opacity: 0; visible: hidden';
       this.currentIndex = endPos;
     }
-  }
+  };
 
   init() {
     this.createItems();
