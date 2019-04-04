@@ -5,7 +5,6 @@ import Form from './js/Form';
 import Map from './js/Map';
 import './sass/main.scss';
 
-const nav = new Nav('.nav', 'nav--close', '.nav__logo', '.nav__link');
 const slider = new Slider(
   '.slider',
   '.slider__left-btn',
@@ -15,15 +14,16 @@ const slider = new Slider(
   'slider__slide--hide'
 );
 
-const gallery = new Gallery();
+const nav = new Nav();
 const form = new Form();
 
 nav.init();
 slider.init();
-gallery.init();
 form.init();
 
 if (window.innerWidth >= 900) {
+  const gallery = new Gallery();
   const map = new Map();
+  gallery.init();
   map.init();
 }

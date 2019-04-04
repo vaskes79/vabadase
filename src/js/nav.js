@@ -1,52 +1,50 @@
 class Nav {
-  constructor(elem, activeClass, btn, links) {
-    this.elem = document.querySelector(elem);
+  constructor(
+    nav = '.nav',
+    activeModifire = 'nav--close',
+    btn = '.nav__logo',
+    linksContainer = '.nav__list'
+  ) {
+    this.nav = document.querySelector(nav);
     this.btn = document.querySelector(btn);
-    this.links = document.querySelectorAll(links);
-    this.activeClass = activeClass;
-
-    this.clickHandler = this.clickHandler.bind(this);
-    this.resizeHandler = this.resizeHandler.bind(this);
+    this.links = document.querySelector(linksContainer);
+    this.activeModifire = activeModifire;
   }
+
+  addHandlers() {
+    this.nav.classList.add(this.activeModifire);
+    this.btn.addEventListener('click', this.clickHandler);
+    this.links.addEventListener('click', this.clickHandler);
+  }
+
+  removeHandlers() {
+    this.nav.classList.remove(this.activeModifire);
+    this.btn.removeEventListener('click', this.clickHandler);
+    this.links.removeEventListener('click', this.clickHandler);
+  }
+
+  resizeHandler = () => {
+    window.addEventListener('resize', e => {
+      let width = e.currentTarget.innerWidth;
+      if (width >= 900) {
+        this.removeHandlers();
+      } else if (width < 900) {
+        this.addHandlers();
+      }
+    });
+  };
+
+  clickHandler = () => {
+    this.nav.classList.toggle(this.activeModifire);
+  };
 
   init() {
     if (window.innerWidth < 900) {
-      this.elem.classList.add(this.activeClass);
+      this.nav.classList.add(this.activeModifire);
       this.addHandlers();
     }
 
     this.resizeHandler();
-  }
-
-  addHandlers() {
-    this.btn.addEventListener('click', this.clickHandler);
-    this.links.forEach(link =>
-      link.addEventListener('click', this.clickHandler),
-    );
-  }
-
-  removeHandlers() {
-    this.btn.removeEventListener('click', this.clickHandler);
-    this.links.forEach(link =>
-      link.removeEventListener('click', this.clickHandler),
-    );
-  }
-
-  resizeHandler() {
-    window.addEventListener('resize', e => {
-      let width = e.currentTarget.innerWidth;
-      if (width >= 900) {
-        this.elem.classList.remove(this.activeClass);
-        this.removeHandlers();
-      } else if (width < 900) {
-        this.elem.classList.add(this.activeClass);
-        this.addHandlers();
-      }
-    });
-  }
-
-  clickHandler() {
-    this.elem.classList.toggle(this.activeClass);
   }
 }
 
