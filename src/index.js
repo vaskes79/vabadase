@@ -5,15 +5,7 @@ import Form from './js/Form';
 import Map from './js/Map';
 import './sass/main.scss';
 
-const slider = new Slider(
-  '.slider',
-  '.slider__left-btn',
-  '.slider__right-btn',
-  '.slider__slide',
-  'slider__slide--active',
-  'slider__slide--hide'
-);
-
+const slider = new Slider();
 const nav = new Nav();
 const form = new Form();
 
