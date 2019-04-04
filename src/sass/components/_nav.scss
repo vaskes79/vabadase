@@ -98,6 +98,7 @@
       background: var(--green);
       outline: none;
       box-shadow: 0 0.5rem 1rem rgba(black, 0.5);
+      animation: pulsate 1s infinite;
       transform: translateY(-1px);
     }
 
