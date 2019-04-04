@@ -20,7 +20,7 @@ class Form {
     this.activeModifire = activeModifire;
   }
 
-  handleActive = e => {
+  handleActive = () => {
     this.form.classList.toggle(this.activeModifire);
   };
 
@@ -83,9 +83,35 @@ class Form {
     }
   };
 
-  init = () => {
+  keyboardHandlers = e => {
+    let {keyCode, which} = e;
+    let {handleActive, form, activeModifire} = this;
+    let formIsOpen = form.classList.contains(activeModifire);
+    // esc, q
+    let closeKeys = [27, 81];
+    let openForm = [13, 13];
+    let isClose = closeKeys.includes(keyCode) || closeKeys.includes(which);
+    let isContactsBtn = e.target.classList.contains('contacts__btn');
+    let isOpen = openForm.includes(keyCode) || openForm.includes(which);
+
+    if (isClose && formIsOpen) {
+      form.classList.remove(activeModifire);
+    }
+
+    if (isOpen && isContactsBtn) {
+      this.form.querySelector('input[name="name"]').focus();
+      handleActive();
+    }
+  };
+
+  setupListeners = () => {
     this.btn.addEventListener('click', this.handleActive);
     this.form.addEventListener('submit', this.handleSendMessage);
+    window.addEventListener('keydown', this.keyboardHandlers);
+  };
+
+  init = () => {
+    this.setupListeners();
   };
 }
 
