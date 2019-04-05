@@ -28,10 +28,23 @@ class Form {
 
     emailValue = emailRegExp.test(emailValue);
 
+    if (!messageValue) {
+      this.showMsg('введите текст сообщения');
+    }
+    if (!themeMessageValue) {
+      this.showMsg('укажите тему сообщения');
+    }
+    if (!emailValue) {
+      this.showMsg('введите email в формате you@mail.ru');
+    }
+    if (!nameValue) {
+      this.showMsg('введите имя');
+    }
+
     return nameValue && emailValue && themeMessageValue && messageValue;
   };
 
-  showMsg = () => {
+  showMsg = message => {
     let msg;
     if (window.innerWidth >= 900) {
       msg = document.querySelector('.contacts__msg');
@@ -40,7 +53,7 @@ class Form {
       msg = document.querySelector('.form__msg');
       msg.classList.add('form__msg--active');
     }
-    msg.innerHTML = 'ваше сообщение успешно отправлено';
+    msg.innerHTML = message ? message : 'отправка сообщения...';
 
     setTimeout(() => {
       if (window.innerWidth >= 900) {
@@ -63,6 +76,7 @@ class Form {
         message: formData.get('message'),
       };
 
+      this.showMsg();
       try {
         let rawResponse = await fetch(PROXY_URL + URL, {
           method: 'POST',
@@ -78,7 +92,7 @@ class Form {
         if (JSON_DATA.id) {
           this.handleActive();
           this.form.reset();
-          this.showMsg();
+          this.showMsg('ваше сообщение успешно отправлено');
         }
       } catch (err) {
         console.log('axios request error', err);
