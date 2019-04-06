@@ -14,8 +14,8 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'js/[contenthash:6].[name].js',
-    publicPath: isDev ? '/' : '/',
+    filename: isDev ? 'js/[name].js' : 'js/[contenthash:6].[name].js',
+    publicPath: '/',
   },
 
   devtool: isDev && 'source-map',
@@ -78,52 +78,28 @@ module.exports = {
         test: /\.(woff2?)$/,
         loader: 'file-loader',
         options: {
-          name: '[contenthash:8].[name].[ext]',
+          name: isDev ? '[name].[ext]' : '[contenthash:6]-[name].[ext]',
           outputPath: 'static/fonts',
           useRelativePath: true,
         },
       },
       {
         test: /\.(png|jpe?g)$/i,
+        include: path.resolve('src'),
         use: [
+          {
+            loader: 'cache-loader',
+            options: {},
+          },
           {
             loader: 'responsive-loader',
             options: {
-              sizes: [300, 600, 1200, 2000],
-              // placeholder: true,
-              // placeholderSize: 100,
-              name: '[contenthash:6]-[name]-[width].[ext]',
+              sizes: !isDev && [600, 1200, 1920],
+              name: isDev
+                ? '[name].[ext]'
+                : '[contenthash:6]-[name]-[width].[ext]',
               outputPath: 'static/img',
-            },
-          },
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[contenthash:8].[name].[ext]',
-              outputPath: 'static/img',
-              useRelativePath: true,
-            },
-          },
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              // webp: {
-              //     quality: 75,
-              // },
-              mozjpeg: {
-                progressive: true,
-                quality: 65,
-              },
-              optipng: {
-                enabled: true,
-              },
-              pngquant: {
-                quality: '65-90',
-                speed: 4,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
+              quality: 50,
             },
           },
         ],
