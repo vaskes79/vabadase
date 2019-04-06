@@ -22,7 +22,6 @@ module.exports = {
 
   devServer: {
     port: 3000,
-    host: '0.0.0.0',
     open: true,
     contentBase: path.join(__dirname, 'src'),
   },
@@ -90,9 +89,9 @@ module.exports = {
           {
             loader: 'responsive-loader',
             options: {
-              sizes: isDev ? 2000 : [300, 600, 1200, 2000],
-              placeholder: true,
-              placeholderSize: 50,
+              sizes: [300, 600, 1200, 2000],
+              // placeholder: true,
+              // placeholderSize: 100,
               name: '[contenthash:6]-[name]-[width].[ext]',
               outputPath: 'static/img',
             },
