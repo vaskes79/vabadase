@@ -3,6 +3,7 @@ public
 .vscode
 img
 .env
+.cache-loader/*
 
 # General
 .DS_Store
