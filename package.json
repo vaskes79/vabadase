@@ -12,7 +12,7 @@
     "prebuild": "rm -r .cache-loader/*",
     "build": "NODE_ENV=production webpack --mode=production",
     "postbuild": "yarn copy:files",
-    "copy:files": "cp ./src/robots.txt ./src/.htaccess ./public",
+    "copy:files": "cp ./src/robots.txt ./src/.htaccess ./src/*.png ./src/browserconfig.xml ./src/site.webmanifest ./src/safari*.svg ./src/favicon.ico ./public",
     "dev": "webpack-dev-server",
     "predeploy": "yarn run build",
     "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}'",
