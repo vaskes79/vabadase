@@ -1,0 +1,347 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create instance and render render components into DOM 1`] = `
+Slider {
+  "activeModifire": "slider__slide--active",
+  "activeSlide": <figure
+    class="slider__slide slider__slide--active"
+  >
+    <img
+      allt="2 часа от петербурга"
+      class="slider__slide-img"
+      sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+      src="/static/img/c89553-slide-1-2000.jpg"
+      srcset="/static/img/c89553-slide-1-2000.jpg 2000w"
+    />
+    <figcaption
+      class="slider__slide-description"
+    >
+      <h3
+        class="heading-3"
+      >
+        2 часа от петербурга
+      </h3>
+      <p
+        class="paragraph"
+      >
+        Все лишь за 2 часа езды на машине можно добраться, до вашего дома в Европе. Где вас ждут Тихие ухоженные тропинки, сосновый лес и много чистого воздуха. 
+      </p>
+      <p
+        class="paragraph"
+      >
+        Усть Нарва давно пользуется популярностью у писателей, художников, актеров и людей с творческим складом ума, здесь они любят отдохнуть от суеты и погрузится в гармонию сдешних мест.
+      </p>
+    </figcaption>
+  </figure>,
+  "angledeg": 0,
+  "btnL": <a
+    class="slider__left-btn"
+    href="#previos"
+  >
+    <svg
+      class="va-icon"
+    >
+       
+      <use
+        xlink:href="#va-icon-chevron-left"
+      />
+    </svg>
+  </a>,
+  "btnR": <a
+    class="slider__right-btn"
+    href="#next"
+  >
+    <svg
+      class="va-icon"
+    >
+       
+      <use
+        xlink:href="#va-icon-chevron-right"
+      />
+    </svg>
+  </a>,
+  "handlerBtnL": [MockFunction],
+  "handlerBtnR": [MockFunction],
+  "rotateContainer": [Function],
+  "slider": <div
+    class="slider"
+  >
+    <a
+      class="slider__left-btn"
+      href="#previos"
+    >
+      <svg
+        class="va-icon"
+      >
+         
+        <use
+          xlink:href="#va-icon-chevron-left"
+        />
+      </svg>
+    </a>
+    <div
+      class="slider__slides-container"
+    >
+      <figure
+        class="slider__slide slider__slide--active"
+      >
+        <img
+          allt="2 часа от петербурга"
+          class="slider__slide-img"
+          sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+          src="/static/img/c89553-slide-1-2000.jpg"
+          srcset="/static/img/c89553-slide-1-2000.jpg 2000w"
+        />
+        <figcaption
+          class="slider__slide-description"
+        >
+          <h3
+            class="heading-3"
+          >
+            2 часа от петербурга
+          </h3>
+          <p
+            class="paragraph"
+          >
+            Все лишь за 2 часа езды на машине можно добраться, до вашего дома в Европе. Где вас ждут Тихие ухоженные тропинки, сосновый лес и много чистого воздуха. 
+          </p>
+          <p
+            class="paragraph"
+          >
+            Усть Нарва давно пользуется популярностью у писателей, художников, актеров и людей с творческим складом ума, здесь они любят отдохнуть от суеты и погрузится в гармонию сдешних мест.
+          </p>
+        </figcaption>
+      </figure>
+      <figure
+        class="slider__slide"
+      >
+        <img
+          allt="3 минуты до моря"
+          class="slider__slide-img"
+          sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+          src="/static/img/c84cf5-slide-2-2000.jpg"
+          srcset="/static/img/c84cf5-slide-2-2000.jpg 2000w"
+        />
+        <figcaption
+          class="slider__slide-description"
+        >
+          <h3
+            class="heading-3"
+          >
+            3 минуты до моря
+          </h3>
+          <p
+            class="paragraph"
+          >
+            Дом VABADUSE расположен на побережъе нарвского залива, в трех минутах хотьбы от берега. Вы сможете очутится на море под теплым солнцем, буквально сразу как захотите!
+          </p>
+        </figcaption>
+      </figure>
+      <figure
+        class="slider__slide"
+      >
+        <img
+          allt="рядом все необходимое"
+          class="slider__slide-img"
+          sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+          src="/static/img/5fa1f7-slide-3-2000.jpg"
+          srcset="/static/img/5fa1f7-slide-3-2000.jpg 2000w"
+        />
+        <figcaption
+          class="slider__slide-description"
+        >
+          <h3
+            class="heading-3"
+          >
+            рядом все необходимое
+          </h3>
+          <p
+            class="paragraph"
+          >
+            Через дорогу от дома расположен супермаркет. В минуте хотьбы СПА санаторий, известный на всю эстонию своими лечебыными процедурами, «Нарва-Йыэсуу». В 2014 году построен современный СПА центр «Норус». Планируется так же строительство аквапарка.
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+    <a
+      class="slider__right-btn"
+      href="#next"
+    >
+      <svg
+        class="va-icon"
+      >
+         
+        <use
+          xlink:href="#va-icon-chevron-right"
+        />
+      </svg>
+    </a>
+  </div>,
+  "slides": NodeList [
+    <figure
+      class="slider__slide slider__slide--active"
+    >
+      <img
+        allt="2 часа от петербурга"
+        class="slider__slide-img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/c89553-slide-1-2000.jpg"
+        srcset="/static/img/c89553-slide-1-2000.jpg 2000w"
+      />
+      <figcaption
+        class="slider__slide-description"
+      >
+        <h3
+          class="heading-3"
+        >
+          2 часа от петербурга
+        </h3>
+        <p
+          class="paragraph"
+        >
+          Все лишь за 2 часа езды на машине можно добраться, до вашего дома в Европе. Где вас ждут Тихие ухоженные тропинки, сосновый лес и много чистого воздуха. 
+        </p>
+        <p
+          class="paragraph"
+        >
+          Усть Нарва давно пользуется популярностью у писателей, художников, актеров и людей с творческим складом ума, здесь они любят отдохнуть от суеты и погрузится в гармонию сдешних мест.
+        </p>
+      </figcaption>
+    </figure>,
+    <figure
+      class="slider__slide"
+    >
+      <img
+        allt="3 минуты до моря"
+        class="slider__slide-img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/c84cf5-slide-2-2000.jpg"
+        srcset="/static/img/c84cf5-slide-2-2000.jpg 2000w"
+      />
+      <figcaption
+        class="slider__slide-description"
+      >
+        <h3
+          class="heading-3"
+        >
+          3 минуты до моря
+        </h3>
+        <p
+          class="paragraph"
+        >
+          Дом VABADUSE расположен на побережъе нарвского залива, в трех минутах хотьбы от берега. Вы сможете очутится на море под теплым солнцем, буквально сразу как захотите!
+        </p>
+      </figcaption>
+    </figure>,
+    <figure
+      class="slider__slide"
+    >
+      <img
+        allt="рядом все необходимое"
+        class="slider__slide-img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/5fa1f7-slide-3-2000.jpg"
+        srcset="/static/img/5fa1f7-slide-3-2000.jpg 2000w"
+      />
+      <figcaption
+        class="slider__slide-description"
+      >
+        <h3
+          class="heading-3"
+        >
+          рядом все необходимое
+        </h3>
+        <p
+          class="paragraph"
+        >
+          Через дорогу от дома расположен супермаркет. В минуте хотьбы СПА санаторий, известный на всю эстонию своими лечебыными процедурами, «Нарва-Йыэсуу». В 2014 году построен современный СПА центр «Норус». Планируется так же строительство аквапарка.
+        </p>
+      </figcaption>
+    </figure>,
+  ],
+  "slidesContainer": <div
+    class="slider__slides-container"
+  >
+    <figure
+      class="slider__slide slider__slide--active"
+    >
+      <img
+        allt="2 часа от петербурга"
+        class="slider__slide-img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/c89553-slide-1-2000.jpg"
+        srcset="/static/img/c89553-slide-1-2000.jpg 2000w"
+      />
+      <figcaption
+        class="slider__slide-description"
+      >
+        <h3
+          class="heading-3"
+        >
+          2 часа от петербурга
+        </h3>
+        <p
+          class="paragraph"
+        >
+          Все лишь за 2 часа езды на машине можно добраться, до вашего дома в Европе. Где вас ждут Тихие ухоженные тропинки, сосновый лес и много чистого воздуха. 
+        </p>
+        <p
+          class="paragraph"
+        >
+          Усть Нарва давно пользуется популярностью у писателей, художников, актеров и людей с творческим складом ума, здесь они любят отдохнуть от суеты и погрузится в гармонию сдешних мест.
+        </p>
+      </figcaption>
+    </figure>
+    <figure
+      class="slider__slide"
+    >
+      <img
+        allt="3 минуты до моря"
+        class="slider__slide-img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/c84cf5-slide-2-2000.jpg"
+        srcset="/static/img/c84cf5-slide-2-2000.jpg 2000w"
+      />
+      <figcaption
+        class="slider__slide-description"
+      >
+        <h3
+          class="heading-3"
+        >
+          3 минуты до моря
+        </h3>
+        <p
+          class="paragraph"
+        >
+          Дом VABADUSE расположен на побережъе нарвского залива, в трех минутах хотьбы от берега. Вы сможете очутится на море под теплым солнцем, буквально сразу как захотите!
+        </p>
+      </figcaption>
+    </figure>
+    <figure
+      class="slider__slide"
+    >
+      <img
+        allt="рядом все необходимое"
+        class="slider__slide-img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/5fa1f7-slide-3-2000.jpg"
+        srcset="/static/img/5fa1f7-slide-3-2000.jpg 2000w"
+      />
+      <figcaption
+        class="slider__slide-description"
+      >
+        <h3
+          class="heading-3"
+        >
+          рядом все необходимое
+        </h3>
+        <p
+          class="paragraph"
+        >
+          Через дорогу от дома расположен супермаркет. В минуте хотьбы СПА санаторий, известный на всю эстонию своими лечебыными процедурами, «Нарва-Йыэсуу». В 2014 году построен современный СПА центр «Норус». Планируется так же строительство аквапарка.
+        </p>
+      </figcaption>
+    </figure>
+  </div>,
+}
+`;
