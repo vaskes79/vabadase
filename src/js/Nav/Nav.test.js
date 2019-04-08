@@ -3,6 +3,7 @@ let nav = null;
 
 beforeEach(() => {
   nav = new Nav();
+  nav.init();
 });
 
 afterEach(() => {
@@ -57,5 +58,17 @@ describe('methods', () => {
     it(`${method} exists`, () => {
       expect(nav[method]).toBeFunction();
     });
+  });
+});
+
+describe('events', () => {
+  it(`resize events < 900`, () => {
+    window.resizeTo(890, 1000);
+    expect(nav.nav.classList.contains('nav--close')).toBeTrue();
+  });
+
+  it(`resize events > 900`, () => {
+    window.resizeTo(910, 1000);
+    expect(nav.nav.classList.contains('nav--close')).toBeFalse();
   });
 });
