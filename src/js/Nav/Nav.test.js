@@ -9,9 +9,13 @@ afterEach(() => {
   nav = null;
 });
 
-describe('create instance', () => {
+describe('Create instance and render', () => {
   it('expect that nav instance of Nav', () => {
     expect(nav instanceof Nav).toBeTruthy();
+  });
+
+  it('render components into DOM', () => {
+    expect(nav).toMatchSnapshot();
   });
 });
 
@@ -38,31 +42,6 @@ describe('props', () => {
       expect(nav.activeModifire).toBe('nav--close');
     });
   });
-
-  // describe('user props', () => {
-  //     let user = new Nav( '.user', 'user--close', '.user__logo', '.user__list' );
-
-  //   it('this.user exists has class .user', () => {
-  //     expect(user.user).not.toBeNil();
-  //     expect(user.user.classList.contains('user')).toBeTrue();
-  //   });
-
-  //   it('this.btn exists has class .user__logo', () => {
-  //     expect(user.btn).not.toBeNil();
-  //     expect(user.btn.classList.contains('user__logo')).toBeTrue();
-  //   });
-
-  //   it('this.links exists has class .user__logo', () => {
-  //     expect(user.links).not.toBeNil();
-  //     expect(user.links.classList.contains('user__list')).toBeTrue();
-  //   });
-
-  //   it('this.activeModifire exists has value user--close', () => {
-  //     expect(user.activeModifire).not.toBeNil();
-  //     expect(user.activeModifire).toBeString();
-  //     expect(user.activeModifire).toBe('user--close');
-  //   });
-  // })
 });
 
 describe('methods', () => {
