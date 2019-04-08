@@ -10,9 +10,10 @@
     "test": "NODE_ENV=test jest",
     "stage:server": "cd public && npx browser-sync start --server --no-notify --no-ui --files *",
     "prestage:server": "yarn build",
+    "prebuild": "rm -r .cache-loader/*",
     "build": "NODE_ENV=production webpack --mode=production",
     "postbuild": "yarn copy:files",
-    "copy:files": "cp ./src/robots.txt ./src/.htaccess ./public",
+    "copy:files": "cp ./src/robots.txt ./src/.htaccess ./src/*.png ./src/browserconfig.xml ./src/site.webmanifest ./src/safari*.svg ./src/favicon.ico ./public",
     "dev": "webpack-dev-server",
     "predeploy": "yarn run build",
     "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}'",
@@ -32,9 +33,11 @@
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "cache-loader": "^2.0.1",
     "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^2.1.1",
-    "dotenv": "^7.0.0",
     "dotenv-webpack": "^1.7.0",
     "eslint": "^5.15.3",
     "eslint-config-prettier": "^4.1.0",
@@ -69,7 +72,6 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
-    "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "core-js": "3",
     "google-maps": "^3.3.0"

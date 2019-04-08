@@ -6,40 +6,36 @@ class Form {
   constructor(
     rootSelector = '.form',
     btnActivateSelector = '.contacts__btn',
-    activeModifire = 'form--active'
+    activeModifier = 'form--active'
   ) {
     this.form = document.querySelector(rootSelector);
     this.btn = document.querySelector(btnActivateSelector);
-    this.activeModifire = activeModifire;
+    this.activeModifier = activeModifier;
   }
 
   handleActive = () => {
-    this.form.classList.toggle(this.activeModifire);
+    this.form.classList.toggle(this.activeModifier);
   };
 
   validate = () => {
     let emailRegExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
-    let nameValue = this.form.querySelector('input[name="name"]').value !== '';
-    let emailValue = this.form.querySelector('input[name="email"]').value;
-    let themeMessageValue =
-      this.form.querySelector('input[name="theme_message"]').value !== '';
-    let messageValue =
-      this.form.querySelector('textarea[name="message"]').value !== '';
+    let nameValue = this.form.querySelector('input[name="name"]').value.trim();
+    let emailValue = this.form
+      .querySelector('input[name="email"]')
+      .value.trim();
+    let themeMessageValue = this.form
+      .querySelector('input[name="theme_message"]')
+      .value.trim();
+    let messageValue = this.form
+      .querySelector('textarea[name="message"]')
+      .value.trim();
 
     emailValue = emailRegExp.test(emailValue);
 
-    if (!messageValue) {
-      this.showMsg('введите текст сообщения');
-    }
-    if (!themeMessageValue) {
-      this.showMsg('укажите тему сообщения');
-    }
-    if (!emailValue) {
-      this.showMsg('введите email в формате you@mail.ru');
-    }
-    if (!nameValue) {
-      this.showMsg('введите имя');
-    }
+    !messageValue && this.showMsg('введите текст сообщения');
+    !themeMessageValue && this.showMsg('укажите тему сообщения');
+    !emailValue && this.showMsg('введите email в формате you@mail.ru');
+    !nameValue && this.showMsg('введите имя');
 
     return nameValue && emailValue && themeMessageValue && messageValue;
   };
@@ -87,9 +83,9 @@ class Form {
           body: JSON.stringify(data),
         });
 
-        const JSON_DATA = await rawResponse.json();
+        const response = await rawResponse.json();
 
-        if (JSON_DATA.id) {
+        if (response.ok) {
           this.handleActive();
           this.form.reset();
           this.showMsg('ваше сообщение успешно отправлено');
@@ -102,8 +98,8 @@ class Form {
 
   keyboardHandlers = e => {
     let {keyCode, which} = e;
-    let {handleActive, form, activeModifire} = this;
-    let formIsOpen = form.classList.contains(activeModifire);
+    let {handleActive, form, activeModifier} = this;
+    let formIsOpen = form.classList.contains(activeModifier);
     // esc, q
     let closeKeys = [27, 81];
     let openForm = [13, 13];
@@ -112,7 +108,7 @@ class Form {
     let isOpen = openForm.includes(keyCode) || openForm.includes(which);
 
     if (isClose && formIsOpen) {
-      form.classList.remove(activeModifire);
+      form.classList.remove(activeModifier);
     }
 
     if (isOpen && isContactsBtn) {
