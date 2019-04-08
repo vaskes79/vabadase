@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create instance and render render components into DOM 1`] = `
+Nav {
+  "activeModifire": "nav--close",
+  "btn": <div
+    class="nav__logo"
+  >
+     
+    <span
+      class="logo"
+    >
+      vabaduse
+    </span>
+  </div>,
+  "clickHandler": [MockFunction],
+  "links": <ul
+    class="nav__list"
+  >
+    <li
+      class="nav__item"
+    >
+      <a
+        class="nav__link"
+        href="#home"
+      >
+        главная
+      </a>
+    </li>
+    <li
+      class="nav__item"
+    >
+      <a
+        class="nav__link"
+        href="#gallery"
+      >
+        эскизы
+      </a>
+    </li>
+    <li
+      class="nav__item"
+    >
+      <a
+        class="nav__link"
+        href="#price"
+      >
+        стоимость
+      </a>
+    </li>
+    <li
+      class="nav__item"
+    >
+      <a
+        class="nav__link"
+        href="#plans"
+      >
+        планировки
+      </a>
+    </li>
+    <li
+      class="nav__item"
+    >
+      <a
+        class="nav__link"
+        href="#times"
+      >
+        сроки
+      </a>
+    </li>
+    <li
+      class="nav__item"
+    >
+      <a
+        class="nav__link"
+        href="#contacts"
+      >
+        контакты
+      </a>
+    </li>
+  </ul>,
+  "nav": <nav
+    class="nav"
+  >
+    <div
+      class="nav__logo"
+    >
+       
+      <span
+        class="logo"
+      >
+        vabaduse
+      </span>
+    </div>
+    <ul
+      class="nav__list"
+    >
+      <li
+        class="nav__item"
+      >
+        <a
+          class="nav__link"
+          href="#home"
+        >
+          главная
+        </a>
+      </li>
+      <li
+        class="nav__item"
+      >
+        <a
+          class="nav__link"
+          href="#gallery"
+        >
+          эскизы
+        </a>
+      </li>
+      <li
+        class="nav__item"
+      >
+        <a
+          class="nav__link"
+          href="#price"
+        >
+          стоимость
+        </a>
+      </li>
+      <li
+        class="nav__item"
+      >
+        <a
+          class="nav__link"
+          href="#plans"
+        >
+          планировки
+        </a>
+      </li>
+      <li
+        class="nav__item"
+      >
+        <a
+          class="nav__link"
+          href="#times"
+        >
+          сроки
+        </a>
+      </li>
+      <li
+        class="nav__item"
+      >
+        <a
+          class="nav__link"
+          href="#contacts"
+        >
+          контакты
+        </a>
+      </li>
+    </ul>
+    <div
+      class="nav__phone phone"
+    >
+      +7(921) 902-51-13
+    </div>
+  </nav>,
+  "resizeHandler": [Function],
+}
+`;
