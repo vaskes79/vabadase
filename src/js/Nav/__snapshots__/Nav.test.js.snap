@@ -13,7 +13,7 @@ Nav {
       vabaduse
     </span>
   </div>,
-  "clickHandler": [Function],
+  "clickHandler": [MockFunction],
   "links": <ul
     class="nav__list"
   >

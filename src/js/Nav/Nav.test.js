@@ -1,13 +1,19 @@
 import Nav from './Nav';
 let nav = null;
+let mock = null;
+let clickHandlerMock = null;
 
 beforeEach(() => {
   nav = new Nav();
   nav.init();
+  mock = jest.fn();
+  clickHandlerMock = jest.spyOn(nav, 'clickHandler');
 });
 
 afterEach(() => {
   nav = null;
+  mock = null;
+  clickHandlerMock = null;
 });
 
 describe('Create instance and render', () => {
@@ -55,20 +61,42 @@ describe('methods', () => {
   ];
 
   listMethods.forEach(method => {
-    it(`${method} exists`, () => {
-      expect(nav[method]).toBeFunction();
+    describe(`${method}`, () => {
+      it(`${method} exists`, () => {
+        expect(nav[method]).toBeFunction();
+      });
+
+      it(`${method} toBeCalled`, () => {
+        nav[method] = mock;
+        nav[method]();
+        expect(nav[method]).toBeCalled();
+      });
     });
   });
 });
 
 describe('events', () => {
-  it(`resize events < 900`, () => {
-    window.resizeTo(890, 1000);
+  it(`resize: innerWidth < 900`, () => {
+    resizeTo(890);
     expect(nav.nav.classList.contains('nav--close')).toBeTrue();
   });
 
-  it(`resize events > 900`, () => {
-    window.resizeTo(910, 1000);
+  it(`resize: innerWidth > 900`, () => {
+    resizeTo(910);
     expect(nav.nav.classList.contains('nav--close')).toBeFalse();
+  });
+
+  it(`nav.btn: click`, () => {
+    resizeTo(890);
+    simulaitClick(nav.btn);
+    expect(clickHandlerMock).toBeCalled();
+    expect(clickHandlerMock).toHaveBeenCalledTimes(1);
+  });
+
+  it(`nav.links: click`, () => {
+    resizeTo(890);
+    simulaitClick(nav.links);
+    expect(clickHandlerMock).toBeCalled();
+    expect(clickHandlerMock).toHaveBeenCalledTimes(1);
   });
 });

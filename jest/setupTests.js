@@ -1,17 +1,21 @@
 import {dom} from './dom';
+import simulant from 'jsdom-simulant';
 import 'jest-extended';
 
 // global variables
 global.document.body.innerHTML = dom;
 
-// Simulate window resize event
-const resizeEvent = document.createEvent('Event');
-resizeEvent.initEvent('resize', true, true);
+global.simulaitClick = elem => {
+  const event = simulant(window, 'click');
+  simulant.fire(elem, event);
+};
 
-global.window.resizeTo = (width, height) => {
+global.resizeTo = (width, height) => {
+  const event = simulant(window, 'resize');
   global.window.innerWidth = width || global.window.innerWidth;
   global.window.innerHeight = height || global.window.innerHeight;
-  global.window.dispatchEvent(resizeEvent);
+
+  simulant.fire(window, event);
 };
 
 // throw error then get any error
