@@ -5,17 +5,15 @@ import 'jest-extended';
 // global variables
 global.document.body.innerHTML = dom;
 
+global.map = {};
+
+window.addEventListener = jest.fn((event, cb) => {
+  map[event] = cb;
+});
+
 global.simulaitClick = elem => {
-  const event = simulant(window, 'click');
+  let event = simulant(window, 'click');
   simulant.fire(elem, event);
-};
-
-global.resizeTo = (width, height) => {
-  const event = simulant(window, 'resize');
-  global.window.innerWidth = width || global.window.innerWidth;
-  global.window.innerHeight = height || global.window.innerHeight;
-
-  simulant.fire(window, event);
 };
 
 // throw error then get any error

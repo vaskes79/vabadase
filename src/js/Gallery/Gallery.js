@@ -117,6 +117,7 @@ class Gallery {
       gallery,
     } = this;
 
+    this.currentIndex = 0;
     gallery.classList.remove(open);
     document.body.style.cssText = 'overflow: auto';
   };
@@ -143,7 +144,7 @@ class Gallery {
     let closeKeys = [27, 81];
     // h, →
     let prevKeys = [72, 37];
-    // h, ←
+    // l, ←
     let nextKeys = [76, 39];
     let isClose = closeKeys.includes(keyCode) || closeKeys.includes(which);
     let isPrev = prevKeys.includes(keyCode) || prevKeys.includes(which);

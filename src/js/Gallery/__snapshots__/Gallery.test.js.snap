@@ -1139,9 +1139,9 @@ Gallery {
   "modifiers": Object {
     "open": "gallery-items--open",
   },
-  "nextHandler": [Function],
-  "openHandler": [Function],
-  "previousHandler": [Function],
+  "nextHandler": [MockFunction],
+  "openHandler": [MockFunction],
+  "previousHandler": [MockFunction],
   "removeEventHandlers": [Function],
   "setCurrentPosition": [Function],
   "showControlls": [Function],

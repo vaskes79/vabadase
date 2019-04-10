@@ -5,9 +5,9 @@ let clickHandlerMock = null;
 
 beforeEach(() => {
   nav = new Nav();
+  clickHandlerMock = jest.spyOn(nav, 'clickHandler');
   nav.init();
   mock = jest.fn();
-  clickHandlerMock = jest.spyOn(nav, 'clickHandler');
 });
 
 afterEach(() => {
@@ -77,24 +77,25 @@ describe('methods', () => {
 
 describe('events', () => {
   it(`resize: innerWidth < 900`, () => {
-    resizeTo(890);
+    map.resize({currentTarget: {innerWidth: 890}});
+    // resizeTo(890);
     expect(nav.nav.classList.contains('nav--close')).toBeTrue();
   });
 
   it(`resize: innerWidth > 900`, () => {
-    resizeTo(910);
+    map.resize({currentTarget: {innerWidth: 910}});
     expect(nav.nav.classList.contains('nav--close')).toBeFalse();
   });
 
   it(`nav.btn: click`, () => {
-    resizeTo(890);
+    map.resize({currentTarget: {innerWidth: 890}});
     simulaitClick(nav.btn);
     expect(clickHandlerMock).toBeCalled();
     expect(clickHandlerMock).toHaveBeenCalledTimes(1);
   });
 
   it(`nav.links: click`, () => {
-    resizeTo(890);
+    map.resize({currentTarget: {innerWidth: 890}});
     simulaitClick(nav.links);
     expect(clickHandlerMock).toBeCalled();
     expect(clickHandlerMock).toHaveBeenCalledTimes(1);
