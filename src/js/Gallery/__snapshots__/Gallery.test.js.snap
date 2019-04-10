@@ -1136,7 +1136,7 @@ Gallery {
     </a>,
   ],
   "keyboardHandlers": [Function],
-  "modifires": Object {
+  "modifiers": Object {
     "open": "gallery-items--open",
   },
   "nextHandler": [Function],
