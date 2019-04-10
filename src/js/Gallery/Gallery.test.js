@@ -121,37 +121,34 @@ describe(`props`, () => {
 });
 
 describe('methods', () => {
-  // const listMethods = [
-  //   'handlerBtnL',
-  //   'handlerBtnR',
-  //   'rotateContainer',
-  //   'setHandlers',
-  //   'init',
-  // ];
-  // listMethods.forEach(method => {
-  //   describe(`${method}`, () => {
-  //     it(`${method} exists`, () => {
-  //       expect(slider[method]).toBeFunction();
-  //     });
-  //     it(`${method} toBeCalled`, () => {
-  //       slider[method] = mock;
-  //       slider[method]();
-  //       expect(slider[method]).toBeCalled();
-  //     });
-  //     if (method === 'rotateContainer') {
-  //       it(`set angle deg`, () => {
-  //         let elem = slider.slidesContainer;
-  //         let style = getComputedStyle(elem);
-  //         let tr = style.transform;
-  //         expect(tr).toBeEmpty();
-  //         slider.rotateContainer(180);
-  //         style = getComputedStyle(elem);
-  //         tr = style.transform;
-  //         expect(tr).toEqual('rotateY(180deg)');
-  //       });
-  //     }
-  //   });
-  // });
+  const listMethods = [
+    'createItems',
+    'createImgItem',
+    'addEventHandlers',
+    'removeEventHandlers',
+    'setHandlers',
+    'openHandler',
+    'closeHandler',
+    'nextHandler',
+    'previousHandler',
+    'keyboardHandlers',
+    'setCurrentPosition',
+    'showControlls',
+    'init',
+  ];
+  listMethods.forEach(method => {
+    describe(`${method}`, () => {
+      it(`${method} exists`, () => {
+        expect(gallery[method]).toBeFunction();
+      });
+
+      it(`${method} toBeCalled`, () => {
+        gallery[method] = mock;
+        gallery[method]();
+        expect(gallery[method]).toBeCalled();
+      });
+    });
+  });
 });
 
 describe(`events`, () => {
