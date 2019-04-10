@@ -10,7 +10,7 @@ class Gallery {
 
     this.wrapItemsClassName = `${gal.slice(1)}__wrap-items`;
     this.imgShowClassName = `${gal.slice(1)}__img-show`;
-    this.modifires = {
+    this.modifiers = {
       open: `${gal}--open`.slice(1),
     };
 
@@ -92,7 +92,7 @@ class Gallery {
     let {
       openHandler,
       setCurrentPosition,
-      modifires: {open},
+      modifiers: {open},
       gallery,
     } = this;
 
@@ -113,10 +113,11 @@ class Gallery {
 
   closeHandler = e => {
     let {
-      modifires: {open},
+      modifiers: {open},
       gallery,
     } = this;
 
+    this.currentIndex = 0;
     gallery.classList.remove(open);
     document.body.style.cssText = 'overflow: auto';
   };
@@ -136,14 +137,14 @@ class Gallery {
     let {
       setCurrentPosition,
       gallery,
-      modifires: {open},
+      modifiers: {open},
     } = this;
     let galleryIsOpen = gallery.classList.contains(open);
     // esc, q
     let closeKeys = [27, 81];
     // h, →
     let prevKeys = [72, 37];
-    // h, ←
+    // l, ←
     let nextKeys = [76, 39];
     let isClose = closeKeys.includes(keyCode) || closeKeys.includes(which);
     let isPrev = prevKeys.includes(keyCode) || prevKeys.includes(which);

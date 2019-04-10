@@ -1,0 +1,1392 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create instance and render render components into DOM 1`] = `
+Gallery {
+  "addEventHandlers": [Function],
+  "btnClose": <div
+    class="gallery-items__btn-close"
+  >
+    <svg
+      class="va-icon"
+    >
+       
+      <use
+        xlink:href="#va-icon-close"
+      />
+    </svg>
+  </div>,
+  "btnNext": <div
+    class="gallery-items__btn-R"
+  >
+    <svg
+      class="va-icon"
+    >
+       
+      <use
+        xlink:href="#va-icon-chevron-right"
+      />
+    </svg>
+  </div>,
+  "btnPrevious": <div
+    class="gallery-items__btn-L"
+  >
+    <svg
+      class="va-icon"
+    >
+       
+      <use
+        xlink:href="#va-icon-chevron-left"
+      />
+    </svg>
+  </div>,
+  "closeHandler": [Function],
+  "container": <div
+    class="gallery-items__container"
+  >
+    <figure
+      class="gallery-items__item"
+    >
+      <a
+        class="gallery-items__link"
+        data-alt="эскиз светлой спальни"
+        data-description="открытые светлые спальни"
+        data-index="0"
+        href="/static/img/108f90-sketch-vabaduse-1-2000.jpg"
+      >
+        <img
+          allt="эскиз светлой спальни"
+          class="gallery-items__img"
+          sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+          src="/static/img/0a9ff3-sketch-vabaduse-1-600.jpg"
+          srcset="/static/img/0a9ff3-sketch-vabaduse-1-600.jpg 600w"
+        />
+      </a>
+      <figcaption
+        class="gallery-items__description"
+      >
+        <h3
+          class="heading-3"
+        >
+          эскиз светлой спальни
+        </h3>
+        <p
+          class="paragraph"
+        >
+          открытые светлые спальни
+        </p>
+      </figcaption>
+    </figure>
+    <figure
+      class="gallery-items__item"
+    >
+      <a
+        class="gallery-items__link"
+        data-alt="кабинет и балкон"
+        data-description="рабочий кабинет с выходом на балкон"
+        data-index="1"
+        href="/static/img/547bf2-sketch-vabaduse-2-2000.jpg"
+      >
+        <img
+          allt="кабинет и балкон"
+          class="gallery-items__img"
+          sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+          src="/static/img/e14f0e-sketch-vabaduse-2-600.jpg"
+          srcset="/static/img/e14f0e-sketch-vabaduse-2-600.jpg 600w"
+        />
+      </a>
+      <figcaption
+        class="gallery-items__description"
+      >
+        <h3
+          class="heading-3"
+        >
+          кабинет и балкон
+        </h3>
+        <p
+          class="paragraph"
+        >
+          рабочий кабинет с выходом на балкон
+        </p>
+      </figcaption>
+    </figure>
+    <figure
+      class="gallery-items__item"
+    >
+      <a
+        class="gallery-items__link"
+        data-alt="ванная комната"
+        data-description="ванная комната с окном"
+        data-index="2"
+        href="/static/img/f215c2-sketch-vabaduse-3-2000.jpg"
+      >
+        <img
+          allt="ванная комната"
+          class="gallery-items__img"
+          sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+          src="/static/img/1abd05-sketch-vabaduse-3-600.jpg"
+          srcset="/static/img/1abd05-sketch-vabaduse-3-600.jpg 600w"
+        />
+      </a>
+      <figcaption
+        class="gallery-items__description"
+      >
+        <h3
+          class="heading-3"
+        >
+          ванная комната
+        </h3>
+        <p
+          class="paragraph"
+        >
+          ванная комната с окном
+        </p>
+      </figcaption>
+    </figure>
+    <figure
+      class="gallery-items__item"
+    >
+      <a
+        class="gallery-items__link"
+        data-alt="кабинет интерьер"
+        data-description="уютный кабинет с диваном"
+        data-index="3"
+        href="/static/img/f7b3b5-sketch-vabaduse-4-2000.jpg"
+      >
+        <img
+          allt="кабинет интерьер"
+          class="gallery-items__img"
+          sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+          src="/static/img/6b71f4-sketch-vabaduse-4-600.jpg"
+          srcset="/static/img/6b71f4-sketch-vabaduse-4-600.jpg 600w"
+        />
+      </a>
+      <figcaption
+        class="gallery-items__description"
+      >
+        <h3
+          class="heading-3"
+        >
+          кабинет интерьер
+        </h3>
+        <p
+          class="paragraph"
+        >
+          уютный кабинет с диваном
+        </p>
+      </figcaption>
+    </figure>
+    <figure
+      class="gallery-items__item"
+    >
+      <a
+        class="gallery-items__link"
+        data-alt="внешний вид дома"
+        data-description="внешний вид дома с парковкой"
+        data-index="4"
+        href="/static/img/7ad0f1-sketch-vabaduse-5-2000.jpg"
+      >
+        <img
+          allt="внешний вид дома"
+          class="gallery-items__img"
+          sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+          src="/static/img/4a39ab-sketch-vabaduse-5-600.jpg"
+          srcset="/static/img/4a39ab-sketch-vabaduse-5-600.jpg 600w"
+        />
+      </a>
+      <figcaption
+        class="gallery-items__description"
+      >
+        <h3
+          class="heading-3"
+        >
+          внешний вид дома
+        </h3>
+        <p
+          class="paragraph"
+        >
+          внешний вид дома с парковкой
+        </p>
+      </figcaption>
+    </figure>
+    <figure
+      class="gallery-items__item"
+    >
+      <a
+        class="gallery-items__link"
+        data-alt="фасад дома"
+        data-description="фасад дома снаружи с парковкой"
+        data-index="5"
+        href="/static/img/79ad5b-sketch-vabaduse-6-2000.jpg"
+      >
+        <img
+          allt="фасад дома"
+          class="gallery-items__img"
+          sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+          src="/static/img/bc4fb1-sketch-vabaduse-6-600.jpg"
+          srcset="/static/img/bc4fb1-sketch-vabaduse-6-600.jpg 600w"
+        />
+      </a>
+      <figcaption
+        class="gallery-items__description"
+      >
+        <h3
+          class="heading-3"
+        >
+          фасад дома
+        </h3>
+        <p
+          class="paragraph"
+        >
+          фасад дома снаружи с парковкой
+        </p>
+      </figcaption>
+    </figure>
+    <figure
+      class="gallery-items__item"
+    >
+      <a
+        class="gallery-items__link"
+        data-alt="внешний вид дома вид снизу на парковку"
+        data-description="внешний вид дома вид снизу на парковку"
+        data-index="6"
+        href="/static/img/3e17d4-sketch-vabaduse-7-2000.jpg"
+      >
+        <img
+          allt="внешний вид дома вид снизу на парковку"
+          class="gallery-items__img"
+          sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+          src="/static/img/4b9025-sketch-vabaduse-7-600.jpg"
+          srcset="/static/img/4b9025-sketch-vabaduse-7-600.jpg 600w"
+        />
+      </a>
+      <figcaption
+        class="gallery-items__description"
+      >
+        <h3
+          class="heading-3"
+        >
+          внешний вид дома вид снизу на парковку
+        </h3>
+        <p
+          class="paragraph"
+        >
+          внешний вид дома вид снизу на парковку
+        </p>
+      </figcaption>
+    </figure>
+    <figure
+      class="gallery-items__item"
+    >
+      <a
+        class="gallery-items__link"
+        data-alt="гостиная"
+        data-description="гостиная"
+        data-index="7"
+        href="/static/img/f8064f-sketch-vabaduse-8-2000.jpg"
+      >
+        <img
+          allt="гостиная"
+          class="gallery-items__img"
+          sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+          src="/static/img/15493d-sketch-vabaduse-8-600.jpg"
+          srcset="/static/img/15493d-sketch-vabaduse-8-600.jpg 600w"
+        />
+      </a>
+      <figcaption
+        class="gallery-items__description"
+      >
+        <h3
+          class="heading-3"
+        >
+          гостиная
+        </h3>
+        <p
+          class="paragraph"
+        >
+          гостиная
+        </p>
+      </figcaption>
+    </figure>
+    <figure
+      class="gallery-items__item"
+    >
+      <a
+        class="gallery-items__link"
+        data-alt="кухня с рабочей зоной"
+        data-description="кухня с рабочей зоной"
+        data-index="8"
+        href="/static/img/ce016e-sketch-vabaduse-9-2000.jpg"
+      >
+        <img
+          allt="кухня с рабочей зоной"
+          class="gallery-items__img"
+          sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+          src="/static/img/f372e1-sketch-vabaduse-9-600.jpg"
+          srcset="/static/img/f372e1-sketch-vabaduse-9-600.jpg 600w"
+        />
+      </a>
+      <figcaption
+        class="gallery-items__description"
+      >
+        <h3
+          class="heading-3"
+        >
+          кухня с рабочей зоной
+        </h3>
+        <p
+          class="paragraph"
+        >
+          кухня с рабочей зоной
+        </p>
+      </figcaption>
+    </figure>
+    <figure
+      class="gallery-items__item"
+    >
+      <a
+        class="gallery-items__link"
+        data-alt="кухня другой ракурс"
+        data-description="кухня другой ракурс"
+        data-index="9"
+        href="/static/img/81d959-sketch-vabaduse-10-2000.jpg"
+      >
+        <img
+          allt="кухня другой ракурс"
+          class="gallery-items__img"
+          sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+          src="/static/img/1e1d68-sketch-vabaduse-10-600.jpg"
+          srcset="/static/img/1e1d68-sketch-vabaduse-10-600.jpg 600w"
+        />
+      </a>
+      <figcaption
+        class="gallery-items__description"
+      >
+        <h3
+          class="heading-3"
+        >
+          кухня другой ракурс
+        </h3>
+        <p
+          class="paragraph"
+        >
+          кухня другой ракурс
+        </p>
+      </figcaption>
+    </figure>
+  </div>,
+  "createImgItem": [Function],
+  "dataItems": Array [
+    Object {
+      "alt": "эскиз светлой спальни",
+      "description": "открытые светлые спальни",
+      "index": "0",
+      "src": "http://localhost/static/img/108f90-sketch-vabaduse-1-2000.jpg",
+    },
+    Object {
+      "alt": "кабинет и балкон",
+      "description": "рабочий кабинет с выходом на балкон",
+      "index": "1",
+      "src": "http://localhost/static/img/547bf2-sketch-vabaduse-2-2000.jpg",
+    },
+    Object {
+      "alt": "ванная комната",
+      "description": "ванная комната с окном",
+      "index": "2",
+      "src": "http://localhost/static/img/f215c2-sketch-vabaduse-3-2000.jpg",
+    },
+    Object {
+      "alt": "кабинет интерьер",
+      "description": "уютный кабинет с диваном",
+      "index": "3",
+      "src": "http://localhost/static/img/f7b3b5-sketch-vabaduse-4-2000.jpg",
+    },
+    Object {
+      "alt": "внешний вид дома",
+      "description": "внешний вид дома с парковкой",
+      "index": "4",
+      "src": "http://localhost/static/img/7ad0f1-sketch-vabaduse-5-2000.jpg",
+    },
+    Object {
+      "alt": "фасад дома",
+      "description": "фасад дома снаружи с парковкой",
+      "index": "5",
+      "src": "http://localhost/static/img/79ad5b-sketch-vabaduse-6-2000.jpg",
+    },
+    Object {
+      "alt": "внешний вид дома вид снизу на парковку",
+      "description": "внешний вид дома вид снизу на парковку",
+      "index": "6",
+      "src": "http://localhost/static/img/3e17d4-sketch-vabaduse-7-2000.jpg",
+    },
+    Object {
+      "alt": "гостиная",
+      "description": "гостиная",
+      "index": "7",
+      "src": "http://localhost/static/img/f8064f-sketch-vabaduse-8-2000.jpg",
+    },
+    Object {
+      "alt": "кухня с рабочей зоной",
+      "description": "кухня с рабочей зоной",
+      "index": "8",
+      "src": "http://localhost/static/img/ce016e-sketch-vabaduse-9-2000.jpg",
+    },
+    Object {
+      "alt": "кухня другой ракурс",
+      "description": "кухня другой ракурс",
+      "index": "9",
+      "src": "http://localhost/static/img/81d959-sketch-vabaduse-10-2000.jpg",
+    },
+  ],
+  "endPos": 9,
+  "gallery": <div
+    class="gallery-items"
+  >
+    <div
+      class="gallery-items__view-box"
+    >
+      <div
+        class="gallery-items__btn-close"
+      >
+        <svg
+          class="va-icon"
+        >
+           
+          <use
+            xlink:href="#va-icon-close"
+          />
+        </svg>
+      </div>
+      <div
+        class="gallery-items__btn-L"
+      >
+        <svg
+          class="va-icon"
+        >
+           
+          <use
+            xlink:href="#va-icon-chevron-left"
+          />
+        </svg>
+      </div>
+      <div
+        class="gallery-items__img-view"
+      >
+        <div
+          class="gallery-items__view-description"
+        >
+          <h3
+            class="hading-3"
+          >
+            ваша новая спальня
+          </h3>
+          <p
+            class="paragraph"
+          >
+            смотреть описание
+          </p>
+        </div>
+        <div
+          class="gallery-items__wrap-items"
+        >
+          <img
+            alt="эскиз светлой спальни"
+            class="gallery-items__img-show"
+            data-description="открытые светлые спальни"
+            data-index="0"
+            src="http://localhost/static/img/108f90-sketch-vabaduse-1-2000.jpg"
+          />
+          <img
+            alt="кабинет и балкон"
+            class="gallery-items__img-show"
+            data-description="рабочий кабинет с выходом на балкон"
+            data-index="1"
+            src="http://localhost/static/img/547bf2-sketch-vabaduse-2-2000.jpg"
+          />
+          <img
+            alt="ванная комната"
+            class="gallery-items__img-show"
+            data-description="ванная комната с окном"
+            data-index="2"
+            src="http://localhost/static/img/f215c2-sketch-vabaduse-3-2000.jpg"
+          />
+          <img
+            alt="кабинет интерьер"
+            class="gallery-items__img-show"
+            data-description="уютный кабинет с диваном"
+            data-index="3"
+            src="http://localhost/static/img/f7b3b5-sketch-vabaduse-4-2000.jpg"
+          />
+          <img
+            alt="внешний вид дома"
+            class="gallery-items__img-show"
+            data-description="внешний вид дома с парковкой"
+            data-index="4"
+            src="http://localhost/static/img/7ad0f1-sketch-vabaduse-5-2000.jpg"
+          />
+          <img
+            alt="фасад дома"
+            class="gallery-items__img-show"
+            data-description="фасад дома снаружи с парковкой"
+            data-index="5"
+            src="http://localhost/static/img/79ad5b-sketch-vabaduse-6-2000.jpg"
+          />
+          <img
+            alt="внешний вид дома вид снизу на парковку"
+            class="gallery-items__img-show"
+            data-description="внешний вид дома вид снизу на парковку"
+            data-index="6"
+            src="http://localhost/static/img/3e17d4-sketch-vabaduse-7-2000.jpg"
+          />
+          <img
+            alt="гостиная"
+            class="gallery-items__img-show"
+            data-description="гостиная"
+            data-index="7"
+            src="http://localhost/static/img/f8064f-sketch-vabaduse-8-2000.jpg"
+          />
+          <img
+            alt="кухня с рабочей зоной"
+            class="gallery-items__img-show"
+            data-description="кухня с рабочей зоной"
+            data-index="8"
+            src="http://localhost/static/img/ce016e-sketch-vabaduse-9-2000.jpg"
+          />
+          <img
+            alt="кухня другой ракурс"
+            class="gallery-items__img-show"
+            data-description="кухня другой ракурс"
+            data-index="9"
+            src="http://localhost/static/img/81d959-sketch-vabaduse-10-2000.jpg"
+          />
+        </div>
+        <div
+          class="gallery-items__wrap-items"
+        >
+          <img
+            alt="эскиз светлой спальни"
+            class="gallery-items__img-show"
+            data-description="открытые светлые спальни"
+            data-index="0"
+            src="http://localhost/static/img/108f90-sketch-vabaduse-1-2000.jpg"
+          />
+          <img
+            alt="кабинет и балкон"
+            class="gallery-items__img-show"
+            data-description="рабочий кабинет с выходом на балкон"
+            data-index="1"
+            src="http://localhost/static/img/547bf2-sketch-vabaduse-2-2000.jpg"
+          />
+          <img
+            alt="ванная комната"
+            class="gallery-items__img-show"
+            data-description="ванная комната с окном"
+            data-index="2"
+            src="http://localhost/static/img/f215c2-sketch-vabaduse-3-2000.jpg"
+          />
+          <img
+            alt="кабинет интерьер"
+            class="gallery-items__img-show"
+            data-description="уютный кабинет с диваном"
+            data-index="3"
+            src="http://localhost/static/img/f7b3b5-sketch-vabaduse-4-2000.jpg"
+          />
+          <img
+            alt="внешний вид дома"
+            class="gallery-items__img-show"
+            data-description="внешний вид дома с парковкой"
+            data-index="4"
+            src="http://localhost/static/img/7ad0f1-sketch-vabaduse-5-2000.jpg"
+          />
+          <img
+            alt="фасад дома"
+            class="gallery-items__img-show"
+            data-description="фасад дома снаружи с парковкой"
+            data-index="5"
+            src="http://localhost/static/img/79ad5b-sketch-vabaduse-6-2000.jpg"
+          />
+          <img
+            alt="внешний вид дома вид снизу на парковку"
+            class="gallery-items__img-show"
+            data-description="внешний вид дома вид снизу на парковку"
+            data-index="6"
+            src="http://localhost/static/img/3e17d4-sketch-vabaduse-7-2000.jpg"
+          />
+          <img
+            alt="гостиная"
+            class="gallery-items__img-show"
+            data-description="гостиная"
+            data-index="7"
+            src="http://localhost/static/img/f8064f-sketch-vabaduse-8-2000.jpg"
+          />
+          <img
+            alt="кухня с рабочей зоной"
+            class="gallery-items__img-show"
+            data-description="кухня с рабочей зоной"
+            data-index="8"
+            src="http://localhost/static/img/ce016e-sketch-vabaduse-9-2000.jpg"
+          />
+          <img
+            alt="кухня другой ракурс"
+            class="gallery-items__img-show"
+            data-description="кухня другой ракурс"
+            data-index="9"
+            src="http://localhost/static/img/81d959-sketch-vabaduse-10-2000.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="gallery-items__btn-R"
+      >
+        <svg
+          class="va-icon"
+        >
+           
+          <use
+            xlink:href="#va-icon-chevron-right"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="gallery-items__container"
+    >
+      <figure
+        class="gallery-items__item"
+      >
+        <a
+          class="gallery-items__link"
+          data-alt="эскиз светлой спальни"
+          data-description="открытые светлые спальни"
+          data-index="0"
+          href="/static/img/108f90-sketch-vabaduse-1-2000.jpg"
+        >
+          <img
+            allt="эскиз светлой спальни"
+            class="gallery-items__img"
+            sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+            src="/static/img/0a9ff3-sketch-vabaduse-1-600.jpg"
+            srcset="/static/img/0a9ff3-sketch-vabaduse-1-600.jpg 600w"
+          />
+        </a>
+        <figcaption
+          class="gallery-items__description"
+        >
+          <h3
+            class="heading-3"
+          >
+            эскиз светлой спальни
+          </h3>
+          <p
+            class="paragraph"
+          >
+            открытые светлые спальни
+          </p>
+        </figcaption>
+      </figure>
+      <figure
+        class="gallery-items__item"
+      >
+        <a
+          class="gallery-items__link"
+          data-alt="кабинет и балкон"
+          data-description="рабочий кабинет с выходом на балкон"
+          data-index="1"
+          href="/static/img/547bf2-sketch-vabaduse-2-2000.jpg"
+        >
+          <img
+            allt="кабинет и балкон"
+            class="gallery-items__img"
+            sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+            src="/static/img/e14f0e-sketch-vabaduse-2-600.jpg"
+            srcset="/static/img/e14f0e-sketch-vabaduse-2-600.jpg 600w"
+          />
+        </a>
+        <figcaption
+          class="gallery-items__description"
+        >
+          <h3
+            class="heading-3"
+          >
+            кабинет и балкон
+          </h3>
+          <p
+            class="paragraph"
+          >
+            рабочий кабинет с выходом на балкон
+          </p>
+        </figcaption>
+      </figure>
+      <figure
+        class="gallery-items__item"
+      >
+        <a
+          class="gallery-items__link"
+          data-alt="ванная комната"
+          data-description="ванная комната с окном"
+          data-index="2"
+          href="/static/img/f215c2-sketch-vabaduse-3-2000.jpg"
+        >
+          <img
+            allt="ванная комната"
+            class="gallery-items__img"
+            sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+            src="/static/img/1abd05-sketch-vabaduse-3-600.jpg"
+            srcset="/static/img/1abd05-sketch-vabaduse-3-600.jpg 600w"
+          />
+        </a>
+        <figcaption
+          class="gallery-items__description"
+        >
+          <h3
+            class="heading-3"
+          >
+            ванная комната
+          </h3>
+          <p
+            class="paragraph"
+          >
+            ванная комната с окном
+          </p>
+        </figcaption>
+      </figure>
+      <figure
+        class="gallery-items__item"
+      >
+        <a
+          class="gallery-items__link"
+          data-alt="кабинет интерьер"
+          data-description="уютный кабинет с диваном"
+          data-index="3"
+          href="/static/img/f7b3b5-sketch-vabaduse-4-2000.jpg"
+        >
+          <img
+            allt="кабинет интерьер"
+            class="gallery-items__img"
+            sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+            src="/static/img/6b71f4-sketch-vabaduse-4-600.jpg"
+            srcset="/static/img/6b71f4-sketch-vabaduse-4-600.jpg 600w"
+          />
+        </a>
+        <figcaption
+          class="gallery-items__description"
+        >
+          <h3
+            class="heading-3"
+          >
+            кабинет интерьер
+          </h3>
+          <p
+            class="paragraph"
+          >
+            уютный кабинет с диваном
+          </p>
+        </figcaption>
+      </figure>
+      <figure
+        class="gallery-items__item"
+      >
+        <a
+          class="gallery-items__link"
+          data-alt="внешний вид дома"
+          data-description="внешний вид дома с парковкой"
+          data-index="4"
+          href="/static/img/7ad0f1-sketch-vabaduse-5-2000.jpg"
+        >
+          <img
+            allt="внешний вид дома"
+            class="gallery-items__img"
+            sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+            src="/static/img/4a39ab-sketch-vabaduse-5-600.jpg"
+            srcset="/static/img/4a39ab-sketch-vabaduse-5-600.jpg 600w"
+          />
+        </a>
+        <figcaption
+          class="gallery-items__description"
+        >
+          <h3
+            class="heading-3"
+          >
+            внешний вид дома
+          </h3>
+          <p
+            class="paragraph"
+          >
+            внешний вид дома с парковкой
+          </p>
+        </figcaption>
+      </figure>
+      <figure
+        class="gallery-items__item"
+      >
+        <a
+          class="gallery-items__link"
+          data-alt="фасад дома"
+          data-description="фасад дома снаружи с парковкой"
+          data-index="5"
+          href="/static/img/79ad5b-sketch-vabaduse-6-2000.jpg"
+        >
+          <img
+            allt="фасад дома"
+            class="gallery-items__img"
+            sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+            src="/static/img/bc4fb1-sketch-vabaduse-6-600.jpg"
+            srcset="/static/img/bc4fb1-sketch-vabaduse-6-600.jpg 600w"
+          />
+        </a>
+        <figcaption
+          class="gallery-items__description"
+        >
+          <h3
+            class="heading-3"
+          >
+            фасад дома
+          </h3>
+          <p
+            class="paragraph"
+          >
+            фасад дома снаружи с парковкой
+          </p>
+        </figcaption>
+      </figure>
+      <figure
+        class="gallery-items__item"
+      >
+        <a
+          class="gallery-items__link"
+          data-alt="внешний вид дома вид снизу на парковку"
+          data-description="внешний вид дома вид снизу на парковку"
+          data-index="6"
+          href="/static/img/3e17d4-sketch-vabaduse-7-2000.jpg"
+        >
+          <img
+            allt="внешний вид дома вид снизу на парковку"
+            class="gallery-items__img"
+            sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+            src="/static/img/4b9025-sketch-vabaduse-7-600.jpg"
+            srcset="/static/img/4b9025-sketch-vabaduse-7-600.jpg 600w"
+          />
+        </a>
+        <figcaption
+          class="gallery-items__description"
+        >
+          <h3
+            class="heading-3"
+          >
+            внешний вид дома вид снизу на парковку
+          </h3>
+          <p
+            class="paragraph"
+          >
+            внешний вид дома вид снизу на парковку
+          </p>
+        </figcaption>
+      </figure>
+      <figure
+        class="gallery-items__item"
+      >
+        <a
+          class="gallery-items__link"
+          data-alt="гостиная"
+          data-description="гостиная"
+          data-index="7"
+          href="/static/img/f8064f-sketch-vabaduse-8-2000.jpg"
+        >
+          <img
+            allt="гостиная"
+            class="gallery-items__img"
+            sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+            src="/static/img/15493d-sketch-vabaduse-8-600.jpg"
+            srcset="/static/img/15493d-sketch-vabaduse-8-600.jpg 600w"
+          />
+        </a>
+        <figcaption
+          class="gallery-items__description"
+        >
+          <h3
+            class="heading-3"
+          >
+            гостиная
+          </h3>
+          <p
+            class="paragraph"
+          >
+            гостиная
+          </p>
+        </figcaption>
+      </figure>
+      <figure
+        class="gallery-items__item"
+      >
+        <a
+          class="gallery-items__link"
+          data-alt="кухня с рабочей зоной"
+          data-description="кухня с рабочей зоной"
+          data-index="8"
+          href="/static/img/ce016e-sketch-vabaduse-9-2000.jpg"
+        >
+          <img
+            allt="кухня с рабочей зоной"
+            class="gallery-items__img"
+            sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+            src="/static/img/f372e1-sketch-vabaduse-9-600.jpg"
+            srcset="/static/img/f372e1-sketch-vabaduse-9-600.jpg 600w"
+          />
+        </a>
+        <figcaption
+          class="gallery-items__description"
+        >
+          <h3
+            class="heading-3"
+          >
+            кухня с рабочей зоной
+          </h3>
+          <p
+            class="paragraph"
+          >
+            кухня с рабочей зоной
+          </p>
+        </figcaption>
+      </figure>
+      <figure
+        class="gallery-items__item"
+      >
+        <a
+          class="gallery-items__link"
+          data-alt="кухня другой ракурс"
+          data-description="кухня другой ракурс"
+          data-index="9"
+          href="/static/img/81d959-sketch-vabaduse-10-2000.jpg"
+        >
+          <img
+            allt="кухня другой ракурс"
+            class="gallery-items__img"
+            sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+            src="/static/img/1e1d68-sketch-vabaduse-10-600.jpg"
+            srcset="/static/img/1e1d68-sketch-vabaduse-10-600.jpg 600w"
+          />
+        </a>
+        <figcaption
+          class="gallery-items__description"
+        >
+          <h3
+            class="heading-3"
+          >
+            кухня другой ракурс
+          </h3>
+          <p
+            class="paragraph"
+          >
+            кухня другой ракурс
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>,
+  "imgShowClassName": "gallery-items__img-show",
+  "items": NodeList [
+    <a
+      class="gallery-items__link"
+      data-alt="эскиз светлой спальни"
+      data-description="открытые светлые спальни"
+      data-index="0"
+      href="/static/img/108f90-sketch-vabaduse-1-2000.jpg"
+    >
+      <img
+        allt="эскиз светлой спальни"
+        class="gallery-items__img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/0a9ff3-sketch-vabaduse-1-600.jpg"
+        srcset="/static/img/0a9ff3-sketch-vabaduse-1-600.jpg 600w"
+      />
+    </a>,
+    <a
+      class="gallery-items__link"
+      data-alt="кабинет и балкон"
+      data-description="рабочий кабинет с выходом на балкон"
+      data-index="1"
+      href="/static/img/547bf2-sketch-vabaduse-2-2000.jpg"
+    >
+      <img
+        allt="кабинет и балкон"
+        class="gallery-items__img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/e14f0e-sketch-vabaduse-2-600.jpg"
+        srcset="/static/img/e14f0e-sketch-vabaduse-2-600.jpg 600w"
+      />
+    </a>,
+    <a
+      class="gallery-items__link"
+      data-alt="ванная комната"
+      data-description="ванная комната с окном"
+      data-index="2"
+      href="/static/img/f215c2-sketch-vabaduse-3-2000.jpg"
+    >
+      <img
+        allt="ванная комната"
+        class="gallery-items__img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/1abd05-sketch-vabaduse-3-600.jpg"
+        srcset="/static/img/1abd05-sketch-vabaduse-3-600.jpg 600w"
+      />
+    </a>,
+    <a
+      class="gallery-items__link"
+      data-alt="кабинет интерьер"
+      data-description="уютный кабинет с диваном"
+      data-index="3"
+      href="/static/img/f7b3b5-sketch-vabaduse-4-2000.jpg"
+    >
+      <img
+        allt="кабинет интерьер"
+        class="gallery-items__img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/6b71f4-sketch-vabaduse-4-600.jpg"
+        srcset="/static/img/6b71f4-sketch-vabaduse-4-600.jpg 600w"
+      />
+    </a>,
+    <a
+      class="gallery-items__link"
+      data-alt="внешний вид дома"
+      data-description="внешний вид дома с парковкой"
+      data-index="4"
+      href="/static/img/7ad0f1-sketch-vabaduse-5-2000.jpg"
+    >
+      <img
+        allt="внешний вид дома"
+        class="gallery-items__img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/4a39ab-sketch-vabaduse-5-600.jpg"
+        srcset="/static/img/4a39ab-sketch-vabaduse-5-600.jpg 600w"
+      />
+    </a>,
+    <a
+      class="gallery-items__link"
+      data-alt="фасад дома"
+      data-description="фасад дома снаружи с парковкой"
+      data-index="5"
+      href="/static/img/79ad5b-sketch-vabaduse-6-2000.jpg"
+    >
+      <img
+        allt="фасад дома"
+        class="gallery-items__img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/bc4fb1-sketch-vabaduse-6-600.jpg"
+        srcset="/static/img/bc4fb1-sketch-vabaduse-6-600.jpg 600w"
+      />
+    </a>,
+    <a
+      class="gallery-items__link"
+      data-alt="внешний вид дома вид снизу на парковку"
+      data-description="внешний вид дома вид снизу на парковку"
+      data-index="6"
+      href="/static/img/3e17d4-sketch-vabaduse-7-2000.jpg"
+    >
+      <img
+        allt="внешний вид дома вид снизу на парковку"
+        class="gallery-items__img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/4b9025-sketch-vabaduse-7-600.jpg"
+        srcset="/static/img/4b9025-sketch-vabaduse-7-600.jpg 600w"
+      />
+    </a>,
+    <a
+      class="gallery-items__link"
+      data-alt="гостиная"
+      data-description="гостиная"
+      data-index="7"
+      href="/static/img/f8064f-sketch-vabaduse-8-2000.jpg"
+    >
+      <img
+        allt="гостиная"
+        class="gallery-items__img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/15493d-sketch-vabaduse-8-600.jpg"
+        srcset="/static/img/15493d-sketch-vabaduse-8-600.jpg 600w"
+      />
+    </a>,
+    <a
+      class="gallery-items__link"
+      data-alt="кухня с рабочей зоной"
+      data-description="кухня с рабочей зоной"
+      data-index="8"
+      href="/static/img/ce016e-sketch-vabaduse-9-2000.jpg"
+    >
+      <img
+        allt="кухня с рабочей зоной"
+        class="gallery-items__img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/f372e1-sketch-vabaduse-9-600.jpg"
+        srcset="/static/img/f372e1-sketch-vabaduse-9-600.jpg 600w"
+      />
+    </a>,
+    <a
+      class="gallery-items__link"
+      data-alt="кухня другой ракурс"
+      data-description="кухня другой ракурс"
+      data-index="9"
+      href="/static/img/81d959-sketch-vabaduse-10-2000.jpg"
+    >
+      <img
+        allt="кухня другой ракурс"
+        class="gallery-items__img"
+        sizes="(max-width: 400px) 280px, (max-width: 600px) 440px, (max-width: 1200px) 800px, (max-width: 2000px) 1970px"
+        src="/static/img/1e1d68-sketch-vabaduse-10-600.jpg"
+        srcset="/static/img/1e1d68-sketch-vabaduse-10-600.jpg 600w"
+      />
+    </a>,
+  ],
+  "keyboardHandlers": [Function],
+  "modifiers": Object {
+    "open": "gallery-items--open",
+  },
+  "nextHandler": [MockFunction],
+  "openHandler": [MockFunction],
+  "previousHandler": [MockFunction],
+  "removeEventHandlers": [Function],
+  "setCurrentPosition": [Function],
+  "showControlls": [Function],
+  "startPos": 0,
+  "viewBox": <div
+    class="gallery-items__img-view"
+  >
+    <div
+      class="gallery-items__view-description"
+    >
+      <h3
+        class="hading-3"
+      >
+        ваша новая спальня
+      </h3>
+      <p
+        class="paragraph"
+      >
+        смотреть описание
+      </p>
+    </div>
+    <div
+      class="gallery-items__wrap-items"
+    >
+      <img
+        alt="эскиз светлой спальни"
+        class="gallery-items__img-show"
+        data-description="открытые светлые спальни"
+        data-index="0"
+        src="http://localhost/static/img/108f90-sketch-vabaduse-1-2000.jpg"
+      />
+      <img
+        alt="кабинет и балкон"
+        class="gallery-items__img-show"
+        data-description="рабочий кабинет с выходом на балкон"
+        data-index="1"
+        src="http://localhost/static/img/547bf2-sketch-vabaduse-2-2000.jpg"
+      />
+      <img
+        alt="ванная комната"
+        class="gallery-items__img-show"
+        data-description="ванная комната с окном"
+        data-index="2"
+        src="http://localhost/static/img/f215c2-sketch-vabaduse-3-2000.jpg"
+      />
+      <img
+        alt="кабинет интерьер"
+        class="gallery-items__img-show"
+        data-description="уютный кабинет с диваном"
+        data-index="3"
+        src="http://localhost/static/img/f7b3b5-sketch-vabaduse-4-2000.jpg"
+      />
+      <img
+        alt="внешний вид дома"
+        class="gallery-items__img-show"
+        data-description="внешний вид дома с парковкой"
+        data-index="4"
+        src="http://localhost/static/img/7ad0f1-sketch-vabaduse-5-2000.jpg"
+      />
+      <img
+        alt="фасад дома"
+        class="gallery-items__img-show"
+        data-description="фасад дома снаружи с парковкой"
+        data-index="5"
+        src="http://localhost/static/img/79ad5b-sketch-vabaduse-6-2000.jpg"
+      />
+      <img
+        alt="внешний вид дома вид снизу на парковку"
+        class="gallery-items__img-show"
+        data-description="внешний вид дома вид снизу на парковку"
+        data-index="6"
+        src="http://localhost/static/img/3e17d4-sketch-vabaduse-7-2000.jpg"
+      />
+      <img
+        alt="гостиная"
+        class="gallery-items__img-show"
+        data-description="гостиная"
+        data-index="7"
+        src="http://localhost/static/img/f8064f-sketch-vabaduse-8-2000.jpg"
+      />
+      <img
+        alt="кухня с рабочей зоной"
+        class="gallery-items__img-show"
+        data-description="кухня с рабочей зоной"
+        data-index="8"
+        src="http://localhost/static/img/ce016e-sketch-vabaduse-9-2000.jpg"
+      />
+      <img
+        alt="кухня другой ракурс"
+        class="gallery-items__img-show"
+        data-description="кухня другой ракурс"
+        data-index="9"
+        src="http://localhost/static/img/81d959-sketch-vabaduse-10-2000.jpg"
+      />
+    </div>
+    <div
+      class="gallery-items__wrap-items"
+    >
+      <img
+        alt="эскиз светлой спальни"
+        class="gallery-items__img-show"
+        data-description="открытые светлые спальни"
+        data-index="0"
+        src="http://localhost/static/img/108f90-sketch-vabaduse-1-2000.jpg"
+      />
+      <img
+        alt="кабинет и балкон"
+        class="gallery-items__img-show"
+        data-description="рабочий кабинет с выходом на балкон"
+        data-index="1"
+        src="http://localhost/static/img/547bf2-sketch-vabaduse-2-2000.jpg"
+      />
+      <img
+        alt="ванная комната"
+        class="gallery-items__img-show"
+        data-description="ванная комната с окном"
+        data-index="2"
+        src="http://localhost/static/img/f215c2-sketch-vabaduse-3-2000.jpg"
+      />
+      <img
+        alt="кабинет интерьер"
+        class="gallery-items__img-show"
+        data-description="уютный кабинет с диваном"
+        data-index="3"
+        src="http://localhost/static/img/f7b3b5-sketch-vabaduse-4-2000.jpg"
+      />
+      <img
+        alt="внешний вид дома"
+        class="gallery-items__img-show"
+        data-description="внешний вид дома с парковкой"
+        data-index="4"
+        src="http://localhost/static/img/7ad0f1-sketch-vabaduse-5-2000.jpg"
+      />
+      <img
+        alt="фасад дома"
+        class="gallery-items__img-show"
+        data-description="фасад дома снаружи с парковкой"
+        data-index="5"
+        src="http://localhost/static/img/79ad5b-sketch-vabaduse-6-2000.jpg"
+      />
+      <img
+        alt="внешний вид дома вид снизу на парковку"
+        class="gallery-items__img-show"
+        data-description="внешний вид дома вид снизу на парковку"
+        data-index="6"
+        src="http://localhost/static/img/3e17d4-sketch-vabaduse-7-2000.jpg"
+      />
+      <img
+        alt="гостиная"
+        class="gallery-items__img-show"
+        data-description="гостиная"
+        data-index="7"
+        src="http://localhost/static/img/f8064f-sketch-vabaduse-8-2000.jpg"
+      />
+      <img
+        alt="кухня с рабочей зоной"
+        class="gallery-items__img-show"
+        data-description="кухня с рабочей зоной"
+        data-index="8"
+        src="http://localhost/static/img/ce016e-sketch-vabaduse-9-2000.jpg"
+      />
+      <img
+        alt="кухня другой ракурс"
+        class="gallery-items__img-show"
+        data-description="кухня другой ракурс"
+        data-index="9"
+        src="http://localhost/static/img/81d959-sketch-vabaduse-10-2000.jpg"
+      />
+    </div>
+  </div>,
+  "widthGallery": 900,
+  "wrapItems": <div
+    class="gallery-items__wrap-items"
+  >
+    <img
+      alt="эскиз светлой спальни"
+      class="gallery-items__img-show"
+      data-description="открытые светлые спальни"
+      data-index="0"
+      src="http://localhost/static/img/108f90-sketch-vabaduse-1-2000.jpg"
+    />
+    <img
+      alt="кабинет и балкон"
+      class="gallery-items__img-show"
+      data-description="рабочий кабинет с выходом на балкон"
+      data-index="1"
+      src="http://localhost/static/img/547bf2-sketch-vabaduse-2-2000.jpg"
+    />
+    <img
+      alt="ванная комната"
+      class="gallery-items__img-show"
+      data-description="ванная комната с окном"
+      data-index="2"
+      src="http://localhost/static/img/f215c2-sketch-vabaduse-3-2000.jpg"
+    />
+    <img
+      alt="кабинет интерьер"
+      class="gallery-items__img-show"
+      data-description="уютный кабинет с диваном"
+      data-index="3"
+      src="http://localhost/static/img/f7b3b5-sketch-vabaduse-4-2000.jpg"
+    />
+    <img
+      alt="внешний вид дома"
+      class="gallery-items__img-show"
+      data-description="внешний вид дома с парковкой"
+      data-index="4"
+      src="http://localhost/static/img/7ad0f1-sketch-vabaduse-5-2000.jpg"
+    />
+    <img
+      alt="фасад дома"
+      class="gallery-items__img-show"
+      data-description="фасад дома снаружи с парковкой"
+      data-index="5"
+      src="http://localhost/static/img/79ad5b-sketch-vabaduse-6-2000.jpg"
+    />
+    <img
+      alt="внешний вид дома вид снизу на парковку"
+      class="gallery-items__img-show"
+      data-description="внешний вид дома вид снизу на парковку"
+      data-index="6"
+      src="http://localhost/static/img/3e17d4-sketch-vabaduse-7-2000.jpg"
+    />
+    <img
+      alt="гостиная"
+      class="gallery-items__img-show"
+      data-description="гостиная"
+      data-index="7"
+      src="http://localhost/static/img/f8064f-sketch-vabaduse-8-2000.jpg"
+    />
+    <img
+      alt="кухня с рабочей зоной"
+      class="gallery-items__img-show"
+      data-description="кухня с рабочей зоной"
+      data-index="8"
+      src="http://localhost/static/img/ce016e-sketch-vabaduse-9-2000.jpg"
+    />
+    <img
+      alt="кухня другой ракурс"
+      class="gallery-items__img-show"
+      data-description="кухня другой ракурс"
+      data-index="9"
+      src="http://localhost/static/img/81d959-sketch-vabaduse-10-2000.jpg"
+    />
+  </div>,
+  "wrapItemsClassName": "gallery-items__wrap-items",
+}
+`;

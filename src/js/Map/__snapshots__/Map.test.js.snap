@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create instance and render render components into DOM 1`] = `
+Map {
+  "center": Array [
+    59.462475,
+    28.0408413,
+  ],
+  "init": [Function],
+  "key": undefined,
+  "lang": undefined,
+  "mapContainer": <div
+    class="contacts__map"
+    id="gmap"
+  />,
+  "ver": undefined,
+}
+`;
