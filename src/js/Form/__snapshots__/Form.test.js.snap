@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create instance and render render components into DOM 1`] = `
+Form {
+  "activeModifier": "form--active",
+  "btn": <button
+    class="contacts__btn"
+  >
+    <svg
+      class="va-icon"
+    >
+       
+      <use
+        xlink:href="#va-icon-envelope"
+      />
+    </svg>
+  </button>,
+  "form": <form
+    class="form"
+  >
+    <h3
+      class="heading-3"
+    >
+      отправить сообщение
+    </h3>
+    <div
+      class="form__msg"
+    >
+       
+    </div>
+    <input
+      class="form__input"
+      name="name"
+      placeholder="имя"
+      type="text"
+    />
+    <input
+      class="form__input"
+      name="email"
+      placeholder="эл. почта"
+      type="email"
+    />
+    <input
+      class="form__input"
+      name="theme_message"
+      placeholder="тема сообщения"
+      type="text"
+    />
+    <textarea
+      class="form__textarea"
+      name="message"
+      placeholder="сообщение"
+      rows="4"
+    />
+    <button
+      class="form__btn"
+    >
+      отправить
+    </button>
+  </form>,
+  "handleActive": [Function],
+  "handleSendMessage": [Function],
+  "init": [Function],
+  "keyboardHandlers": [Function],
+  "setupListeners": [Function],
+  "showMsg": [Function],
+  "validate": [Function],
+}
+`;

@@ -37,7 +37,9 @@ class Form {
     !emailValue && this.showMsg('введите email в формате you@mail.ru');
     !nameValue && this.showMsg('введите имя');
 
-    return nameValue && emailValue && themeMessageValue && messageValue;
+    return nameValue && emailValue && themeMessageValue && messageValue
+      ? true
+      : false;
   };
 
   showMsg = message => {
