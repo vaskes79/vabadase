@@ -1,14 +1,17 @@
-import Form from './Form';
+import Form, {ERROR_MSG} from './Form';
 const ROOT_CLASS = 'form';
 const BTN_ACTIVE = `contacts__btn`;
 const ACTIVE_MODIFIRE = `${ROOT_CLASS}--active`;
+const MSG_CONTACTS = '.contacts__msg';
+const MSG_FORM = '.form__msg';
 let formInst = null;
 let mock = null;
-let valid = null;
-let elemName = null;
-let elemEmail = null;
-let elemTheme = null;
-let elemMessage = null;
+const FORM_DATA = {
+  elemName: null,
+  elemEmail: null,
+  elemTheme: null,
+  elemMessage: null,
+};
 // let openHandlerMock = null;
 
 beforeEach(() => {
@@ -21,7 +24,6 @@ beforeEach(() => {
 afterEach(() => {
   formInst = null;
   mock = null;
-  valid = null;
   // openHandlerMock = null;
 });
 
@@ -68,6 +70,23 @@ describe('methods', () => {
     'init',
   ];
   listMethods.forEach(method => {
+    beforeEach(() => {
+      FORM_DATA['elemName'] = formInst.form.querySelector('input[name="name"]');
+      FORM_DATA['elemEmail'] = formInst.form.querySelector(
+        'input[name="email"]'
+      );
+      FORM_DATA['elemTheme'] = formInst.form.querySelector(
+        'input[name="theme_message"]'
+      );
+      FORM_DATA['elemMessage'] = formInst.form.querySelector(
+        'textarea[name="message"]'
+      );
+      FORM_DATA['elemName']['value'] = '   check remove space    ';
+      FORM_DATA['elemEmail']['value'] = '   some@email.com    ';
+      FORM_DATA['elemTheme']['value'] = '  some text     ';
+      FORM_DATA['elemMessage']['value'] = '    some largest text   ';
+    });
+
     describe(`${method}`, () => {
       it(`${method} exists`, () => {
         expect(formInst[method]).toBeFunction();
@@ -86,28 +105,37 @@ describe('methods', () => {
         });
       }
       if (method === 'validate') {
-        beforeEach(() => {
-          elemName = formInst.form.querySelector('input[name="name"]');
-          elemEmail = formInst.form.querySelector('input[name="email"]');
-          elemTheme = formInst.form.querySelector(
-            'input[name="theme_message"]'
-          );
-          elemMessage = formInst.form.querySelector('textarea[name="message"]');
-          elemName.value = '   check remove space    ';
-          elemEmail.value = '   some@email.com    ';
-          elemTheme.value = '  some text     ';
-          elemMessage.value = '    some largest text   ';
-        });
-
         it(`check valid data`, () => {
-          valid = formInst.validate();
+          let valid = formInst.validate();
           expect(valid).toBeTrue();
         });
 
         it(`check invalid data wrong email address`, () => {
-          elemEmail.value = '   some@email    ';
-          valid = formInst.validate();
+          FORM_DATA['elemEmail']['value'] = '   some@email    ';
+          let valid = formInst.validate();
           expect(valid).toBeFalse();
+        });
+      }
+      if (method === 'showMsg') {
+        Object.keys(ERROR_MSG).forEach(nameElem => {
+          let message = ERROR_MSG[nameElem];
+          it(`window size = 910px message error name === ${message}`, () => {
+            window.innerWidth = 910;
+
+            formInst.showMsg(message);
+            let msgContact = document.querySelector(MSG_CONTACTS).textContent;
+            expect(msgContact).toBeString();
+            expect(msgContact).toEqual(message);
+          });
+
+          it(`window size = 890px message error name === ${message}`, () => {
+            window.innerWidth = 890;
+
+            formInst.showMsg(message);
+            let msgForm = document.querySelector(MSG_FORM).textContent;
+            expect(msgForm).toBeString(message);
+            expect(msgForm).toEqual(message);
+          });
         });
       }
     });
