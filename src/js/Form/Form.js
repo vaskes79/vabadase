@@ -97,9 +97,10 @@ class Form {
           this.handleActive();
           this.form.reset();
           this.showMsg('ваше сообщение успешно отправлено');
+          return response;
         }
       } catch (err) {
-        console.log('axios request error', err);
+        console.log('error fetch response', err);
       }
     }
   };

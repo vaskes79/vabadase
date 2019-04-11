@@ -5,26 +5,21 @@ const ACTIVE_MODIFIRE = `${ROOT_CLASS}--active`;
 const MSG_CONTACTS = '.contacts__msg';
 const MSG_FORM = '.form__msg';
 let formInst = null;
-let mock = null;
 const FORM_DATA = {
   elemName: null,
   elemEmail: null,
   elemTheme: null,
   elemMessage: null,
 };
-// let openHandlerMock = null;
 
 beforeEach(() => {
   formInst = new Form();
-  // openHandlerMock = jest.spyOn(formInst, 'openHandler');
-  mock = jest.fn();
   formInst.init();
 });
 
 afterEach(() => {
+  formInst.form.classList.remove(ACTIVE_MODIFIRE);
   formInst = null;
-  mock = null;
-  // openHandlerMock = null;
 });
 
 describe(`Create instance and render`, () => {
@@ -69,24 +64,22 @@ describe('methods', () => {
     'setupListeners',
     'init',
   ];
-  listMethods.forEach(method => {
-    beforeEach(() => {
-      FORM_DATA['elemName'] = formInst.form.querySelector('input[name="name"]');
-      FORM_DATA['elemEmail'] = formInst.form.querySelector(
-        'input[name="email"]'
-      );
-      FORM_DATA['elemTheme'] = formInst.form.querySelector(
-        'input[name="theme_message"]'
-      );
-      FORM_DATA['elemMessage'] = formInst.form.querySelector(
-        'textarea[name="message"]'
-      );
-      FORM_DATA['elemName']['value'] = '   check remove space    ';
-      FORM_DATA['elemEmail']['value'] = '   some@email.com    ';
-      FORM_DATA['elemTheme']['value'] = '  some text     ';
-      FORM_DATA['elemMessage']['value'] = '    some largest text   ';
-    });
+  beforeEach(() => {
+    FORM_DATA['elemName'] = formInst.form.querySelector('input[name="name"]');
+    FORM_DATA['elemEmail'] = formInst.form.querySelector('input[name="email"]');
+    FORM_DATA['elemTheme'] = formInst.form.querySelector(
+      'input[name="theme_message"]'
+    );
+    FORM_DATA['elemMessage'] = formInst.form.querySelector(
+      'textarea[name="message"]'
+    );
+    FORM_DATA['elemName']['value'] = '   check remove space    ';
+    FORM_DATA['elemEmail']['value'] = '   some@email.com    ';
+    FORM_DATA['elemTheme']['value'] = '  some text     ';
+    FORM_DATA['elemMessage']['value'] = '    some largest text   ';
+  });
 
+  listMethods.forEach(method => {
     describe(`${method}`, () => {
       it(`${method} exists`, () => {
         expect(formInst[method]).toBeFunction();
@@ -96,6 +89,7 @@ describe('methods', () => {
         formInst[method]();
         expect(formInst[method]).toBeCalled();
       });
+
       if (method === 'handleActive') {
         it(`toggle state from open close`, () => {
           let elem = formInst.form;
@@ -104,6 +98,7 @@ describe('methods', () => {
           expect(elem.classList.contains(ACTIVE_MODIFIRE)).toBeTrue();
         });
       }
+
       if (method === 'validate') {
         it(`check valid data`, () => {
           let valid = formInst.validate();
@@ -116,6 +111,7 @@ describe('methods', () => {
           expect(valid).toBeFalse();
         });
       }
+
       if (method === 'showMsg') {
         Object.keys(ERROR_MSG).forEach(nameElem => {
           let message = ERROR_MSG[nameElem];
@@ -142,4 +138,38 @@ describe('methods', () => {
   });
 });
 
-describe(`events`, () => {});
+describe(`events`, () => {
+  describe(`mouse`, () => {
+    it(`open close form click to this.btn === .contacts__btn`, () => {
+      let elem = formInst.btn;
+      expect(formInst.form.classList.contains(ACTIVE_MODIFIRE)).toBeFalse();
+      simulaitClick(elem);
+      expect(formInst.form.classList.contains(ACTIVE_MODIFIRE)).toBeTrue();
+    });
+  });
+
+  describe(`keyboard`, () => {
+    it(`keydown: esq q keys is works`, () => {
+      let elem = formInst.btn;
+      simulaitClick(elem);
+
+      // hit key q or esc
+      map.keydown({
+        keyCode: 27,
+        which: 81,
+        target: {classList: {contains: () => false}},
+      });
+      expect(formInst.form.classList.contains(ACTIVE_MODIFIRE)).toBeFalse();
+    });
+
+    it(`keydown: enter keys is works`, () => {
+      // hit key q or esc
+      map.keydown({
+        keyCode: 13,
+        which: 13,
+        target: {classList: {contains: () => true}},
+      });
+      expect(formInst.form.classList.contains(ACTIVE_MODIFIRE)).toBeTrue();
+    });
+  });
+});
