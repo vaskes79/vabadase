@@ -60,7 +60,7 @@
     "prettier": "^1.16.4",
     "prettier-stylelint": "^0.4.2",
     "pretty-quick": "^1.10.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-loader": "^2.4.0",
     "responsive-loader": "^1.2.0",
     "sass-loader": "^7.1.0",
